@@ -1,0 +1,2538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CoursePlatform - Learn, Grow, Succeed</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "course-primary": "#f97316",
+              "course-secondary": "#fff7ed",
+              "course-accent": "#ef4444",
+              "course-red": "#ef4444",
+              "course-orange": "#f97316",
+              "course-orange-light": "#fb923c",
+              "course-blue": "#0E2A47",
+              topbar: "#f97316",
+              "topbar-foreground": "#ffffff",
+            },
+            animation: {
+              "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      .bg-gradient-text {
+        background: linear-gradient(to right, #f97316, #ef4444);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .slide {
+        display: none;
+      }
+
+      .slide.active {
+        display: block;
+      }
+
+      .testimonial {
+        display: none;
+      }
+
+      .testimonial.active {
+        display: block;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-white">
+    <div class="bg-course-primary text-white py-2 px-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center space-x-6">
+          <div class="flex items-center space-x-2">
+            <i class="fas fa-phone text-sm"></i>
+            <span class="text-sm">+1 (555) 123-4567</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <i class="fas fa-envelope text-sm"></i>
+            <span class="text-sm">info@courseplatform.com</span>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-4">
+          <a
+            href="#"
+            class="hover:text-course-accent transition-colors duration-200"
+            aria-label="Facebook"
+          >
+            <i class="fab fa-facebook text-lg"></i>
+          </a>
+          <a
+            href="#"
+            class="hover:text-course-accent transition-colors duration-200"
+            aria-label="Twitter"
+          >
+            <i class="fab fa-twitter text-lg"></i>
+          </a>
+          <a
+            href="#"
+            class="hover:text-course-accent transition-colors duration-200"
+            aria-label="Instagram"
+          >
+            <i class="fab fa-instagram text-lg"></i>
+          </a>
+          <a
+            href="#"
+            class="hover:text-course-accent transition-colors duration-200"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin text-lg"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <nav
+      class="bg-white/95 backdrop-blur-md border-b border-gray-200/50 shadow-lg shadow-course-orange/10 sticky top-0 z-50"
+    >
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+          <a href="#" class="flex items-center space-x-2 group">
+            <div
+              class="w-10 h-10 bg-gradient-to-br from-course-primary to-course-accent rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-course-orange/25"
+            >
+              <span class="text-white font-bold text-xl">C</span>
+            </div>
+            <span class="text-xl font-bold bg-gradient-text"
+              >CoursePlatform</span
+            >
+          </a>
+
+          <div class="hidden lg:flex items-center space-x-8">
+            <a
+              href="#home"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium relative group"
+            >
+              Home
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-course-orange to-course-accent group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+            <a
+              href="#courses"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium relative group"
+            >
+              Courses
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-course-orange to-course-accent group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+            <a
+              href="#categories"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium relative group"
+            >
+              Categories
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-course-orange to-course-accent group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+            <a
+              href="#about"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium relative group"
+            >
+              About Us
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-course-orange to-course-accent group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+            <a
+              href="#team"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium relative group"
+            >
+              Team
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-course-orange to-course-accent group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+            <a
+              href="#blog"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium relative group"
+            >
+              Blog
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-course-orange to-course-accent group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium relative group"
+            >
+              Contact
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-course-orange to-course-accent group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+
+            <button
+              class="bg-gradient-to-r from-course-orange to-course-accent hover:from-course-accent hover:to-course-orange text-white px-6 py-2 rounded-full flex items-center space-x-2 transition-all duration-500 hover:shadow-xl hover:shadow-course-orange/25 hover:scale-105"
+            >
+              <i class="fas fa-phone text-sm"></i>
+              <span>Call Now</span>
+            </button>
+          </div>
+
+          <div class="lg:hidden">
+            <button
+              id="mobile-menu-btn"
+              class="text-gray-700 hover:text-course-primary transition-colors"
+            >
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="mobile-menu"
+          class="lg:hidden hidden py-4 border-t border-gray-200"
+        >
+          <div class="flex flex-col space-y-4">
+            <a
+              href="#home"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium px-2 py-1 rounded-lg hover:bg-course-orange/10"
+              >Home</a
+            >
+            <a
+              href="#courses"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium px-2 py-1 rounded-lg hover:bg-course-orange/10"
+              >Courses</a
+            >
+            <a
+              href="#categories"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium px-2 py-1 rounded-lg hover:bg-course-orange/10"
+              >Categories</a
+            >
+            <a
+              href="#about"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium px-2 py-1 rounded-lg hover:bg-course-orange/10"
+              >About Us</a
+            >
+            <a
+              href="#team"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium px-2 py-1 rounded-lg hover:bg-course-orange/10"
+              >Team</a
+            >
+            <a
+              href="#blog"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium px-2 py-1 rounded-lg hover:bg-course-orange/10"
+              >Blog</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium px-2 py-1 rounded-lg hover:bg-course-orange/10"
+              >Contact</a
+            >
+            <button
+              class="bg-gradient-to-r from-course-orange to-course-accent hover:from-course-accent hover:to-course-orange text-white px-6 py-2 rounded-full flex items-center justify-center space-x-2 transition-all duration-500 hover:shadow-xl hover:shadow-course-orange/25 hover:scale-105 mt-4"
+            >
+              <i class="fas fa-phone text-sm"></i>
+              <span>Call Now</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section id="home" class="relative py-20 overflow-hidden">
+      <div class="absolute inset-0">
+        <img
+          src="img/bg.jpg"
+          alt="Driving School Background"
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <div class="absolute inset-0 overflow-hidden">
+        <div
+          class="absolute -top-40 -right-40 w-80 h-80 bg-course-orange/10 rounded-full blur-3xl animate-pulse"
+        ></div>
+        <div
+          class="absolute -bottom-40 -left-40 w-80 h-80 bg-course-primary/10 rounded-full blur-3xl animate-pulse-slow"
+        ></div>
+        <div
+          class="absolute top-1/4 left-5 lg:left-16 animate-float"
+          style="animation-delay: 0.8s"
+        >
+          <div
+            class="w-16 h-16 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center shadow-xl shadow-course-orange/10"
+          >
+            <i class="fas fa-car-alt text-course-orange text-3xl"></i>
+          </div>
+        </div>
+        <div
+          class="absolute bottom-1/4 left-16 lg:left-36 animate-float"
+          style="animation-delay: 2s"
+        >
+          <div
+            class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center shadow-xl shadow-course-primary/10"
+          >
+            <i class="fas fa-road text-course-orange text-4xl"></i>
+          </div>
+        </div>
+        <div
+          class="absolute top-1/3 right-5 lg:right-16 animate-float"
+          style="animation-delay: 1.2s"
+        >
+          <div
+            class="w-16 h-16 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center shadow-xl shadow-course-orange/10"
+          >
+            <i class="fas fa-key text-course-orange text-3xl"></i>
+          </div>
+        </div>
+        <div
+          class="absolute bottom-1/3 right-16 lg:right-36 animate-float"
+          style="animation-delay: 2.5s"
+        >
+          <div
+            class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center shadow-xl shadow-course-primary/10"
+          >
+            <i class="fas fa-tachometer-alt text-course-orange text-4xl"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-8">
+            <div class="space-y-6">
+              <p
+                class="text-sm font-bold text-gray-700 uppercase tracking-widest"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                Govt. Approved Driving School in Narsingdi
+              </p>
+              <h1
+                class="text-5xl lg:text-6xl font-bold bg-gradient-text leading-tight"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                data-aos-delay="100"
+              >
+                Learn to Drive with Confidence
+              </h1>
+              <p
+                class="text-xl text-gray-600 leading-relaxed"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+              >
+                Get safe and effective driving training from our experienced
+                instructors. We will prepare you for everything from busy city
+                streets to highways.
+              </p>
+            </div>
+
+            <div
+              class="grid grid-cols-2 gap-x-8 gap-y-4 pt-4"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="300"
+            >
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-check-circle text-xl text-course-primary"></i>
+                <span class="text-gray-700 font-medium"
+                  >Modern Dual-Control Cars</span
+                >
+              </div>
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-check-circle text-xl text-course-primary"></i>
+                <span class="text-gray-700 font-medium"
+                  >One-on-One Training</span
+                >
+              </div>
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-check-circle text-xl text-course-primary"></i>
+                <span class="text-gray-700 font-medium"
+                  >Flexible Scheduling</span
+                >
+              </div>
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-check-circle text-xl text-course-primary"></i>
+                <span class="text-gray-700 font-medium"
+                  >Driving Test Preparation</span
+                >
+              </div>
+            </div>
+
+            <button
+              class="bg-gradient-to-r from-course-primary to-course-accent hover:from-course-accent hover:to-course-primary text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center space-x-3 transition-all duration-500 hover:shadow-2xl hover:shadow-course-orange/25 hover:scale-105 transform group"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="400"
+            >
+              <span>Enroll Now</span>
+              <i
+                class="fas fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"
+              ></i>
+            </button>
+
+            <div class="grid grid-cols-3 gap-8 pt-8">
+              <div
+                class="relative text-center bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:shadow-course-orange/20 transition-all duration-300 hover:-translate-y-2"
+                data-aos="fade-up"
+                data-aos-delay="500"
+              >
+                <div class="relative z-10">
+                  <div class="text-3xl font-bold text-gray-700">10+</div>
+                  <div
+                    class="text-sm text-gray-500 group-hover:text-course-primary transition-colors duration-300"
+                  >
+                    Years Experience
+                  </div>
+                </div>
+              </div>
+              <div
+                class="relative text-center bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:shadow-course-orange/20 transition-all duration-300 hover:-translate-y-2"
+                data-aos="fade-up"
+                data-aos-delay="600"
+              >
+                <div class="relative z-10">
+                  <div class="text-3xl font-bold text-gray-700">15+</div>
+                  <div
+                    class="text-sm text-gray-500 group-hover:text-course-primary transition-colors duration-300"
+                  >
+                    Certified Instructors
+                  </div>
+                </div>
+              </div>
+              <div
+                class="relative text-center bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:shadow-course-orange/20 transition-all duration-300 hover:-translate-y-2"
+                data-aos="fade-up"
+                data-aos-delay="700"
+              >
+                <div class="relative z-10">
+                  <div class="text-3xl font-bold text-gray-700">98%</div>
+                  <div
+                    class="text-sm text-gray-500 group-hover:text-course-primary transition-colors duration-300"
+                  >
+                    Pass Rate
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative" data-aos="fade-left" data-aos-duration="1000">
+            <div
+              id="image-slider"
+              class="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl shadow-course-orange/20"
+            >
+              <div
+                class="slide active absolute inset-0 transition-all duration-1000"
+              >
+                <img
+                  src="img/hero1.png"
+                  alt="Driving Lesson"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="slide absolute inset-0 transition-all duration-1000">
+                <img
+                  src="img/hero2.png"
+                  alt="Car Interior"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="slide absolute inset-0 transition-all duration-1000">
+                <img
+                  src="https://images.unsplash.com/photo-1581092917144-43c942c017a1?auto=format&fit=crop&w=800&q=80"
+                  alt="Student Driver"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <button
+                id="prev-slide"
+                class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm hover:bg-white text-course-primary hover:text-course-orange-light rounded-full p-3 transition-all duration-300 hover:shadow-xl hover:shadow-course-orange/25 hover:scale-110"
+              >
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button
+                id="next-slide"
+                class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm hover:bg-white text-course-primary hover:text-course-orange-light rounded-full p-3 transition-all duration-300 hover:shadow-xl hover:shadow-course-orange/25 hover:scale-110"
+              >
+                <i class="fas fa-chevron-right"></i>
+              </button>
+              <div
+                class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2"
+              >
+                <button
+                  class="dot w-3 h-3 rounded-full transition-all duration-300 bg-course-primary scale-125 shadow-lg shadow-course-orange/50"
+                  data-slide="0"
+                ></button>
+                <button
+                  class="dot w-3 h-3 rounded-full transition-all duration-300 bg-white/50 hover:bg-course-primary/70 hover:scale-110"
+                  data-slide="1"
+                ></button>
+                <button
+                  class="dot w-3 h-3 rounded-full transition-all duration-300 bg-white/50 hover:bg-course-primary/70 hover:scale-110"
+                  data-slide="2"
+                ></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+
+    <section
+      id="courses"
+      class="py-20 bg-gradient-to-br from-course-secondary/30 via-course-orange/5 to-course-secondary/30 relative overflow-hidden"
+    >
+      <div class="container mx-auto px-4 relative z-10">
+        <div
+          class="text-center mb-16"
+          data-aos="fade-down"
+          data-aos-duration="800"
+        >
+          <h2 class="text-4xl font-bold bg-gradient-text mb-4">
+            Featured Courses
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover our most popular courses taught by industry experts. Start
+            learning today and advance your career.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-course-orange/10 transition-all duration-300 hover:-translate-y-3 group border border-transparent hover:border-course-orange/20"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Complete Web Development Bootcamp"
+                class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div
+                class="absolute top-4 right-4 bg-gradient-to-r from-course-orange to-course-accent text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg"
+              >
+                $299
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center space-x-3 mb-4">
+                <div
+                  class="w-10 h-10 bg-gradient-to-br from-course-orange/20 to-course-accent/20 rounded-full flex items-center justify-center group-hover:from-course-orange group-hover:to-course-accent transition-all duration-300"
+                >
+                  <span
+                    class="text-course-primary group-hover:text-white font-semibold text-sm transition-colors duration-300"
+                    >SJ</span
+                  >
+                </div>
+                <div>
+                  <div class="font-semibold text-gray-800 text-sm">
+                    Sarah Johnson
+                  </div>
+                  <div class="text-gray-600 text-xs">
+                    Senior Full-Stack Developer
+                  </div>
+                </div>
+              </div>
+              <h3
+                class="text-lg font-bold text-gray-800 mb-4 group-hover:text-course-primary transition-colors duration-300"
+              >
+                Complete Web Development Bootcamp
+              </h3>
+              <div class="space-y-2 mb-6">
+                <div
+                  class="flex items-center justify-between text-sm text-gray-600"
+                >
+                  <div
+                    style="
+                      box-shadow: 2px 2px 8px #fef3e9;
+                      padding: 6px;
+                      border-radius: 6px;
+                    "
+                    class="flex items-center space-x-1"
+                  >
+                    <i class="fas fa-clock drop-shadow-lg"></i>
+                    <span>45 classes</span>
+                  </div>
+                  <div
+                    style="
+                      box-shadow: 2px 2px 8px #fef3e9;
+                      padding: 6px;
+                      border-radius: 6px;
+                    "
+                    class="flex items-center space-x-1"
+                  >
+                    <i class="fas fa-star text-yellow-400 drop-shadow-lg"></i>
+                    <span>4.9</span>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-between text-sm text-gray-600"
+                >
+                  <div
+                    style="
+                      box-shadow: 2px 2px 8px #fef3e9;
+                      padding: 6px;
+                      border-radius: 6px;
+                    "
+                    class="flex items-center space-x-1"
+                  >
+                    <i class="fas fa-calendar drop-shadow-lg"></i>
+                    <span>March 15, 2024</span>
+                  </div>
+                  <div
+                    style="
+                      box-shadow: 2px 2px 8px #fef3e9;
+                      padding: 6px;
+                      border-radius: 6px;
+                    "
+                    class="flex items-center space-x-1"
+                  >
+                    <i class="fas fa-users drop-shadow-lg"></i>
+                    <span>1,250 students</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex space-x-3">
+                <button
+                  class="flex-1 bg-gradient-to-r from-course-orange to-course-accent hover:from-course-accent hover:to-course-orange text-white rounded-full font-semibold py-2 px-4 transition-all duration-500 hover:shadow-xl hover:shadow-course-orange/25"
+                >
+                  Enroll Now
+                </button>
+                <button
+                  class="px-4 rounded-full border-2 border-course-orange text-course-orange hover:bg-course-orange hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-course-orange/25"
+                >
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-course-orange/10 transition-all duration-300 hover:-translate-y-3 group border border-transparent hover:border-course-orange/20"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Advanced UI/UX Design Masterclass"
+                class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div
+                class="absolute top-4 right-4 bg-gradient-to-r from-course-orange to-course-accent text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg"
+              >
+                $199
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center space-x-3 mb-4">
+                <div
+                  class="w-10 h-10 bg-gradient-to-br from-course-orange/20 to-course-accent/20 rounded-full flex items-center justify-center group-hover:from-course-orange group-hover:to-course-accent transition-all duration-300"
+                >
+                  <span
+                    class="text-course-primary group-hover:text-white font-semibold text-sm transition-colors duration-300"
+                    >MC</span
+                  >
+                </div>
+                <div>
+                  <div class="font-semibold text-gray-800 text-sm">
+                    Michael Chen
+                  </div>
+                  <div class="text-gray-600 text-xs">Lead UX Designer</div>
+                </div>
+              </div>
+              <h3
+                class="text-lg font-bold text-gray-800 mb-4 group-hover:text-course-primary transition-colors duration-300"
+              >
+                Advanced UI/UX Design Masterclass
+              </h3>
+              <div class="space-y-2 mb-6">
+                <div
+                  class="flex items-center justify-between text-sm text-gray-600"
+                >
+                  <div
+                    style="
+                      box-shadow: 2px 2px 8px #fef3e9;
+                      padding: 6px;
+                      border-radius: 6px;
+                    "
+                    class="flex items-center space-x-1"
+                  >
+                    <i class="fas fa-clock drop-shadow-lg"></i>
+                    <span>45 classes</span>
+                  </div>
+                  <div
+                    style="
+                      box-shadow: 2px 2px 8px #fef3e9;
+                      padding: 6px;
+                      border-radius: 6px;
+                    "
+                    class="flex items-center space-x-1"
+                  >
+                    <i class="fas fa-star text-yellow-400 drop-shadow-lg"></i>
+                    <span>4.9</span>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-between text-sm text-gray-600"
+                >
+                  <div
+                    style="
+                      box-shadow: 2px 2px 8px #fef3e9;
+                      padding: 6px;
+                      border-radius: 6px;
+                    "
+                    class="flex items-center space-x-1"
+                  >
+                    <i class="fas fa-calendar drop-shadow-lg"></i>
+                    <span>March 15, 2024</span>
+                  </div>
+                  <div
+                    style="
+                      box-shadow: 2px 2px 8px #fef3e9;
+                      padding: 6px;
+                      border-radius: 6px;
+                    "
+                    class="flex items-center space-x-1"
+                  >
+                    <i class="fas fa-users drop-shadow-lg"></i>
+                    <span>1,250 students</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex space-x-3">
+                <button
+                  class="flex-1 bg-gradient-to-r from-course-orange to-course-accent hover:from-course-accent hover:to-course-orange text-white rounded-full font-semibold py-2 px-4 transition-all duration-500 hover:shadow-xl hover:shadow-course-orange/25"
+                >
+                  Enroll Now
+                </button>
+                <button
+                  class="px-4 rounded-full border-2 border-course-orange text-course-orange hover:bg-course-orange hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-course-orange/25"
+                >
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-course-orange/10 transition-all duration-300 hover:-translate-y-3 group border border-transparent hover:border-course-orange/20"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Complete Web Development Bootcamp"
+                class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div
+                class="absolute top-4 right-4 bg-gradient-to-r from-course-orange to-course-accent text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg"
+              >
+                $299
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center space-x-3 mb-4">
+                <div
+                  class="w-10 h-10 bg-gradient-to-br from-course-orange/20 to-course-accent/20 rounded-full flex items-center justify-center group-hover:from-course-orange group-hover:to-course-accent transition-all duration-300"
+                >
+                  <span
+                    class="text-course-primary group-hover:text-white font-semibold text-sm transition-colors duration-300"
+                    >SJ</span
+                  >
+                </div>
+                <div>
+                  <div class="font-semibold text-gray-800 text-sm">
+                    Sarah Johnson
+                  </div>
+                  <div class="text-gray-600 text-xs">
+                    Senior Full-Stack Developer
+                  </div>
+                </div>
+              </div>
+              <h3
+                class="text-lg font-bold text-gray-800 mb-4 group-hover:text-course-primary transition-colors duration-300"
+              >
+                Complete Web Development Bootcamp
+              </h3>
+              <div class="space-y-2 mb-6">
+                <div
+                  class="flex items-center justify-between text-sm text-gray-600"
+                >
+                  <div
+                    style="
+                      box-shadow: 2px 2px 8px #fef3e9;
+                      padding: 6px;
+                      border-radius: 6px;
+                    "
+                    class="flex items-center space-x-1"
+                  >
+                    <i class="fas fa-clock drop-shadow-lg"></i>
+                    <span>45 classes</span>
+                  </div>
+                  <div
+                    style="
+                      box-shadow: 2px 2px 8px #fef3e9;
+                      padding: 6px;
+                      border-radius: 6px;
+                    "
+                    class="flex items-center space-x-1"
+                  >
+                    <i class="fas fa-star text-yellow-400 drop-shadow-lg"></i>
+                    <span>4.9</span>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-between text-sm text-gray-600"
+                >
+                  <div
+                    style="
+                      box-shadow: 2px 2px 8px #fef3e9;
+                      padding: 6px;
+                      border-radius: 6px;
+                    "
+                    class="flex items-center space-x-1"
+                  >
+                    <i class="fas fa-calendar drop-shadow-lg"></i>
+                    <span>March 15, 2024</span>
+                  </div>
+                  <div
+                    style="
+                      box-shadow: 2px 2px 8px #fef3e9;
+                      padding: 6px;
+                      border-radius: 6px;
+                    "
+                    class="flex items-center space-x-1"
+                  >
+                    <i class="fas fa-users drop-shadow-lg"></i>
+                    <span>1,250 students</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex space-x-3">
+                <button
+                  class="flex-1 bg-gradient-to-r from-course-orange to-course-accent hover:from-course-accent hover:to-course-orange text-white rounded-full font-semibold py-2 px-4 transition-all duration-500 hover:shadow-xl hover:shadow-course-orange/25"
+                >
+                  Enroll Now
+                </button>
+                <button
+                  class="px-4 rounded-full border-2 border-course-orange text-course-orange hover:bg-course-orange hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-course-orange/25"
+                >
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-course-orange/10 transition-all duration-300 hover:-translate-y-3 group border border-transparent hover:border-course-orange/20"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Advanced UI/UX Design Masterclass"
+                class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div
+                class="absolute top-4 right-4 bg-gradient-to-r from-course-orange to-course-accent text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg"
+              >
+                $199
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center space-x-3 mb-4">
+                <div
+                  class="w-10 h-10 bg-gradient-to-br from-course-orange/20 to-course-accent/20 rounded-full flex items-center justify-center group-hover:from-course-orange group-hover:to-course-accent transition-all duration-300"
+                >
+                  <span
+                    class="text-course-primary group-hover:text-white font-semibold text-sm transition-colors duration-300"
+                    >MC</span
+                  >
+                </div>
+                <div>
+                  <div class="font-semibold text-gray-800 text-sm">
+                    Michael Chen
+                  </div>
+                  <div class="text-gray-600 text-xs">Lead UX Designer</div>
+                </div>
+              </div>
+              <h3
+                class="text-lg font-bold text-gray-800 mb-4 group-hover:text-course-primary transition-colors duration-300"
+              >
+                Advanced UI/UX Design Masterclass
+              </h3>
+              <div class="space-y-2 mb-6">
+                <div
+                  class="flex items-center justify-between text-sm text-gray-600"
+                >
+                  <div
+                    style="
+                      box-shadow: 2px 2px 8px #fef3e9;
+                      padding: 6px;
+                      border-radius: 6px;
+                    "
+                    class="flex items-center space-x-1"
+                  >
+                    <i class="fas fa-clock drop-shadow-lg"></i>
+                    <span>45 classes</span>
+                  </div>
+                  <div
+                    style="
+                      box-shadow: 2px 2px 8px #fef3e9;
+                      padding: 6px;
+                      border-radius: 6px;
+                    "
+                    class="flex items-center space-x-1"
+                  >
+                    <i class="fas fa-star text-yellow-400 drop-shadow-lg"></i>
+                    <span>4.9</span>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-between text-sm text-gray-600"
+                >
+                  <div
+                    style="
+                      box-shadow: 2px 2px 8px #fef3e9;
+                      padding: 6px;
+                      border-radius: 6px;
+                    "
+                    class="flex items-center space-x-1"
+                  >
+                    <i class="fas fa-calendar drop-shadow-lg"></i>
+                    <span>March 15, 2024</span>
+                  </div>
+                  <div
+                    style="
+                      box-shadow: 2px 2px 8px #fef3e9;
+                      padding: 6px;
+                      border-radius: 6px;
+                    "
+                    class="flex items-center space-x-1"
+                  >
+                    <i class="fas fa-users drop-shadow-lg"></i>
+                    <span>1,250 students</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex space-x-3">
+                <button
+                  class="flex-1 bg-gradient-to-r from-course-orange to-course-accent hover:from-course-accent hover:to-course-orange text-white rounded-full font-semibold py-2 px-4 transition-all duration-500 hover:shadow-xl hover:shadow-course-orange/25"
+                >
+                  Enroll Now
+                </button>
+                <button
+                  class="px-4 rounded-full border-2 border-course-orange text-course-orange hover:bg-course-orange hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-course-orange/25"
+                >
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12" data-aos="fade-up">
+          <button
+            class="bg-gradient-to-r from-course-primary to-course-accent hover:from-course-accent hover:to-course-primary text-white px-8 py-3 rounded-full font-semibold transition-all duration-500 hover:shadow-xl hover:shadow-course-orange/25 hover:scale-110"
+          >
+            View All Courses
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="about"
+      class="py-20 bg-gradient-to-b from-white via-course-orange/5 to-white relative overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 z-0 opacity-25"
+        style="
+          background-image: url('img/category.png');
+          background-repeat: repeat;
+        "
+      ></div>
+
+      <div class="absolute inset-0">
+        <div
+          class="absolute top-32 left-20 w-24 h-24 bg-course-orange/20 rounded-full blur-2xl opacity-50"
+        ></div>
+        <div
+          class="absolute bottom-32 right-32 w-32 h-32 bg-course-primary/20 rounded-full blur-2xl opacity-50"
+        ></div>
+        <div
+          class="absolute top-1/2 left-1/4 w-20 h-20 bg-course-orange/15 rounded-full blur-xl animate-float"
+        ></div>
+        <div
+          class="absolute top-1/3 right-1/4 w-24 h-24 bg-course-primary/15 rounded-full blur-xl animate-float"
+          style="animation-delay: 1.5s"
+        ></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="space-y-12" data-aos="fade-right">
+            <div class="space-y-6">
+              <h2 class="text-4xl font-bold bg-gradient-text">
+                About Our Learning Platform
+              </h2>
+              <p class="text-lg text-gray-600 leading-relaxed">
+                We are dedicated to transforming lives through accessible,
+                high-quality education. Our mission is to make learning
+                engaging, effective, and available to everyone.We are dedicated
+                to transforming lives through accessible, high-quality
+                education. Our mission is to make learning engaging, effective,
+                and available to everyone.
+              </p>
+            </div>
+
+            <div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div
+                  class="bg-white/60 backdrop-blur-sm p-6 rounded-xl border border-gray-200/50 hover:shadow-xl hover:border-white transition-all duration-300"
+                >
+                  <div class="flex items-center space-x-4">
+                    <div
+                      class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-course-orange/10 to-course-accent/10 rounded-lg flex items-center justify-center"
+                    >
+                      <i
+                        class="fas fa-chalkboard-teacher text-2xl text-course-primary"
+                      ></i>
+                    </div>
+                    <h4 class="font-semibold text-gray-800 text-lg">
+                      Expert-Led Courses
+                    </h4>
+                  </div>
+                </div>
+                <div
+                  class="bg-white/60 backdrop-blur-sm p-6 rounded-xl border border-gray-200/50 hover:shadow-xl hover:border-white transition-all duration-300"
+                >
+                  <div class="flex items-center space-x-4">
+                    <div
+                      class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-course-orange/10 to-course-accent/10 rounded-lg flex items-center justify-center"
+                    >
+                      <i
+                        class="fas fa-laptop-code text-2xl text-course-primary"
+                      ></i>
+                    </div>
+                    <h4 class="font-semibold text-gray-800 text-lg">
+                      Interactive Learning
+                    </h4>
+                  </div>
+                </div>
+                <div
+                  class="bg-white/60 backdrop-blur-sm p-6 rounded-xl border border-gray-200/50 hover:shadow-xl hover:border-white transition-all duration-300"
+                >
+                  <div class="flex items-center space-x-4">
+                    <div
+                      class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-course-orange/10 to-course-accent/10 rounded-lg flex items-center justify-center"
+                    >
+                      <i
+                        class="fas fa-chart-line text-2xl text-course-primary"
+                      ></i>
+                    </div>
+                    <h4 class="font-semibold text-gray-800 text-lg">
+                      Progress Tracking
+                    </h4>
+                  </div>
+                </div>
+                <div
+                  class="bg-white/60 backdrop-blur-sm p-6 rounded-xl border border-gray-200/50 hover:shadow-xl hover:border-white transition-all duration-300"
+                >
+                  <div class="flex items-center space-x-4">
+                    <div
+                      class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-course-orange/10 to-course-accent/10 rounded-lg flex items-center justify-center"
+                    >
+                      <i
+                        class="fas fa-headset text-2xl text-course-primary"
+                      ></i>
+                    </div>
+                    <h4 class="font-semibold text-gray-800 text-lg">
+                      Dedicated Support
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4">
+              <button
+                class="bg-gradient-to-r from-course-primary to-course-accent hover:from-course-accent hover:to-course-primary text-white px-8 py-3 rounded-full text-lg font-semibold flex items-center space-x-3 transition-all duration-500 hover:shadow-xl hover:shadow-course-orange/25 hover:scale-105 transform group"
+              >
+                <span>Learn More</span>
+                <i
+                  class="fas fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"
+                ></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="relative h-[500px]" data-aos="fade-left">
+            <div
+              class="absolute w-full h-full bg-course-orange/10 rounded-3xl transform -rotate-6 transition-transform duration-500 group-hover:rotate-0"
+            ></div>
+            <img
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Students collaborating"
+              class="absolute top-0 left-0 w-[85%] h-auto rounded-2xl shadow-lg transform rotate-3 transition-transform duration-500 hover:rotate-0 hover:scale-105"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Teacher explaining"
+              class="absolute bottom-0 right-0 w-[70%] h-auto rounded-2xl shadow-2xl border-4 border-white transform -rotate-2 transition-transform duration-500 hover:rotate-0 hover:scale-105"
+            />
+          </div>
+        </div>
+
+        <div
+          class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-24 pt-12 border-t border-gray-200/50"
+        >
+          <div
+            class="text-center space-y-4 group"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-course-primary/10 to-course-accent/10 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-gradient-to-br group-hover:from-course-orange group-hover:to-course-accent group-hover:text-white transition-all duration-300 group-hover:shadow-lg group-hover:shadow-course-orange/25 group-hover:scale-110"
+            >
+              <i
+                class="fas fa-users text-2xl text-course-primary group-hover:text-white transition-colors duration-300"
+              ></i>
+            </div>
+            <div>
+              <div class="text-3xl font-bold bg-gradient-text mb-1">
+                50,000+
+              </div>
+              <div class="text-lg font-semibold text-gray-800 mb-1">
+                Happy Students
+              </div>
+              <div class="text-sm text-gray-600">Learners worldwide</div>
+            </div>
+          </div>
+
+          <div
+            class="text-center space-y-4 group"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-course-primary/10 to-course-accent/10 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-gradient-to-br group-hover:from-course-orange group-hover:to-course-accent group-hover:text-white transition-all duration-300 group-hover:shadow-lg group-hover:shadow-course-orange/25 group-hover:scale-110"
+            >
+              <i
+                class="fas fa-book-open text-2xl text-course-primary group-hover:text-white transition-colors duration-300"
+              ></i>
+            </div>
+            <div>
+              <div class="text-3xl font-bold bg-gradient-text mb-1">500+</div>
+              <div class="text-lg font-semibold text-gray-800 mb-1">
+                Quality Courses
+              </div>
+              <div class="text-sm text-gray-600">Across multiple fields</div>
+            </div>
+          </div>
+
+          <div
+            class="text-center space-y-4 group"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-course-primary/10 to-course-accent/10 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-gradient-to-br group-hover:from-course-orange group-hover:to-course-accent group-hover:text-white transition-all duration-300 group-hover:shadow-lg group-hover:shadow-course-orange/25 group-hover:scale-110"
+            >
+              <i
+                class="fas fa-award text-2xl text-course-primary group-hover:text-white transition-colors duration-300"
+              ></i>
+            </div>
+            <div>
+              <div class="text-3xl font-bold bg-gradient-text mb-1">98%</div>
+              <div class="text-lg font-semibold text-gray-800 mb-1">
+                Success Rate
+              </div>
+              <div class="text-sm text-gray-600">Course completion</div>
+            </div>
+          </div>
+
+          <div
+            class="text-center space-y-4 group"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-course-primary/10 to-course-accent/10 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-gradient-to-br group-hover:from-course-orange group-hover:to-course-accent group-hover:text-white transition-all duration-300 group-hover:shadow-lg group-hover:shadow-course-orange/25 group-hover:scale-110"
+            >
+              <i
+                class="fas fa-target text-2xl text-course-primary group-hover:text-white transition-colors duration-300"
+              ></i>
+            </div>
+            <div>
+              <div class="text-3xl font-bold bg-gradient-text mb-1">15+</div>
+              <div class="text-lg font-semibold text-gray-800 mb-1">
+                Years Experience
+              </div>
+              <div class="text-sm text-gray-600">In education</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="py-20 bg-gray-50 relative overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div
+          class="absolute w-96 h-96 bg-course-primary/10 rounded-full -left-32 top-1/4 blur-3xl"
+        ></div>
+        <div
+          class="absolute w-96 h-96 bg-course-orange/10 rounded-full -right-32 bottom-1/4 blur-3xl"
+        ></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center mb-16" data-aos="fade-down">
+          <span
+            class="inline-block text-sm font-semibold text-course-blue bg-course-orange/20 px-4 py-1.5 rounded-full mb-4"
+          >
+            — MEET OUR TEAM —
+          </span>
+          <h2
+            class="text-4xl sm:text-5xl font-black text-gray-800 mb-6 leading-tight"
+          >
+            We Have an Expert<span class="block bg-gradient-text">Team</span>
+          </h2>
+        </div>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center"
+        >
+          <div
+            class="bg-white rounded-3xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:shadow-course-orange/20 hover:-translate-y-2 relative group w-full max-w-sm"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <div
+                class="absolute inset-0 [clip-path:ellipse(120%_80%_at_50%_0)] bg-gradient-to-br from-course-orange to-course-accent"
+              ></div>
+            </div>
+
+            <div class="relative z-20 flex flex-col items-center p-6 pt-8">
+              <img
+                src="team/1753206191.jpg"
+                alt="Dr. Sarah Johnson"
+                class="w-52 h-52 rounded-2xl object-cover mb-5 shadow-md grayscale group-hover:grayscale-0 transition-all duration-300"
+              />
+              <h3
+                class="text-xl font-bold text-course-primary mb-1 group-hover:text-gray-700 transition-colors duration-300"
+              >
+                Dr. Sarah Johnson
+              </h3>
+              <p
+                class="text-sm text-gray-500 group-hover:text-gray-500 transition-colors duration-300 mb-4"
+              >
+                Founder & CEO
+              </p>
+            </div>
+
+            <div
+              class="absolute top-4 right-4 space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30"
+            >
+              <a
+                href="#"
+                class="w-9 h-9 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/40 transition-colors"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="w-9 h-9 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/40 transition-colors"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-3xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:shadow-course-orange/20 hover:-translate-y-2 relative group w-full max-w-sm"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <div
+                class="absolute inset-0 [clip-path:ellipse(120%_80%_at_50%_0)] bg-gradient-to-br from-course-orange to-course-accent"
+              ></div>
+            </div>
+
+            <div class="relative z-20 flex flex-col items-center p-6 pt-8">
+              <img
+                src="team/1753206215.jpg"
+                alt="Dr. Sarah Johnson"
+                class="w-52 h-52 rounded-2xl object-cover mb-5 shadow-md grayscale group-hover:grayscale-0 transition-all duration-300"
+              />
+              <h3
+                class="text-xl font-bold text-course-primary mb-1 group-hover:text-gray-700 transition-colors duration-300"
+              >
+                Dr. Sarah Johnson
+              </h3>
+              <p
+                class="text-sm text-gray-500 group-hover:text-gray-500 transition-colors duration-300 mb-4"
+              >
+                Founder & CEO
+              </p>
+            </div>
+
+            <div
+              class="absolute top-4 right-4 space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30"
+            >
+              <a
+                href="#"
+                class="w-9 h-9 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/40 transition-colors"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="w-9 h-9 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/40 transition-colors"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-3xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:shadow-course-orange/20 hover:-translate-y-2 relative group w-full max-w-sm"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <div
+                class="absolute inset-0 [clip-path:ellipse(120%_80%_at_50%_0)] bg-gradient-to-br from-course-orange to-course-accent"
+              ></div>
+            </div>
+
+            <div class="relative z-20 flex flex-col items-center p-6 pt-8">
+              <img
+                src="team/1753247199.jpg"
+                alt="Michael Chen"
+                class="w-52 h-52 rounded-2xl object-cover mb-5 shadow-md grayscale group-hover:grayscale-0 transition-all duration-300"
+              />
+              <h3
+                class="text-xl font-bold text-course-primary mb-1 group-hover:text-gray-700 transition-colors duration-300"
+              >
+                Michael Chen
+              </h3>
+              <p
+                class="text-sm text-gray-500 group-hover:text-gray-500 transition-colors duration-300 mb-4"
+              >
+                Head of Product
+              </p>
+            </div>
+
+            <div
+              class="absolute top-4 right-4 space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30"
+            >
+              <a
+                href="#"
+                class="w-9 h-9 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/40 transition-colors"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="#"
+                class="w-9 h-9 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/40 transition-colors"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-3xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:shadow-course-orange/20 hover:-translate-y-2 relative group w-full max-w-sm"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div
+              class="absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <div
+                class="absolute inset-0 [clip-path:ellipse(120%_80%_at_50%_0)] bg-gradient-to-br from-course-orange to-course-accent"
+              ></div>
+            </div>
+
+            <div class="relative z-20 flex flex-col items-center p-6 pt-8">
+              <img
+                src="team/1753353920.jpg"
+                alt="Dr. Emily Rodriguez"
+                class="w-52 h-52 rounded-2xl object-cover mb-5 shadow-md grayscale group-hover:grayscale-0 transition-all duration-300"
+              />
+              <h3
+                class="text-xl font-bold text-course-primary mb-1 group-hover:text-gray-700 transition-colors duration-300"
+              >
+                Dr. Emily Rodriguez
+              </h3>
+              <p
+                class="text-sm text-gray-500 group-hover:text-gray-500 transition-colors duration-300 mb-4"
+              >
+                Chief Learning Officer
+              </p>
+            </div>
+
+            <div
+              class="absolute top-4 right-4 space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30"
+            >
+              <a
+                href="#"
+                class="w-9 h-9 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/40 transition-colors"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="w-9 h-9 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/40 transition-colors"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-16" data-aos="fade-up" data-aos-delay="400">
+          <a
+            href="#team"
+            class="inline-block bg-gradient-to-r from-course-primary to-course-accent hover:from-course-accent hover:to-course-primary text-white px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group relative overflow-hidden"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+            ></div>
+            <span class="relative z-10 flex items-center justify-center">
+              Meet All Team Members
+              <i
+                class="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform duration-300"
+              ></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="py-20 bg-gradient-to-br from-white via-course-orange/5 to-course-red/5 relative overflow-hidden"
+    >
+      <div class="absolute inset-0 opacity-30">
+        <div
+          class="absolute top-20 left-1/4 w-48 h-48 bg-course-orange/10 rounded-full blur-3xl animate-pulse"
+        ></div>
+        <div
+          class="absolute bottom-20 right-1/4 w-64 h-64 bg-course-primary/10 rounded-full blur-3xl animate-pulse-slow"
+        ></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div
+          class="text-center mb-16"
+          data-aos="fade-down"
+          data-aos-duration="800"
+        >
+          <h2 class="text-4xl font-bold bg-gradient-text mb-4">
+            What Our Students Say
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Hear from thousands of successful students who have transformed
+            their careers through our courses.
+          </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+          <div
+            id="testimonial-container"
+            class="relative bg-white/80 backdrop-blur-xl rounded-3xl p-8 md:p-12 shadow-2xl shadow-course-orange/10 border border-white/20"
+            data-aos="zoom-in"
+          >
+            <i
+              class="fas fa-quote-left text-4xl text-course-orange/40 mb-6"
+            ></i>
+
+            <div class="testimonial active text-center space-y-6">
+              <p
+                class="text-lg md:text-xl text-gray-800 leading-relaxed italic"
+              >
+                "This platform completely transformed my career. The web
+                development course was comprehensive, practical, and the
+                instructors were incredibly supportive. I landed my dream job
+                just 3 months after completing the program!"
+              </p>
+
+              <div class="flex justify-center space-x-1">
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+              </div>
+
+              <div class="flex items-center justify-center space-x-4 pt-4">
+                <img
+                  src="https://images.unsplash.com/photo-1494790108755-2616b612b127?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                  alt="Alexandra Kim"
+                  class="w-16 h-16 rounded-full object-cover"
+                />
+                <div class="text-left">
+                  <div class="font-semibold text-gray-800">Alexandra Kim</div>
+                  <div class="text-course-primary font-medium">
+                    Software Developer
+                  </div>
+                  <div class="text-gray-600 text-sm">Tech Solutions Inc.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial text-center space-y-6">
+              <p
+                class="text-lg md:text-xl text-gray-800 leading-relaxed italic"
+              >
+                "The UI/UX design course exceeded all my expectations. The
+                hands-on projects and real-world case studies gave me the
+                confidence and skills I needed to transition into design. Highly
+                recommended!"
+              </p>
+
+              <div class="flex justify-center space-x-1">
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+              </div>
+
+              <div class="flex items-center justify-center space-x-4 pt-4">
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                  alt="Marcus Johnson"
+                  class="w-16 h-16 rounded-full object-cover"
+                />
+                <div class="text-left">
+                  <div class="font-semibold text-gray-800">Marcus Johnson</div>
+                  <div class="text-course-primary font-medium">UX Designer</div>
+                  <div class="text-gray-600 text-sm">Creative Agency</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial text-center space-y-6">
+              <p
+                class="text-lg md:text-xl text-gray-800 leading-relaxed italic"
+              >
+                "As someone with no prior programming experience, I was nervous
+                about taking the data science course. But the step-by-step
+                approach and excellent support made it achievable. Now I'm
+                working as a data scientist!"
+              </p>
+
+              <div class="flex justify-center space-x-1">
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+                <i class="fas fa-star text-yellow-400"></i>
+              </div>
+
+              <div class="flex items-center justify-center space-x-4 pt-4">
+                <img
+                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                  alt="Priya Patel"
+                  class="w-16 h-16 rounded-full object-cover"
+                />
+                <div class="text-left">
+                  <div class="font-semibold text-gray-800">Priya Patel</div>
+                  <div class="text-course-primary font-medium">
+                    Data Scientist
+                  </div>
+                  <div class="text-gray-600 text-sm">Analytics Corp</div>
+                </div>
+              </div>
+            </div>
+
+            <button
+              id="prev-testimonial"
+              class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm hover:bg-gradient-to-r hover:from-course-orange hover:to-course-accent hover:text-white text-course-primary rounded-full flex items-center justify-center transition-all duration-300 hover:shadow-xl hover:shadow-course-orange/25 hover:scale-110"
+            >
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button
+              id="next-testimonial"
+              class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm hover:bg-gradient-to-r hover:from-course-orange hover:to-course-accent hover:text-white text-course-primary rounded-full flex items-center justify-center transition-all duration-300 hover:shadow-xl hover:shadow-course-orange/25 hover:scale-110"
+            >
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <div class="flex justify-center space-x-3 mt-8">
+            <button
+              class="testimonial-dot w-3 h-3 rounded-full transition-all duration-300 bg-gradient-to-r from-course-orange to-course-accent scale-125 shadow-lg shadow-course-orange/50"
+              data-testimonial="0"
+            ></button>
+            <button
+              class="testimonial-dot w-3 h-3 rounded-full transition-all duration-300 bg-course-primary/30 hover:bg-course-orange/60 hover:scale-110"
+              data-testimonial="1"
+            ></button>
+            <button
+              class="testimonial-dot w-3 h-3 rounded-full transition-all duration-300 bg-course-primary/30 hover:bg-course-orange/60 hover:scale-110"
+              data-testimonial="2"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="py-20 relative overflow-hidden bg-gray-50">
+      <div class="absolute inset-0 z-0 overflow-hidden">
+        <div
+          class="absolute w-96 h-96 bg-course-primary/10 rounded-full -left-32 top-1/4 blur-3xl"
+        ></div>
+        <div
+          class="absolute w-96 h-96 bg-course-orange/10 rounded-full -right-32 bottom-1/4 blur-3xl"
+        ></div>
+      </div>
+      <div
+        class="absolute top-0 right-0 w-64 h-64 bg-repeat"
+        style="
+          background-image: url('data:image/svg+xml,%3Csvg width=\'10\' height=\'10\' viewBox=\'0 0 10 10\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Ccircle cx=\'5\' cy=\'5\' r=\'1\' fill=\'%23c7c7c7\'/%3E%3C/svg%3E');
+          opacity: 0.1;
+        "
+      ></div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center mb-16" data-aos="fade-down">
+          <span
+            class="inline-block text-sm font-semibold text-course-blue bg-course-orange/20 px-4 py-1.5 rounded-full mb-4"
+          >
+            — LATEST FROM OUR BLOG —
+          </span>
+          <h2
+            class="text-4xl sm:text-5xl font-black text-gray-800 mb-6 leading-tight"
+          >
+            Insights & Learning <span class="block bg-gradient-text">Tips</span>
+          </h2>
+        </div>
+
+        <div class="max-w-7xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:shadow-course-orange/20 hover:-translate-y-2"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="relative overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                  alt="Blog Post Title"
+                  class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-6"
+                >
+                  <span
+                    class="bg-course-primary text-white text-xs font-bold px-3 py-1 rounded-full"
+                    >Web Development</span
+                  >
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-sm text-gray-500 mb-2">
+                  <i class="far fa-calendar-alt mr-1"></i> March 15, 2024 |
+                  <i class="far fa-user mr-1 ml-2"></i> Admin
+                </p>
+                <h3 class="text-xl font-bold text-gray-900 leading-tight mb-3">
+                  <a
+                    href="#"
+                    class="hover:text-course-primary transition-colors duration-300"
+                    >A Deep Dive into the Future of Web Development</a
+                  >
+                </h3>
+                <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                  Discover the latest trends and technologies shaping the future
+                  of web development, from AI integration to the rise of
+                  serverless architecture.
+                </p>
+                <a
+                  href="#"
+                  class="inline-flex items-center text-course-primary font-semibold hover:text-course-accent transition-colors duration-300"
+                >
+                  Read More
+                  <i
+                    class="fas fa-arrow-right ml-2 text-sm group-hover:translate-x-1 transition-transform"
+                  ></i>
+                </a>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:shadow-course-orange/20 hover:-translate-y-2"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="relative overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                  alt="Blog Post Title"
+                  class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-6"
+                >
+                  <span
+                    class="bg-course-primary text-white text-xs font-bold px-3 py-1 rounded-full"
+                    >Design</span
+                  >
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-sm text-gray-500 mb-2">
+                  <i class="far fa-calendar-alt mr-1"></i> March 20, 2024 |
+                  <i class="far fa-user mr-1 ml-2"></i> Admin
+                </p>
+                <h3 class="text-xl font-bold text-gray-900 leading-tight mb-3">
+                  <a
+                    href="#"
+                    class="hover:text-course-primary transition-colors duration-300"
+                    >10 UI/UX Principles for a Better User Experience</a
+                  >
+                </h3>
+                <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                  Learn the core principles of UI/UX design that will help you
+                  create intuitive, engaging, and user-friendly digital
+                  products.
+                </p>
+                <a
+                  href="#"
+                  class="inline-flex items-center text-course-primary font-semibold hover:text-course-accent transition-colors duration-300"
+                >
+                  Read More
+                  <i
+                    class="fas fa-arrow-right ml-2 text-sm group-hover:translate-x-1 transition-transform"
+                  ></i>
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:shadow-course-orange/20 hover:-translate-y-2"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="relative overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                  alt="Blog Post Title"
+                  class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-6"
+                >
+                  <span
+                    class="bg-course-primary text-white text-xs font-bold px-3 py-1 rounded-full"
+                    >Data Science</span
+                  >
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-sm text-gray-500 mb-2">
+                  <i class="far fa-calendar-alt mr-1"></i> March 25, 2024 |
+                  <i class="far fa-user mr-1 ml-2"></i> Admin
+                </p>
+                <h3 class="text-xl font-bold text-gray-900 leading-tight mb-3">
+                  <a
+                    href="#"
+                    class="hover:text-course-primary transition-colors duration-300"
+                    >Getting Started with Machine Learning in 2025</a
+                  >
+                </h3>
+                <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                  A beginner-friendly guide to understanding the basics of
+                  machine learning and how you can start your journey in this
+                  exciting field.
+                </p>
+                <a
+                  href="#"
+                  class="inline-flex items-center text-course-primary font-semibold hover:text-course-accent transition-colors duration-300"
+                >
+                  Read More
+                  <i
+                    class="fas fa-arrow-right ml-2 text-sm group-hover:translate-x-1 transition-transform"
+                  ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="text-center mt-16"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <a
+              href="#blog"
+              class="inline-block bg-gradient-to-r from-course-primary to-course-accent hover:from-course-accent hover:to-course-primary text-white px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group relative overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              ></div>
+              <span class="relative z-10 flex items-center justify-center">
+                View All Posts
+                <i
+                  class="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform duration-300"
+                ></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="py-20 bg-gradient-to-br from-course-primary via-course-orange-light to-course-accent text-white relative overflow-hidden"
+    >
+      <div class="absolute inset-0 opacity-10">
+        <div
+          class="absolute top-10 left-10 w-20 h-20 border border-white/30 rounded-full"
+        ></div>
+        <div
+          class="absolute top-32 right-20 w-16 h-16 border border-white/30 rounded-full"
+        ></div>
+        <div
+          class="absolute bottom-20 left-32 w-24 h-24 border border-white/30 rounded-full"
+        ></div>
+        <div
+          class="absolute bottom-32 right-10 w-12 h-12 border border-white/30 rounded-full"
+        ></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+          <div class="mb-12">
+            <div
+              class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-envelope text-2xl text-white"></i>
+            </div>
+            <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+              Stay Updated with Our Newsletter
+            </h2>
+            <p class="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
+              Join thousands of learners who receive our latest course updates,
+              exclusive offers, and valuable learning resources directly in
+              their inbox.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-4 mb-12 max-w-2xl mx-auto">
+            <div class="flex items-center space-x-3 text-left">
+              <i class="fas fa-check-circle text-white/80 flex-shrink-0"></i>
+              <span class="text-white/90"
+                >Get notified about new courses and updates</span
+              >
+            </div>
+            <div class="flex items-center space-x-3 text-left">
+              <i class="fas fa-check-circle text-white/80 flex-shrink-0"></i>
+              <span class="text-white/90"
+                >Receive exclusive discounts and early access</span
+              >
+            </div>
+            <div class="flex items-center space-x-3 text-left">
+              <i class="fas fa-check-circle text-white/80 flex-shrink-0"></i>
+              <span class="text-white/90"
+                >Weekly tips and learning resources</span
+              >
+            </div>
+            <div class="flex items-center space-x-3 text-left">
+              <i class="fas fa-check-circle text-white/80 flex-shrink-0"></i>
+              <span class="text-white/90"
+                >Industry insights and career guidance</span
+              >
+            </div>
+          </div>
+
+          <form class="max-w-md mx-auto">
+            <div class="flex flex-col sm:flex-row gap-4">
+              <div class="flex-1">
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  class="w-full px-4 py-3 rounded-full bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-300"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                class="bg-white text-course-primary hover:bg-course-orange-light hover:text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-white/25 flex items-center justify-center space-x-2"
+              >
+                <span>Subscribe</span>
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+            <p class="text-white/70 text-sm mt-4">
+              No spam, unsubscribe at any time. We respect your privacy.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="faq"
+      class="py-20 bg-gradient-to-b from-white via-course-orange/5 to-white relative overflow-hidden"
+    >
+      <div class="absolute inset-0 z-0 opacity-20">
+        <div
+          class="absolute top-1/4 left-10 w-72 h-72 bg-course-orange/10 rounded-full blur-3xl animate-pulse"
+        ></div>
+        <div
+          class="absolute bottom-1/4 right-10 w-72 h-72 bg-course-primary/10 rounded-full blur-3xl animate-pulse-slow"
+        ></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center mb-16" data-aos="fade-down">
+          <h2
+            class="text-4xl sm:text-5xl font-black text-gray-800 mb-6 leading-tight"
+          >
+            Frequently Asked<span class="block bg-gradient-text"
+              >Questions</span
+            >
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Find answers to common questions about our courses, platform, and
+            policies. If you can't find your answer here, feel free to contact
+            us.
+          </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto space-y-4" data-aos="fade-up">
+          <div
+            class="faq-item bg-white/70 backdrop-blur-sm border border-gray-200/50 rounded-2xl shadow-lg transition-all duration-300"
+          >
+            <button
+              class="faq-question w-full flex justify-between items-center text-left p-6"
+            >
+              <span class="text-lg font-semibold text-gray-800"
+                >What is the refund policy?</span
+              >
+              <i
+                class="fas fa-chevron-down text-course-primary transition-transform duration-300"
+              ></i>
+            </button>
+            <div
+              class="faq-answer overflow-hidden max-h-0 transition-all duration-500 ease-in-out"
+            >
+              <p class="p-6 pt-0 text-gray-600">
+                We offer a 30-day money-back guarantee on all our courses. If
+                you are not satisfied with your purchase for any reason, you can
+                request a full refund within 30 days of enrollment, no questions
+                asked.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="faq-item bg-white/70 backdrop-blur-sm border border-gray-200/50 rounded-2xl shadow-lg transition-all duration-300"
+          >
+            <button
+              class="faq-question w-full flex justify-between items-center text-left p-6"
+            >
+              <span class="text-lg font-semibold text-gray-800"
+                >Are the courses self-paced?</span
+              >
+              <i
+                class="fas fa-chevron-down text-course-primary transition-transform duration-300"
+              ></i>
+            </button>
+            <div
+              class="faq-answer overflow-hidden max-h-0 transition-all duration-500 ease-in-out"
+            >
+              <p class="p-6 pt-0 text-gray-600">
+                Yes, all of our courses are fully self-paced. You can learn on
+                your own schedule and access the course materials 24/7 from any
+                device. There are no deadlines to start or complete the course.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="faq-item bg-white/70 backdrop-blur-sm border border-gray-200/50 rounded-2xl shadow-lg transition-all duration-300"
+          >
+            <button
+              class="faq-question w-full flex justify-between items-center text-left p-6"
+            >
+              <span class="text-lg font-semibold text-gray-800"
+                >Do I get a certificate upon completion?</span
+              >
+              <i
+                class="fas fa-chevron-down text-course-primary transition-transform duration-300"
+              ></i>
+            </button>
+            <div
+              class="faq-answer overflow-hidden max-h-0 transition-all duration-500 ease-in-out"
+            >
+              <p class="p-6 pt-0 text-gray-600">
+                Absolutely! Upon successful completion of any course, you will
+                receive a verifiable digital certificate. You can share it on
+                your LinkedIn profile, add it to your resume, or share it with
+                potential employers.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="faq-item bg-white/70 backdrop-blur-sm border border-gray-200/50 rounded-2xl shadow-lg transition-all duration-300"
+          >
+            <button
+              class="faq-question w-full flex justify-between items-center text-left p-6"
+            >
+              <span class="text-lg font-semibold text-gray-800"
+                >Is there any support available if I get stuck?</span
+              >
+              <i
+                class="fas fa-chevron-down text-course-primary transition-transform duration-300"
+              ></i>
+            </button>
+            <div
+              class="faq-answer overflow-hidden max-h-0 transition-all duration-500 ease-in-out"
+            >
+              <p class="p-6 pt-0 text-gray-600">
+                Yes! We have a dedicated support team and a community forum
+                where you can ask questions. Instructors and teaching assistants
+                are actively involved in the forums to help you with any
+                technical or conceptual difficulties.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white relative">
+      <div class="container mx-auto px-4 pt-16 pb-8" data-aos="fade-up">
+        <div class="grid lg:grid-cols-5 md:grid-cols-3 gap-8">
+          <div class="lg:col-span-2">
+            <div class="flex items-center space-x-3 mb-6">
+              <div
+                class="w-12 h-12 bg-white rounded-lg flex items-center justify-center"
+              >
+                <span class="text-gray-800 font-bold text-xl">C</span>
+              </div>
+              <span class="text-2xl font-bold">CoursePlatform</span>
+            </div>
+            <p class="text-white/80 leading-relaxed mb-6 max-w-md">
+              Empowering learners worldwide with high-quality, accessible
+              education. Join thousands of students who have transformed their
+              careers through our comprehensive courses and expert instruction.
+            </p>
+
+            <div class="space-y-3">
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-phone text-white/60"></i>
+                <span class="text-white/80">+1 (555) 123-4567</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-envelope text-white/60"></i>
+                <span class="text-white/80">info@courseplatform.com</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-map-marker-alt text-white/60"></i>
+                <span class="text-white/80"
+                  >123 Education St, Learning City, LC 12345</span
+                >
+              </div>
+            </div>
+
+            <div class="flex space-x-4 mt-6">
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
+                aria-label="Facebook"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
+                aria-label="Twitter"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
+                aria-label="Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
+                aria-label="LinkedIn"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
+                aria-label="YouTube"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Popular Courses</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Web Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Data Science</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >UI/UX Design</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Mobile Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Digital Marketing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Photography</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Company</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#about"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#team"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Our Team</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Press</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Partner with Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Affiliate Program</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Support</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Help Center</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Contact Support</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Course Refunds</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Technical Support</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Accessibility</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >System Status</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-white/20 mt-12 pt-8">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+          >
+            <div class="flex flex-wrap justify-center md:justify-start gap-6">
+              <a
+                href="#"
+                class="text-white/60 hover:text-white transition-colors duration-200 text-sm"
+                >Privacy Policy</a
+              >
+              <a
+                href="#"
+                class="text-white/60 hover:text-white transition-colors duration-200 text-sm"
+                >Terms of Service</a
+              >
+              <a
+                href="#"
+                class="text-white/60 hover:text-white transition-colors duration-200 text-sm"
+                >Cookie Policy</a
+              >
+              <a
+                href="#"
+                class="text-white/60 hover:text-white transition-colors duration-200 text-sm"
+                >GDPR</a
+              >
+              <a
+                href="#"
+                class="text-white/60 hover:text-white transition-colors duration-200 text-sm"
+                >Refund Policy</a
+              >
+              <a
+                href="#"
+                class="text-white/60 hover:text-white transition-colors duration-200 text-sm"
+                >Student Agreement</a
+              >
+            </div>
+
+            <button
+              id="back-to-top"
+              class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
+              aria-label="Back to top"
+            >
+              <i class="fas fa-arrow-up"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="border-t border-white/20 mt-8 pt-8 text-center">
+          <p class="text-white/60 text-sm">
+            © 2024 CoursePlatform. All rights reserved. | Designed with ❤️ for
+            learners worldwide
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      // Initialize AOS
+      AOS.init({
+        duration: 900, // Animation duration
+        once: false, // Whether animation should happen only once - while scrolling down
+      });
+
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Image slider functionality
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".slide");
+      const dots = document.querySelectorAll(".dot");
+      const totalSlides = slides.length;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+        });
+        dots.forEach((dot, i) => {
+          if (i === index) {
+            dot.classList.remove("bg-white/50", "hover:bg-course-primary/70");
+            dot.classList.add(
+              "bg-course-primary",
+              "scale-125",
+              "shadow-lg",
+              "shadow-course-orange/50"
+            );
+          } else {
+            dot.classList.remove(
+              "bg-course-primary",
+              "scale-125",
+              "shadow-lg",
+              "shadow-course-orange/50"
+            );
+            dot.classList.add("bg-white/50", "hover:bg-course-primary/70");
+          }
+        });
+      }
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+      }
+
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
+      }
+
+      // Auto advance slides
+      setInterval(nextSlide, 5000);
+
+      // Manual navigation
+      document
+        .getElementById("next-slide")
+        .addEventListener("click", nextSlide);
+      document
+        .getElementById("prev-slide")
+        .addEventListener("click", prevSlide);
+
+      // Dot navigation
+      dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+          currentSlide = index;
+          showSlide(currentSlide);
+        });
+      });
+
+      // Testimonial slider functionality
+      let currentTestimonial = 0;
+      const testimonials = document.querySelectorAll(".testimonial");
+      const testimonialDots = document.querySelectorAll(".testimonial-dot");
+      const totalTestimonials = testimonials.length;
+
+      function showTestimonial(index) {
+        testimonials.forEach((testimonial, i) => {
+          testimonial.classList.toggle("active", i === index);
+        });
+        testimonialDots.forEach((dot, i) => {
+          if (i === index) {
+            dot.classList.remove(
+              "bg-course-primary/30",
+              "hover:bg-course-orange/60"
+            );
+            dot.classList.add(
+              "bg-gradient-to-r",
+              "from-course-orange",
+              "to-course-accent",
+              "scale-125",
+              "shadow-lg",
+              "shadow-course-orange/50"
+            );
+          } else {
+            dot.classList.remove(
+              "bg-gradient-to-r",
+              "from-course-orange",
+              "to-course-accent",
+              "scale-125",
+              "shadow-lg",
+              "shadow-course-orange/50"
+            );
+            dot.classList.add(
+              "bg-course-primary/30",
+              "hover:bg-course-orange/60"
+            );
+          }
+        });
+      }
+
+      function nextTestimonial() {
+        currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+        showTestimonial(currentTestimonial);
+      }
+
+      function prevTestimonial() {
+        currentTestimonial =
+          (currentTestimonial - 1 + totalTestimonials) % totalTestimonials;
+        showTestimonial(currentTestimonial);
+      }
+
+      // Auto advance testimonials
+      setInterval(nextTestimonial, 6000);
+
+      // Manual navigation
+      document
+        .getElementById("next-testimonial")
+        .addEventListener("click", nextTestimonial);
+      document
+        .getElementById("prev-testimonial")
+        .addEventListener("click", prevTestimonial);
+
+      // Dot navigation
+      testimonialDots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+          currentTestimonial = index;
+          showTestimonial(currentTestimonial);
+        });
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Back to top functionality
+      document.getElementById("back-to-top").addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // Show/hide back to top button based on scroll
+      window.addEventListener("scroll", () => {
+        const backToTopBtn = document.getElementById("back-to-top");
+        if (window.scrollY > 300) {
+          backToTopBtn.style.opacity = "1";
+        } else {
+          backToTopBtn.style.opacity = "0.6";
+        }
+      });
+
+      // Close mobile menu when clicking on links
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+
+      // faq
+      document.addEventListener("DOMContentLoaded", function () {
+        const faqItems = document.querySelectorAll(".faq-item");
+
+        faqItems.forEach((item) => {
+          const questionButton = item.querySelector(".faq-question");
+          const answerPanel = item.querySelector(".faq-answer");
+          const icon = questionButton.querySelector("i");
+
+          questionButton.addEventListener("click", () => {
+            // Toggle active class for styling
+            const isOpen = item.classList.toggle("active");
+
+            // Rotate icon
+            icon.style.transform = isOpen ? "rotate(180deg)" : "rotate(0deg)";
+
+            // Expand or collapse answer
+            if (isOpen) {
+              answerPanel.style.maxHeight = answerPanel.scrollHeight + "px";
+              item.style.boxShadow = "0 10px 25px -5px rgba(249, 115, 22, 0.2)"; // Add shadow on open
+            } else {
+              answerPanel.style.maxHeight = "0px";
+              item.style.boxShadow = ""; // Remove shadow on close
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
