@@ -38,7 +38,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body class="min-h-screen bg-white">
     <div class="bg-course-primary text-white py-2 px-4">
@@ -236,264 +236,100 @@
         </div>
       </div>
     </nav>
-    <section id="home" class="relative py-20 overflow-hidden">
-      <div class="absolute inset-0">
+    <!-- hero  -->
+    <section id="home" class="relative overflow-hidden">
+      <div class="absolute inset-0 z-0">
         <img
-          src="img/bg.jpg"
-          alt="Driving School Background"
-          class="w-full h-full object-cover"
+          src="img/hero1.png"
+          alt="Driving School Background 1"
+          class="w-full h-full object-cover slide active"
         />
+        <img
+          src="img/hero2.png"
+          alt="Driving School Background 2"
+          class="w-full h-full object-cover slide"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1581092917144-43c942c017a1?auto=format&fit=crop&w=1920&q=80"
+          alt="Driving School Background 3"
+          class="w-full h-full object-cover slide"
+        />
+        <div class="absolute inset-0 bg-black/50"></div>
       </div>
 
-      <div class="absolute inset-0 overflow-hidden">
-        <div
-          class="absolute -top-40 -right-40 w-80 h-80 bg-course-orange/10 rounded-full blur-3xl animate-pulse"
-        ></div>
-        <div
-          class="absolute -bottom-40 -left-40 w-80 h-80 bg-course-primary/10 rounded-full blur-3xl animate-pulse-slow"
-        ></div>
-        <div
-          class="absolute top-1/4 left-5 lg:left-16 animate-float"
-          style="animation-delay: 0.8s"
-        >
-          <div
-            class="w-16 h-16 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center shadow-xl shadow-course-orange/10"
+      <div
+        class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex items-center justify-center py-40 md:h-screen"
+      >
+        <div class="text-center">
+          <p
+            class="text-sm font-bold text-white uppercase tracking-widest mb-4 md:mb-6"
+            data-aos="fade-down"
+            data-aos-duration="1000"
           >
-            <i class="fas fa-car-alt text-course-orange text-3xl"></i>
-          </div>
-        </div>
-        <div
-          class="absolute bottom-1/4 left-16 lg:left-36 animate-float"
-          style="animation-delay: 2s"
-        >
-          <div
-            class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center shadow-xl shadow-course-primary/10"
+            Govt. Approved Driving School in Narsingdi
+          </p>
+          <h1
+            class="text-3xl lg:text-5xl font-bold text-white leading-tight mb-6 md:mb-10"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-delay="100"
           >
-            <i class="fas fa-road text-course-orange text-4xl"></i>
-          </div>
-        </div>
-        <div
-          class="absolute top-1/3 right-5 lg:right-16 animate-float"
-          style="animation-delay: 1.2s"
-        >
-          <div
-            class="w-16 h-16 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center shadow-xl shadow-course-orange/10"
+            Learn to Drive Safely & Achieve Your License
+          </h1>
+          <p
+            class="text-base md:text-xl text-white/80 leading-relaxed max-w-3xl mx-auto mb-8 md:mb-12"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
           >
-            <i class="fas fa-key text-course-orange text-3xl"></i>
-          </div>
-        </div>
-        <div
-          class="absolute bottom-1/3 right-16 lg:right-36 animate-float"
-          style="animation-delay: 2.5s"
-        >
+            Get safe and confident driving training from our experienced
+            instructors. We will prepare you for everything from busy city
+            streets to highways.
+          </p>
           <div
-            class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center shadow-xl shadow-course-primary/10"
+            class="flex justify-center space-x-4"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="300"
           >
-            <i class="fas fa-tachometer-alt text-course-orange text-4xl"></i>
-          </div>
-        </div>
-      </div>
-
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div class="space-y-8">
-            <div class="space-y-6">
-              <p
-                class="text-sm font-bold text-gray-700 uppercase tracking-widest"
-                data-aos="fade-right"
-                data-aos-duration="1000"
-              >
-                Govt. Approved Driving School in Narsingdi
-              </p>
-              <h1
-                class="text-5xl lg:text-6xl font-bold bg-gradient-text leading-tight"
-                data-aos="fade-right"
-                data-aos-duration="1000"
-                data-aos-delay="100"
-              >
-                Learn to Drive with Confidence
-              </h1>
-              <p
-                class="text-xl text-gray-600 leading-relaxed"
-                data-aos="fade-right"
-                data-aos-duration="1000"
-                data-aos-delay="200"
-              >
-                Get safe and effective driving training from our experienced
-                instructors. We will prepare you for everything from busy city
-                streets to highways.
-              </p>
-            </div>
-
-            <div
-              class="grid grid-cols-2 gap-x-8 gap-y-4 pt-4"
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              data-aos-delay="300"
-            >
-              <div class="flex items-center space-x-3">
-                <i class="fas fa-check-circle text-xl text-course-primary"></i>
-                <span class="text-gray-700 font-medium"
-                  >Modern Dual-Control Cars</span
-                >
-              </div>
-              <div class="flex items-center space-x-3">
-                <i class="fas fa-check-circle text-xl text-course-primary"></i>
-                <span class="text-gray-700 font-medium"
-                  >One-on-One Training</span
-                >
-              </div>
-              <div class="flex items-center space-x-3">
-                <i class="fas fa-check-circle text-xl text-course-primary"></i>
-                <span class="text-gray-700 font-medium"
-                  >Flexible Scheduling</span
-                >
-              </div>
-              <div class="flex items-center space-x-3">
-                <i class="fas fa-check-circle text-xl text-course-primary"></i>
-                <span class="text-gray-700 font-medium"
-                  >Driving Test Preparation</span
-                >
-              </div>
-            </div>
-
             <button
-              class="bg-gradient-to-r from-course-primary to-course-accent hover:from-course-accent hover:to-course-primary text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center space-x-3 transition-all duration-500 hover:shadow-2xl hover:shadow-course-orange/25 hover:scale-105 transform group"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="400"
+              class="bg-gradient-to-r from-course-primary to-course-accent hover:from-course-accent hover:to-course-primary text-white px-6 py-3 md:px-8 md:py-4 rounded-full text-base md:text-lg font-semibold flex items-center space-x-2 md:space-x-3 transition-all duration-500 hover:shadow-2xl hover:shadow-course-orange/25 hover:scale-105 transform group"
             >
               <span>Enroll Now</span>
               <i
                 class="fas fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"
               ></i>
             </button>
-
-            <div class="grid grid-cols-3 gap-8 pt-8">
-              <div
-                class="relative text-center bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:shadow-course-orange/20 transition-all duration-300 hover:-translate-y-2"
-                data-aos="fade-up"
-                data-aos-delay="500"
-              >
-                <div class="relative z-10">
-                  <div class="text-3xl font-bold text-gray-700">10+</div>
-                  <div
-                    class="text-sm text-gray-500 group-hover:text-course-primary transition-colors duration-300"
-                  >
-                    Years Experience
-                  </div>
-                </div>
-              </div>
-              <div
-                class="relative text-center bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:shadow-course-orange/20 transition-all duration-300 hover:-translate-y-2"
-                data-aos="fade-up"
-                data-aos-delay="600"
-              >
-                <div class="relative z-10">
-                  <div class="text-3xl font-bold text-gray-700">15+</div>
-                  <div
-                    class="text-sm text-gray-500 group-hover:text-course-primary transition-colors duration-300"
-                  >
-                    Certified Instructors
-                  </div>
-                </div>
-              </div>
-              <div
-                class="relative text-center bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:shadow-course-orange/20 transition-all duration-300 hover:-translate-y-2"
-                data-aos="fade-up"
-                data-aos-delay="700"
-              >
-                <div class="relative z-10">
-                  <div class="text-3xl font-bold text-gray-700">98%</div>
-                  <div
-                    class="text-sm text-gray-500 group-hover:text-course-primary transition-colors duration-300"
-                  >
-                    Pass Rate
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="relative" data-aos="fade-left" data-aos-duration="1000">
-            <div
-              id="image-slider"
-              class="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl shadow-course-orange/20"
+            <button
+              class="bg-white/20 hover:bg-white/30 text-white font-semibold px-6 py-3 md:px-6 md:py-3 rounded-full text-base md:text-lg transition-colors duration-300 flex items-center space-x-2"
+              onclick="window.location.href='#contact'"
             >
-              <div
-                class="slide active absolute inset-0 transition-all duration-1000"
-              >
-                <img
-                  src="img/hero1.png"
-                  alt="Driving Lesson"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <div class="slide absolute inset-0 transition-all duration-1000">
-                <img
-                  src="img/hero2.png"
-                  alt="Car Interior"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <div class="slide absolute inset-0 transition-all duration-1000">
-                <img
-                  src="https://images.unsplash.com/photo-1581092917144-43c942c017a1?auto=format&fit=crop&w=800&q=80"
-                  alt="Student Driver"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <button
-                id="prev-slide"
-                class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm hover:bg-white text-course-primary hover:text-course-orange-light rounded-full p-3 transition-all duration-300 hover:shadow-xl hover:shadow-course-orange/25 hover:scale-110"
-              >
-                <i class="fas fa-chevron-left"></i>
-              </button>
-              <button
-                id="next-slide"
-                class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm hover:bg-white text-course-primary hover:text-course-orange-light rounded-full p-3 transition-all duration-300 hover:shadow-xl hover:shadow-course-orange/25 hover:scale-110"
-              >
-                <i class="fas fa-chevron-right"></i>
-              </button>
-              <div
-                class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2"
-              >
-                <button
-                  class="dot w-3 h-3 rounded-full transition-all duration-300 bg-course-primary scale-125 shadow-lg shadow-course-orange/50"
-                  data-slide="0"
-                ></button>
-                <button
-                  class="dot w-3 h-3 rounded-full transition-all duration-300 bg-white/50 hover:bg-course-primary/70 hover:scale-110"
-                  data-slide="1"
-                ></button>
-                <button
-                  class="dot w-3 h-3 rounded-full transition-all duration-300 bg-white/50 hover:bg-course-primary/70 hover:scale-110"
-                  data-slide="2"
-                ></button>
-              </div>
-            </div>
+              <i class="fas fa-phone-alt"></i>
+              <span>Contact Us</span>
+            </button>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- course -->
     <section
       id="courses"
       class="py-20 bg-gradient-to-br from-course-secondary/30 via-course-orange/5 to-course-secondary/30 relative overflow-hidden"
     >
       <div class="container mx-auto px-4 relative z-10">
-        <div
-          class="text-center mb-16"
-          data-aos="fade-down"
-          data-aos-duration="800"
-        >
-          <h2 class="text-4xl font-bold bg-gradient-text mb-4">
-            Featured Courses
+        <div class="text-center mb-16" data-aos="fade-down">
+          <span
+            class="inline-block text-sm font-semibold text-course-blue bg-course-orange/20 px-4 py-1.5 rounded-full mb-4"
+          >
+            — OUR EXCELLENT COURSE —
+          </span>
+          <h2
+            class="text-3xl md:text-4xl lg:text-5xl sm:text-5xl font-black text-gray-800 mb-6 leading-tight"
+          >
+            Professional Course
+            <span class="block bg-gradient-text">For Your Space</span>
           </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our most popular courses taught by industry experts. Start
-            learning today and advance your career.
-          </p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -871,6 +707,7 @@
       </div>
     </section>
 
+    <!-- about -->
     <section
       id="about"
       class="py-20 bg-gradient-to-b from-white via-course-orange/5 to-white relative overflow-hidden"
@@ -903,9 +740,19 @@
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div class="space-y-12" data-aos="fade-right">
             <div class="space-y-6">
-              <h2 class="text-4xl font-bold bg-gradient-text">
-                About Our Learning Platform
-              </h2>
+              <div class="text-start mb-16" data-aos="fade-down">
+                <span
+                  class="inline-block text-sm font-semibold text-course-blue bg-course-orange/20 px-4 py-1.5 rounded-full mb-4"
+                >
+                  — ABOUT COURSE —
+                </span>
+                <h2
+                  class="text-3xl md:text-4xl lg:text-5xl sm:text-5xl font-black text-gray-800 mb-6 leading-tight"
+                >
+                  Our Driving Agency
+                  <span class="block bg-gradient-text">For Your City</span>
+                </h2>
+              </div>
               <p class="text-lg text-gray-600 leading-relaxed">
                 We are dedicated to transforming lives through accessible,
                 high-quality education. Our mission is to make learning
@@ -1106,6 +953,7 @@
       </div>
     </section>
 
+    <!-- team section -->
     <section id="team" class="py-20 bg-gray-50 relative overflow-hidden">
       <div class="absolute inset-0 z-0">
         <div
@@ -1124,7 +972,7 @@
             — MEET OUR TEAM —
           </span>
           <h2
-            class="text-4xl sm:text-5xl font-black text-gray-800 mb-6 leading-tight"
+            class="text-3xl md:text-4xl lg:text-5xl sm:text-5xl font-black text-gray-800 mb-6 leading-tight"
           >
             We Have an Expert<span class="block bg-gradient-text">Team</span>
           </h2>
@@ -1348,6 +1196,7 @@
       </div>
     </section>
 
+    <!-- testimonial -->
     <section
       class="py-20 bg-gradient-to-br from-white via-course-orange/5 to-course-red/5 relative overflow-hidden"
     >
@@ -1366,13 +1215,20 @@
           data-aos="fade-down"
           data-aos-duration="800"
         >
-          <h2 class="text-4xl font-bold bg-gradient-text mb-4">
-            What Our Students Say
+             <div class="text-center mb-16" data-aos="fade-down">
+          <span
+            class="inline-block text-sm font-semibold text-course-blue bg-course-orange/20 px-4 py-1.5 rounded-full mb-4"
+          >
+            — CUSTOMER STORIES —
+          </span>
+          <h2
+            class="text-3xl md:text-4xl lg:text-5xl sm:text-5xl font-black text-gray-800 mb-6 leading-tight"
+          >
+            What People Are
+            <span class="block bg-gradient-text">Saying</span>
           </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Hear from thousands of successful students who have transformed
-            their careers through our courses.
-          </p>
+        </div>
+         
         </div>
 
         <div class="max-w-4xl mx-auto">
@@ -1517,6 +1373,8 @@
       </div>
     </section>
 
+    <!-- blog section -->
+
     <section id="blog" class="py-20 relative overflow-hidden bg-gray-50">
       <div class="absolute inset-0 z-0 overflow-hidden">
         <div
@@ -1542,13 +1400,13 @@
             — LATEST FROM OUR BLOG —
           </span>
           <h2
-            class="text-4xl sm:text-5xl font-black text-gray-800 mb-6 leading-tight"
+            class="text-3xl md:text-4xl lg:text-5xl md:text-5xl sm:text-5xl font-black text-gray-800 mb-6 leading-tight"
           >
             Insights & Learning <span class="block bg-gradient-text">Tips</span>
           </h2>
         </div>
 
-        <div class="max-w-7xl mx-auto">
+        <div class="max-w-8xl mx-auto">
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div
               class="bg-white rounded-2xl shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:shadow-course-orange/20 hover:-translate-y-2"
@@ -1721,6 +1579,7 @@
       </div>
     </section>
 
+    <!-- subscription -->
     <section
       class="py-20 bg-gradient-to-br from-course-primary via-course-orange-light to-course-accent text-white relative overflow-hidden"
     >
@@ -1747,7 +1606,7 @@
             >
               <i class="fas fa-envelope text-2xl text-white"></i>
             </div>
-            <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               Stay Updated with Our Newsletter
             </h2>
             <p class="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
@@ -1810,6 +1669,7 @@
       </div>
     </section>
 
+    <!-- faq -->
     <section
       id="faq"
       class="py-20 bg-gradient-to-b from-white via-course-orange/5 to-white relative overflow-hidden"
@@ -1826,7 +1686,7 @@
       <div class="container mx-auto px-4 relative z-10">
         <div class="text-center mb-16" data-aos="fade-down">
           <h2
-            class="text-4xl sm:text-5xl font-black text-gray-800 mb-6 leading-tight"
+            class="text-3xl md:text-4xl lg:text-5xl sm:text-5xl font-black text-gray-800 mb-6 leading-tight"
           >
             Frequently Asked<span class="block bg-gradient-text"
               >Questions</span
@@ -2219,6 +2079,35 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-<script src="main.js"></script>
+    <script src="main.js"></script>
+    <script>
+    // FAQ accordion logic
+    document.addEventListener("DOMContentLoaded", function () {
+        const faqItems = document.querySelectorAll(".faq-item");
+
+        faqItems.forEach((item) => {
+            const questionButton = item.querySelector(".faq-question");
+            const answerPanel = item.querySelector(".faq-answer");
+            const icon = questionButton.querySelector("i");
+            const answerContent = answerPanel.querySelector('p'); // Get the paragraph inside answerPanel
+
+            questionButton.addEventListener("click", () => {
+                const isOpen = item.classList.toggle("active");
+                icon.style.transform = isOpen ? "rotate(180deg)" : "rotate(0deg)";
+
+                if (isOpen) {
+                    // Set max-height to the scrollHeight of the content + padding
+                    answerPanel.style.maxHeight = answerContent.scrollHeight + (2 * 16) + "px"; // Adding ~2rem (32px) for p-6 padding
+                    item.style.boxShadow = "0 10px 25px -5px rgba(249, 115, 22, 0.2)"; // Add shadow on open
+                    answerPanel.style.paddingBottom = "1.5rem"; // Apply padding when open
+                } else {
+                    answerPanel.style.maxHeight = "0px"; // Collapse
+                    item.style.boxShadow = ""; // Remove shadow on close
+                    answerPanel.style.paddingBottom = "0"; // Remove padding when closed
+                }
+            });
+        });
+    });
+</script>
   </body>
 </html>

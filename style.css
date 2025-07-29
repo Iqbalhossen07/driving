@@ -1,51 +1,65 @@
 
-      .bg-gradient-text {
-        background: linear-gradient(to right, #f97316, #ef4444);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
+.bg-gradient-text {
+  background: linear-gradient(to right, #f97316, #ef4444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
-      .slide {
-        display: none;
-      }
+.slide {
+  display: none;
+}
 
-      .slide.active {
-        display: block;
-      }
+.slide.active {
+  display: block;
+}
 
-      .testimonial {
-        display: none;
-      }
+.testimonial {
+  display: none;
+}
 
-      .testimonial.active {
-        display: block;
-      }
+.testimonial.active {
+  display: block;
+}
 
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0px);
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Added Font Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Merriweather", serif;
+}
+
+body {
+  font-family: "Lora", serif;
+}
+
+/* Styles for FAQ accordion */
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
         }
-        50% {
-          transform: translateY(-10px);
+        /* Crucial fix: Remove max-height from active state in CSS */
+        .faq-answer {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out; /* Added padding transition for smoother effect */
         }
-      }
-
-      .animate-float {
-        animation: float 3s ease-in-out infinite;
-      }
-
-      /* Added Font Styles */
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Merriweather", serif;
-      }
-
-      body {
-        font-family: "Lora", serif;
-      }
+        .faq-item.active .faq-answer {
+            padding-bottom: 1.5rem; /* Equivalent to p-6 but only for bottom */
+        }

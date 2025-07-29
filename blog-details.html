@@ -278,239 +278,524 @@
       </div>
     </nav>
 
-    <section class="relative py-20 bg-gradient-to-br from-course-secondary/50 via-course-orange/10 to-course-secondary/50 overflow-hidden">
-        <div class="absolute inset-0 z-0 opacity-20">
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-course-orange/10 rounded-full blur-3xl animate-pulse-slow"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-course-primary/10 rounded-full blur-3xl animate-pulse"></div>
-        </div>
-        <div class="container mx-auto px-4 relative z-10 text-center">
-            <h1 class="text-5xl lg:text-6xl font-bold bg-gradient-text mb-6" data-aos="fade-down" data-aos-duration="1000">
-                A Deep Dive into the Future of Web Development
-            </h1>
-            <p class="text-xl text-gray-700 max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                Exploring the upcoming trends, technologies, and paradigms that will shape the web in the years to come.
-            </p>
-            <div class="flex items-center justify-center space-x-4 text-gray-600 mt-8" data-aos="fade-up" data-aos-delay="300">
-                <div class="flex items-center space-x-2">
-                    <i class="far fa-user text-course-primary"></i>
-                    <span>By Admin</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                    <i class="far fa-calendar-alt text-course-primary"></i>
-                    <span>July 25, 2025</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                    <i class="fas fa-tag text-course-primary"></i>
-                    <span>Web Development</span>
-                </div>
-            </div>
-        </div>
+    <section
+      class="relative py-20 bg-gradient-to-br from-course-secondary/50 via-course-orange/10 to-course-secondary/50 overflow-hidden"
+    >
+      <div class="absolute inset-0 z-0 opacity-20">
+        <div
+          class="absolute top-1/4 left-1/4 w-96 h-96 bg-course-orange/10 rounded-full blur-3xl animate-pulse-slow"
+        ></div>
+        <div
+          class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-course-primary/10 rounded-full blur-3xl animate-pulse"
+        ></div>
+      </div>
+      <div class="container mx-auto px-4 relative z-10 text-center">
+        <h1
+          class="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-text mb-6"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
+          A Deep Dive into the Future of Web Development
+        </h1>
+        <p
+          class="text-xl text-gray-700 max-w-4xl mx-auto"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+        >
+          Exploring the upcoming trends, technologies, and paradigms that will
+          shape the web in the years to come.
+        </p>
+      </div>
     </section>
 
     <section class="py-20 bg-white relative">
-        <div class="container mx-auto px-4">
-            <div class="grid lg:grid-cols-3 gap-12">
-                <div class="lg:col-span-2 space-y-8">
-                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Blog Post Image" class="w-full h-auto max-h-[500px] object-cover rounded-2xl shadow-xl mb-6" data-aos="fade-up" data-aos-delay="100"/>
-                    
-                    <div class="prose max-w-none text-gray-700 leading-relaxed text-lg space-y-6" data-aos="fade-up" data-aos-delay="200">
-                        <p>
-                            The landscape of web development is in a constant state of flux, evolving at a dizzying pace. What was cutting-edge yesterday might be obsolete tomorrow. As we move further into 2025, several exciting trends and technologies are emerging that promise to reshape how we build and interact with the web.
-                        </p>
-                        
-                        <h2 class="text-3xl font-bold text-gray-800 pt-4">The Rise of AI and Machine Learning in Web Development</h2>
-                        <p>
-                            Artificial Intelligence (AI) and Machine Learning (ML) are no longer confined to sci-fi movies; they are becoming integral to web development. From intelligent chatbots and personalized user experiences to automated code generation and predictive analytics, AI/ML is set to revolutionize every aspect of web creation. Developers are leveraging AI-powered tools for tasks like UI/UX optimization, content generation, and even bug detection, leading to faster development cycles and more intuitive applications.
-                        </p>
-                        <ul class="list-disc pl-8 space-y-2">
-                            <li>Automated code generation and optimization.</li>
-                            <li>Enhanced personalization through predictive analytics.</li>
-                            <li>Smarter chatbots and virtual assistants.</li>
-                            <li>Improved accessibility features.</li>
-                        </ul>
+      <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-3 gap-12">
+          <div class="lg:col-span-2 space-y-8">
+            <img
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+              alt="Blog Post Image"
+              class="w-full h-auto max-h-[500px] object-cover rounded-2xl shadow-xl mb-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            />
 
-                        <h2 class="text-3xl font-bold text-gray-800 pt-4">Serverless Architecture: Beyond the Buzzword</h2>
-                        <p>
-                            Serverless computing, despite its name, doesn't mean servers are gone. Instead, it means developers no longer need to manage them directly. This paradigm allows you to build and run applications and services without thinking about servers. Cloud providers dynamically manage the allocation of machine resources. This approach offers significant benefits, including reduced operational costs, improved scalability, and faster deployment times.
-                        </p>
-                        <p>
-                            The adoption of serverless technologies like AWS Lambda, Azure Functions, and Google Cloud Functions is growing exponentially, enabling developers to focus solely on writing code and delivering value.
-                        </p>
-
-                        <h2 class="text-3xl font-bold text-gray-800 pt-4">WebAssembly (Wasm) for High Performance</h2>
-                        <p>
-                            WebAssembly (Wasm) is quickly becoming a game-changer for performance-critical web applications. It allows developers to run code written in languages like C++, Rust, and C# directly in the browser at near-native speeds. This opens up new possibilities for complex applications, such as high-performance games, video editing tools, and CAD software, directly within the web environment without relying on plugins.
-                        </p>
-                        <div class="video-container rounded-xl shadow-xl">
-                            <iframe 
-                                src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                                title="YouTube video player" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen
-                            ></iframe>
-                        </div>
-                        <p class="text-center text-sm text-gray-500 mt-2">
-                            A quick introduction to WebAssembly. (Example Video)
-                        </p>
-
-                        <h2 class="text-3xl font-bold text-gray-800 pt-4">Progressive Web Apps (PWAs) and Native App Features</h2>
-                        <p>
-                            PWAs continue to blur the line between web and native applications. Offering offline capabilities, push notifications, and access to device hardware (like cameras and GPS), PWAs provide a fast, reliable, and engaging user experience. They are easier and cheaper to develop than traditional native apps, making them an attractive option for businesses looking to reach a wider audience without the overhead of app store distribution.
-                        </p>
-                        
-                        <h2 class="text-3xl font-bold text-gray-800 pt-4">Enhanced Security Measures</h2>
-                        <p>
-                            With increasing cyber threats, web security is more critical than ever. The future of web development will see a greater emphasis on robust security protocols. This includes widespread adoption of HTTPS by default, Content Security Policy (CSP), stricter data privacy regulations (like GDPR), and the implementation of advanced authentication methods. Developers must prioritize security from the outset, not as an afterthought.
-                        </p>
-
-                        <p>
-                            The future of web development is exciting and full of opportunities. By staying informed and adaptable, developers can embrace these changes to build more powerful, intelligent, and secure web experiences for everyone.
-                        </p>
-                    </div>
-
-                    <div class="border-t border-b border-gray-200 py-6 mt-12 flex flex-wrap justify-between items-center gap-4" data-aos="fade-up" data-aos-delay="300">
-                        <div class="flex items-center space-x-3">
-                            <span class="font-semibold text-gray-800">Tags:</span>
-                            <span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full hover:bg-gray-200 transition-colors">#WebDev</span>
-                            <span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full hover:bg-gray-200 transition-colors">#AI</span>
-                            <span class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full hover:bg-gray-200 transition-colors">#FutureTech</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <span class="font-semibold text-gray-800">Share:</span>
-                            <a href="#" class="w-9 h-9 bg-course-blue/10 rounded-full flex items-center justify-center text-course-blue hover:bg-course-blue hover:text-white transition-colors" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="w-9 h-9 bg-course-blue/10 rounded-full flex items-center justify-center text-course-blue hover:bg-course-blue hover:text-white transition-colors" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="w-9 h-9 bg-course-blue/10 rounded-full flex items-center justify-center text-course-blue hover:bg-course-blue hover:text-white transition-colors" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="bg-course-secondary/50 p-6 rounded-2xl flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6" data-aos="fade-up" data-aos-delay="400">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d877085b21?auto=format&fit=crop&w=100&q=80" alt="Author Profile" class="w-24 h-24 rounded-full object-cover border-4 border-white shadow-md"/>
-                        <div class="text-center sm:text-left">
-                            <h4 class="text-xl font-bold text-gray-800">About the Author: Admin</h4>
-                            <p class="text-gray-600">
-                                This article was written by the CoursePlatform editorial team, dedicated to providing valuable insights and educational content for our community.
-                            </p>
-                            <a href="team.html" class="inline-flex items-center text-course-primary font-semibold hover:text-course-accent transition-colors duration-300 mt-2">
-                                View Author's Profile <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div data-aos="fade-up" data-aos-delay="500">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Comments (3)</h3>
-                        <div class="space-y-6">
-                            <div class="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-md border border-gray-200/50">
-                                <div class="flex items-center space-x-4 mb-3">
-                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Commenter 1" class="w-10 h-10 rounded-full object-cover"/>
-                                    <div>
-                                        <div class="font-semibold text-gray-800">John M.</div>
-                                        <div class="text-gray-500 text-sm">July 26, 2025 at 10:30 AM</div>
-                                    </div>
-                                </div>
-                                <p class="text-gray-700 leading-relaxed">
-                                    "Great article! The insights on AI and serverless are particularly relevant. Looking forward to more content like this."
-                                </p>
-                            </div>
-                            <div class="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-md border border-gray-200/50">
-                                <div class="flex items-center space-x-4 mb-3">
-                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Commenter 2" class="w-10 h-10 rounded-full object-cover"/>
-                                    <div>
-                                        <div class="font-semibold text-gray-800">Sarah K.</div>
-                                        <div class="text-gray-500 text-sm">July 26, 2025 at 02:15 PM</div>
-                                    </div>
-                                </div>
-                                <p class="text-gray-700 leading-relaxed">
-                                    "WebAssembly sounds really promising. I wonder how soon it will be adopted widely for mainstream apps."
-                                </p>
-                            </div>
-                            <div class="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-md border border-gray-200/50">
-                                <div class="flex items-center space-x-4 mb-3">
-                                    <img src="https://randomuser.me/api/portraits/men/50.jpg" alt="Commenter 3" class="w-10 h-10 rounded-full object-cover"/>
-                                    <div>
-                                        <div class="font-semibold text-gray-800">David L.</div>
-                                        <div class="text-gray-500 text-sm">July 27, 2025 at 09:00 AM</div>
-                                    </div>
-                                </div>
-                                <p class="text-gray-700 leading-relaxed">
-                                    "Fantastic breakdown of future trends! As a budding developer, this helps me focus my learning path."
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="bg-course-secondary/50 p-6 rounded-2xl mt-8 shadow-lg" data-aos="fade-up" data-aos-delay="600">
-                            <h4 class="text-xl font-bold text-gray-800 mb-4">Leave a Comment</h4>
-                            <form class="space-y-4">
-                                <input type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-course-primary transition-all">
-                                <input type="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-course-primary transition-all">
-                                <textarea placeholder="Your Comment" rows="5" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-course-primary transition-all"></textarea>
-                                <button type="submit" class="bg-gradient-to-r from-course-primary to-course-accent hover:from-course-accent hover:to-course-primary text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-course-orange/25">
-                                    Post Comment
-                                </button>
-                            </form>
-                        </div>
-                    </div>
+            <div
+              class="prose max-w-none text-gray-700 leading-relaxed text-lg space-y-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div
+                class="flex items-center justify-start space-x-4 text-gray-600 mt-8"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <div class="flex items-center space-x-2">
+                  <i class="far fa-user text-course-primary"></i>
+                  <span>By Admin</span>
                 </div>
-
-                <div class="lg:col-span-1 space-y-12">
-                    <div class="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-200/50" data-aos="fade-left" data-aos-delay="100">
-                        <h4 class="text-xl font-bold text-gray-800 mb-4">Search Blog</h4>
-                        <div class="relative">
-                            <input type="text" placeholder="Search for posts..." class="w-full p-3 pr-10 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-course-primary transition-all"/>
-                            <i class="fas fa-search absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
-                        </div>
-                    </div>
-
-                    <div class="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-200/50" data-aos="fade-left" data-aos-delay="200">
-                        <h4 class="text-xl font-bold text-gray-800 mb-4">Recent Posts</h4>
-                        <ul class="space-y-4">
-                            <li>
-                                <a href="blog-single.html" class="flex items-start space-x-3 group">
-                                    <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&q=80" alt="Recent Post 1" class="w-16 h-16 object-cover rounded-md flex-shrink-0 group-hover:scale-105 transition-transform"/>
-                                    <div>
-                                        <h5 class="text-gray-800 font-semibold group-hover:text-course-primary transition-colors text-base">Understanding Frontend Frameworks</h5>
-                                        <p class="text-gray-500 text-xs flex items-center mt-1"><i class="far fa-calendar-alt mr-1"></i> June 28, 2025</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="blog-single.html" class="flex items-start space-x-3 group">
-                                    <img src="https://images.unsplash.com/photo-1582299066606-9366150245a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&q=80" alt="Recent Post 2" class="w-16 h-16 object-cover rounded-md flex-shrink-0 group-hover:scale-105 transition-transform"/>
-                                    <div>
-                                        <h5 class="text-gray-800 font-semibold group-hover:text-course-primary transition-colors text-base">The Importance of User-Centered Design</h5>
-                                        <p class="text-gray-500 text-xs flex items-center mt-1"><i class="far fa-calendar-alt mr-1"></i> June 15, 2025</p>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-200/50" data-aos="fade-left" data-aos-delay="300">
-                        <h4 class="text-xl font-bold text-gray-800 mb-4">Categories</h4>
-                        <ul class="space-y-2 text-gray-700">
-                            <li><a href="blog.html?category=web-dev" class="block hover:text-course-primary transition-colors">Web Development <span class="float-right">(5)</span></a></li>
-                            <li><a href="blog.html?category=design" class="block hover:text-course-primary transition-colors">Design <span class="float-right">(3)</span></a></li>
-                            <li><a href="blog.html?category=data-science" class="block hover:text-course-primary transition-colors">Data Science <span class="float-right">(4)</span></a></li>
-                            <li><a href="blog.html?category=career" class="block hover:text-course-primary transition-colors">Career Tips <span class="float-right">(2)</span></a></li>
-                            <li><a href="blog.html?category=marketing" class="block hover:text-course-primary transition-colors">Digital Marketing <span class="float-right">(3)</span></a></li>
-                        </ul>
-                    </div>
-
-                    <div class="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-200/50" data-aos="fade-left" data-aos-delay="400">
-                        <h4 class="text-xl font-bold text-gray-800 mb-4">Tags</h4>
-                        <div class="flex flex-wrap gap-2">
-                            <a href="blog.html?tag=ai" class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full hover:bg-gray-200 transition-colors">AI</a>
-                            <a href="blog.html?tag=frontend" class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full hover:bg-gray-200 transition-colors">Frontend</a>
-                            <a href="blog.html?tag=backend" class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full hover:bg-gray-200 transition-colors">Backend</a>
-                            <a href="blog.html?tag=uiux" class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full hover:bg-gray-200 transition-colors">UI/UX</a>
-                            <a href="blog.html?tag=datascience" class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full hover:bg-gray-200 transition-colors">Data Science</a>
-                            <a href="blog.html?tag=pwa" class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full hover:bg-gray-200 transition-colors">PWA</a>
-                            <a href="blog.html?tag=career" class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full hover:bg-gray-200 transition-colors">Career</a>
-                        </div>
-                    </div>
+                <div class="flex items-center space-x-2">
+                  <i class="far fa-calendar-alt text-course-primary"></i>
+                  <span>July 25, 2025</span>
                 </div>
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-tag text-course-primary"></i>
+                  <span>Web Development</span>
+                </div>
+              </div>
+              <p>
+                The landscape of web development is in a constant state of flux,
+                evolving at a dizzying pace. What was cutting-edge yesterday
+                might be obsolete tomorrow. As we move further into 2025,
+                several exciting trends and technologies are emerging that
+                promise to reshape how we build and interact with the web.
+              </p>
+
+              <h2 class="text-3xl font-bold text-gray-800 pt-4">
+                The Rise of AI and Machine Learning in Web Development
+              </h2>
+              <p>
+                Artificial Intelligence (AI) and Machine Learning (ML) are no
+                longer confined to sci-fi movies; they are becoming integral to
+                web development. From intelligent chatbots and personalized user
+                experiences to automated code generation and predictive
+                analytics, AI/ML is set to revolutionize every aspect of web
+                creation. Developers are leveraging AI-powered tools for tasks
+                like UI/UX optimization, content generation, and even bug
+                detection, leading to faster development cycles and more
+                intuitive applications.
+              </p>
+              <ul class="list-disc pl-8 space-y-2">
+                <li>Automated code generation and optimization.</li>
+                <li>Enhanced personalization through predictive analytics.</li>
+                <li>Smarter chatbots and virtual assistants.</li>
+                <li>Improved accessibility features.</li>
+              </ul>
+
+              <h2 class="text-3xl font-bold text-gray-800 pt-4">
+                Serverless Architecture: Beyond the Buzzword
+              </h2>
+              <p>
+                Serverless computing, despite its name, doesn't mean servers are
+                gone. Instead, it means developers no longer need to manage them
+                directly. This paradigm allows you to build and run applications
+                and services without thinking about servers. Cloud providers
+                dynamically manage the allocation of machine resources. This
+                approach offers significant benefits, including reduced
+                operational costs, improved scalability, and faster deployment
+                times.
+              </p>
+              <p>
+                The adoption of serverless technologies like AWS Lambda, Azure
+                Functions, and Google Cloud Functions is growing exponentially,
+                enabling developers to focus solely on writing code and
+                delivering value.
+              </p>
+
+              <h2 class="text-3xl font-bold text-gray-800 pt-4">
+                WebAssembly (Wasm) for High Performance
+              </h2>
+              <p>
+                WebAssembly (Wasm) is quickly becoming a game-changer for
+                performance-critical web applications. It allows developers to
+                run code written in languages like C++, Rust, and C# directly in
+                the browser at near-native speeds. This opens up new
+                possibilities for complex applications, such as high-performance
+                games, video editing tools, and CAD software, directly within
+                the web environment without relying on plugins.
+              </p>
+              <div class="video-container rounded-xl shadow-xl">
+                <iframe
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p class="text-center text-sm text-gray-500 mt-2">
+                A quick introduction to WebAssembly. (Example Video)
+              </p>
+
+              <h2 class="text-3xl font-bold text-gray-800 pt-4">
+                Progressive Web Apps (PWAs) and Native App Features
+              </h2>
+              <p>
+                PWAs continue to blur the line between web and native
+                applications. Offering offline capabilities, push notifications,
+                and access to device hardware (like cameras and GPS), PWAs
+                provide a fast, reliable, and engaging user experience. They are
+                easier and cheaper to develop than traditional native apps,
+                making them an attractive option for businesses looking to reach
+                a wider audience without the overhead of app store distribution.
+              </p>
+
+              <h2 class="text-3xl font-bold text-gray-800 pt-4">
+                Enhanced Security Measures
+              </h2>
+              <p>
+                With increasing cyber threats, web security is more critical
+                than ever. The future of web development will see a greater
+                emphasis on robust security protocols. This includes widespread
+                adoption of HTTPS by default, Content Security Policy (CSP),
+                stricter data privacy regulations (like GDPR), and the
+                implementation of advanced authentication methods. Developers
+                must prioritize security from the outset, not as an
+                afterthought.
+              </p>
+
+              <p>
+                The future of web development is exciting and full of
+                opportunities. By staying informed and adaptable, developers can
+                embrace these changes to build more powerful, intelligent, and
+                secure web experiences for everyone.
+              </p>
             </div>
+
+            <div
+              class="border-t border-b border-gray-200 py-6 mt-12 flex flex-wrap justify-between items-center gap-4"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="flex items-center space-x-3">
+                <span class="font-semibold text-gray-800">Tags:</span>
+                <span
+                  class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full hover:bg-gray-200 transition-colors"
+                  >#WebDev</span
+                >
+                <span
+                  class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full hover:bg-gray-200 transition-colors"
+                  >#AI</span
+                >
+                <span
+                  class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full hover:bg-gray-200 transition-colors"
+                  >#FutureTech</span
+                >
+              </div>
+              <div class="flex items-center space-x-3">
+                <span class="font-semibold text-gray-800">Share:</span>
+                <a
+                  href="#"
+                  class="w-9 h-9 bg-course-blue/10 rounded-full flex items-center justify-center text-course-blue hover:bg-course-blue hover:text-white transition-colors"
+                  aria-label="Share on Facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a
+                  href="#"
+                  class="w-9 h-9 bg-course-blue/10 rounded-full flex items-center justify-center text-course-blue hover:bg-course-blue hover:text-white transition-colors"
+                  aria-label="Share on Twitter"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a
+                  href="#"
+                  class="w-9 h-9 bg-course-blue/10 rounded-full flex items-center justify-center text-course-blue hover:bg-course-blue hover:text-white transition-colors"
+                  aria-label="Share on LinkedIn"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+
+            <div
+              class="bg-course-secondary/50 p-6 rounded-2xl flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d877085b21?auto=format&fit=crop&w=100&q=80"
+                alt="Author Profile"
+                class="w-24 h-24 rounded-full object-cover border-4 border-white shadow-md"
+              />
+              <div class="text-center sm:text-left">
+                <h4 class="text-xl font-bold text-gray-800">
+                  About the Author: Admin
+                </h4>
+                <p class="text-gray-600">
+                  This article was written by the CoursePlatform editorial team,
+                  dedicated to providing valuable insights and educational
+                  content for our community.
+                </p>
+                <a
+                  href="team.html"
+                  class="inline-flex items-center text-course-primary font-semibold hover:text-course-accent transition-colors duration-300 mt-2"
+                >
+                  View Author's Profile
+                  <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </a>
+              </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="500">
+              <h3 class="text-2xl font-bold text-gray-800 mb-6">
+                Comments (3)
+              </h3>
+              <div class="space-y-6">
+                <div
+                  class="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-md border border-gray-200/50"
+                >
+                  <div class="flex items-center space-x-4 mb-3">
+                    <img
+                      src="https://randomuser.me/api/portraits/men/32.jpg"
+                      alt="Commenter 1"
+                      class="w-10 h-10 rounded-full object-cover"
+                    />
+                    <div>
+                      <div class="font-semibold text-gray-800">John M.</div>
+                      <div class="text-gray-500 text-sm">
+                        July 26, 2025 at 10:30 AM
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-gray-700 leading-relaxed">
+                    "Great article! The insights on AI and serverless are
+                    particularly relevant. Looking forward to more content like
+                    this."
+                  </p>
+                </div>
+                <div
+                  class="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-md border border-gray-200/50"
+                >
+                  <div class="flex items-center space-x-4 mb-3">
+                    <img
+                      src="https://randomuser.me/api/portraits/women/44.jpg"
+                      alt="Commenter 2"
+                      class="w-10 h-10 rounded-full object-cover"
+                    />
+                    <div>
+                      <div class="font-semibold text-gray-800">Sarah K.</div>
+                      <div class="text-gray-500 text-sm">
+                        July 26, 2025 at 02:15 PM
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-gray-700 leading-relaxed">
+                    "WebAssembly sounds really promising. I wonder how soon it
+                    will be adopted widely for mainstream apps."
+                  </p>
+                </div>
+                <div
+                  class="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-md border border-gray-200/50"
+                >
+                  <div class="flex items-center space-x-4 mb-3">
+                    <img
+                      src="https://randomuser.me/api/portraits/men/50.jpg"
+                      alt="Commenter 3"
+                      class="w-10 h-10 rounded-full object-cover"
+                    />
+                    <div>
+                      <div class="font-semibold text-gray-800">David L.</div>
+                      <div class="text-gray-500 text-sm">
+                        July 27, 2025 at 09:00 AM
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-gray-700 leading-relaxed">
+                    "Fantastic breakdown of future trends! As a budding
+                    developer, this helps me focus my learning path."
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="bg-course-secondary/50 p-6 rounded-2xl mt-8 shadow-lg"
+                data-aos="fade-up"
+                data-aos-delay="600"
+              >
+                <h4 class="text-xl font-bold text-gray-800 mb-4">
+                  Leave a Comment
+                </h4>
+                <form class="space-y-4">
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-course-primary transition-all"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-course-primary transition-all"
+                  />
+                  <textarea
+                    placeholder="Your Comment"
+                    rows="5"
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-course-primary transition-all"
+                  ></textarea>
+                  <button
+                    type="submit"
+                    class="bg-gradient-to-r from-course-primary to-course-accent hover:from-course-accent hover:to-course-primary text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-course-orange/25"
+                  >
+                    Post Comment
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-1 space-y-12">
+            <div
+              class="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-200/50"
+              data-aos="fade-left"
+              data-aos-delay="100"
+            >
+              <h4 class="text-xl font-bold text-gray-800 mb-4">Search Blog</h4>
+              <div class="relative">
+                <input
+                  type="text"
+                  placeholder="Search for posts..."
+                  class="w-full p-3 pr-10 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-course-primary transition-all"
+                />
+                <i
+                  class="fas fa-search absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-200/50"
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
+              <h4 class="text-xl font-bold text-gray-800 mb-4">Recent Posts</h4>
+              <ul class="space-y-4">
+                <li>
+                  <a
+                    href="blog-single.html"
+                    class="flex items-start space-x-3 group"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&q=80"
+                      alt="Recent Post 1"
+                      class="w-16 h-16 object-cover rounded-md flex-shrink-0 group-hover:scale-105 transition-transform"
+                    />
+                    <div>
+                      <h5
+                        class="text-gray-800 font-semibold group-hover:text-course-primary transition-colors text-base"
+                      >
+                        Understanding Frontend Frameworks
+                      </h5>
+                      <p class="text-gray-500 text-xs flex items-center mt-1">
+                        <i class="far fa-calendar-alt mr-1"></i> June 28, 2025
+                      </p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="blog-single.html"
+                    class="flex items-start space-x-3 group"
+                  >
+                    <img
+                      src="https://images.unsplash.com/photo-1582299066606-9366150245a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&q=80"
+                      alt="Recent Post 2"
+                      class="w-16 h-16 object-cover rounded-md flex-shrink-0 group-hover:scale-105 transition-transform"
+                    />
+                    <div>
+                      <h5
+                        class="text-gray-800 font-semibold group-hover:text-course-primary transition-colors text-base"
+                      >
+                        The Importance of User-Centered Design
+                      </h5>
+                      <p class="text-gray-500 text-xs flex items-center mt-1">
+                        <i class="far fa-calendar-alt mr-1"></i> June 15, 2025
+                      </p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-200/50"
+              data-aos="fade-left"
+              data-aos-delay="300"
+            >
+              <h4 class="text-xl font-bold text-gray-800 mb-4">Categories</h4>
+              <ul class="space-y-2 text-gray-700">
+                <li>
+                  <a
+                    href="blog.html?category=web-dev"
+                    class="block hover:text-course-primary transition-colors"
+                    >Web Development <span class="float-right">(5)</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="blog.html?category=design"
+                    class="block hover:text-course-primary transition-colors"
+                    >Design <span class="float-right">(3)</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="blog.html?category=data-science"
+                    class="block hover:text-course-primary transition-colors"
+                    >Data Science <span class="float-right">(4)</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="blog.html?category=career"
+                    class="block hover:text-course-primary transition-colors"
+                    >Career Tips <span class="float-right">(2)</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="blog.html?category=marketing"
+                    class="block hover:text-course-primary transition-colors"
+                    >Digital Marketing <span class="float-right">(3)</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-200/50"
+              data-aos="fade-left"
+              data-aos-delay="400"
+            >
+              <h4 class="text-xl font-bold text-gray-800 mb-4">Tags</h4>
+              <div class="flex flex-wrap gap-2">
+                <a
+                  href="blog.html?tag=ai"
+                  class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full hover:bg-gray-200 transition-colors"
+                  >AI</a
+                >
+                <a
+                  href="blog.html?tag=frontend"
+                  class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full hover:bg-gray-200 transition-colors"
+                  >Frontend</a
+                >
+                <a
+                  href="blog.html?tag=backend"
+                  class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full hover:bg-gray-200 transition-colors"
+                  >Backend</a
+                >
+                <a
+                  href="blog.html?tag=uiux"
+                  class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full hover:bg-gray-200 transition-colors"
+                  >UI/UX</a
+                >
+                <a
+                  href="blog.html?tag=datascience"
+                  class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full hover:bg-gray-200 transition-colors"
+                  >Data Science</a
+                >
+                <a
+                  href="blog.html?tag=pwa"
+                  class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full hover:bg-gray-200 transition-colors"
+                  >PWA</a
+                >
+                <a
+                  href="blog.html?tag=career"
+                  class="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full hover:bg-gray-200 transition-colors"
+                  >Career</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section

@@ -270,7 +270,7 @@
             <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-course-primary/10 rounded-full blur-3xl animate-pulse"></div>
         </div>
         <div class="container mx-auto px-4 relative z-10 text-center">
-            <h1 class="text-5xl lg:text-6xl font-bold bg-gradient-text mb-6" data-aos="fade-down" data-aos-duration="1000">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-text mb-6" data-aos="fade-down" data-aos-duration="1000">
                 Our Courses
             </h1>
             <p class="text-xl text-gray-700 max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
@@ -279,294 +279,399 @@
         </div>
     </section>
 
-    <section class="py-20 bg-white relative overflow-hidden">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12" data-aos="fade-down" data-aos-duration="800">
-                <h2 class="text-4xl font-bold bg-gradient-text mb-4">Discover Your Next Skill</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Choose from hundreds of courses taught by industry experts. Find the perfect course to kickstart your learning journey.
-                </p>
-            </div>
-
-            <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up" data-aos-delay="200">
-                <button class="filter-button active py-2 px-6 rounded-full font-semibold border border-gray-300 text-gray-700 hover:border-course-orange hover:text-course-primary transition-all duration-300" data-filter="all">All Categories</button>
-                <button class="filter-button py-2 px-6 rounded-full font-semibold border border-gray-300 text-gray-700 hover:border-course-orange hover:text-course-primary transition-all duration-300" data-filter="web-dev">Web Development</button>
-                <button class="filter-button py-2 px-6 rounded-full font-semibold border border-gray-300 text-gray-700 hover:border-course-orange hover:text-course-primary transition-all duration-300" data-filter="design">Design</button>
-                <button class="filter-button py-2 px-6 rounded-full font-semibold border border-gray-300 text-gray-700 hover:border-course-orange hover:text-course-primary transition-all duration-300" data-filter="data-science">Data Science</button>
-                <button class="filter-button py-2 px-6 rounded-full font-semibold border border-gray-300 text-gray-700 hover:border-course-orange hover:text-course-primary transition-all duration-300" data-filter="marketing">Marketing</button>
-            </div>
-
-            <div id="courses-grid" class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                <div class="course-card bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-course-orange/10 transition-all duration-300 hover:-translate-y-3 group border border-transparent hover:border-course-orange/20" data-category="web-dev" data-aos="fade-up" data-aos-delay="100">
-                    <div class="relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Complete Web Development Bootcamp" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
-                        <div class="absolute top-4 right-4 bg-gradient-to-r from-course-orange to-course-accent text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">$299</div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <div class="w-10 h-10 bg-gradient-to-br from-course-orange/20 to-course-accent/20 rounded-full flex items-center justify-center group-hover:from-course-orange group-hover:to-course-accent transition-all duration-300">
-                                <span class="text-course-primary group-hover:text-white font-semibold text-sm transition-colors duration-300">SJ</span>
-                            </div>
-                            <div>
-                                <div class="font-semibold text-gray-800 text-sm">Sarah Johnson</div>
-                                <div class="text-gray-600 text-xs">Senior Full-Stack Developer</div>
-                            </div>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-800 mb-4 group-hover:text-course-primary transition-colors duration-300">Complete Web Development Bootcamp</h3>
-                        <div class="space-y-2 mb-6">
-                            <div style="box-shadow: 2px 2px 8px #fef3e9; padding: 6px; border-radius: 6px;" class="flex items-center justify-between text-sm text-gray-600">
-                                <div class="flex items-center space-x-1"><i class="fas fa-clock drop-shadow-lg"></i><span>45 classes</span></div>
-                                <div class="flex items-center space-x-1"><i class="fas fa-star text-yellow-400 drop-shadow-lg"></i><span>4.9</span></div>
-                            </div>
-                            <div style="box-shadow: 2px 2px 8px #fef3e9; padding: 6px; border-radius: 6px;" class="flex items-center justify-between text-sm text-gray-600">
-                                <div class="flex items-center space-x-1"><i class="fas fa-calendar drop-shadow-lg"></i><span>March 15, 2024</span></div>
-                                <div class="flex items-center space-x-1"><i class="fas fa-users drop-shadow-lg"></i><span>1,250 students</span></div>
-                            </div>
-                        </div>
-                        <div class="flex space-x-3">
-                            <button class="flex-1 bg-gradient-to-r from-course-orange to-course-accent hover:from-course-accent hover:to-course-orange text-white rounded-full font-semibold py-2 px-4 transition-all duration-500 hover:shadow-xl hover:shadow-course-orange/25">Enroll Now</button>
-                            <button class="px-4 rounded-full border-2 border-course-orange text-course-orange hover:bg-course-orange hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-course-orange/25"><i class="fas fa-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-course-orange/10 transition-all duration-300 hover:-translate-y-3 group border border-transparent hover:border-course-orange/20" data-category="design" data-aos="fade-up" data-aos-delay="200">
-                    <div class="relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Advanced UI/UX Design Masterclass" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
-                        <div class="absolute top-4 right-4 bg-gradient-to-r from-course-orange to-course-accent text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">$199</div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <div class="w-10 h-10 bg-gradient-to-br from-course-orange/20 to-course-accent/20 rounded-full flex items-center justify-center group-hover:from-course-orange group-hover:to-course-accent transition-all duration-300">
-                                <span class="text-course-primary group-hover:text-white font-semibold text-sm transition-colors duration-300">MC</span>
-                            </div>
-                            <div>
-                                <div class="font-semibold text-gray-800 text-sm">Michael Chen</div>
-                                <div class="text-gray-600 text-xs">Lead UX Designer</div>
-                            </div>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-800 mb-4 group-hover:text-course-primary transition-colors duration-300">Advanced UI/UX Design Masterclass</h3>
-                        <div class="space-y-2 mb-6">
-                            <div style="box-shadow: 2px 2px 8px #fef3e9; padding: 6px; border-radius: 6px;" class="flex items-center justify-between text-sm text-gray-600">
-                                <div class="flex items-center space-x-1"><i class="fas fa-clock drop-shadow-lg"></i><span>40 classes</span></div>
-                                <div class="flex items-center space-x-1"><i class="fas fa-star text-yellow-400 drop-shadow-lg"></i><span>4.8</span></div>
-                            </div>
-                            <div style="box-shadow: 2px 2px 8px #fef3e9; padding: 6px; border-radius: 6px;" class="flex items-center justify-between text-sm text-gray-600">
-                                <div class="flex items-center space-x-1"><i class="fas fa-calendar drop-shadow-lg"></i><span>April 1, 2024</span></div>
-                                <div class="flex items-center space-x-1"><i class="fas fa-users drop-shadow-lg"></i><span>980 students</span></div>
-                            </div>
-                        </div>
-                        <div class="flex space-x-3">
-                            <button class="flex-1 bg-gradient-to-r from-course-orange to-course-accent hover:from-course-accent hover:to-course-orange text-white rounded-full font-semibold py-2 px-4 transition-all duration-500 hover:shadow-xl hover:shadow-course-orange/25">Enroll Now</button>
-                            <button class="px-4 rounded-full border-2 border-course-orange text-course-orange hover:bg-course-orange hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-course-orange/25"><i class="fas fa-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-course-orange/10 transition-all duration-300 hover:-translate-y-3 group border border-transparent hover:border-course-orange/20" data-category="data-science" data-aos="fade-up" data-aos-delay="300">
-                    <div class="relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Data Science for Beginners" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
-                        <div class="absolute top-4 right-4 bg-gradient-to-r from-course-orange to-course-accent text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">$349</div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <div class="w-10 h-10 bg-gradient-to-br from-course-orange/20 to-course-accent/20 rounded-full flex items-center justify-center group-hover:from-course-orange group-hover:to-course-accent transition-all duration-300">
-                                <span class="text-course-primary group-hover:text-white font-semibold text-sm transition-colors duration-300">PP</span>
-                            </div>
-                            <div>
-                                <div class="font-semibold text-gray-800 text-sm">Priya Patel</div>
-                                <div class="text-gray-600 text-xs">Lead Data Scientist</div>
-                            </div>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-800 mb-4 group-hover:text-course-primary transition-colors duration-300">Data Science for Beginners</h3>
-                        <div class="space-y-2 mb-6">
-                            <div style="box-shadow: 2px 2px 8px #fef3e9; padding: 6px; border-radius: 6px;" class="flex items-center justify-between text-sm text-gray-600">
-                                <div class="flex items-center space-x-1"><i class="fas fa-clock drop-shadow-lg"></i><span>50 classes</span></div>
-                                <div class="flex items-center space-x-1"><i class="fas fa-star text-yellow-400 drop-shadow-lg"></i><span>4.9</span></div>
-                            </div>
-                            <div style="box-shadow: 2px 2px 8px #fef3e9; padding: 6px; border-radius: 6px;" class="flex items-center justify-between text-sm text-gray-600">
-                                <div class="flex items-center space-x-1"><i class="fas fa-calendar drop-shadow-lg"></i><span>Feb 20, 2024</span></div>
-                                <div class="flex items-center space-x-1"><i class="fas fa-users drop-shadow-lg"></i><span>1,500 students</span></div>
-                            </div>
-                        </div>
-                        <div class="flex space-x-3">
-                            <button class="flex-1 bg-gradient-to-r from-course-orange to-course-accent hover:from-course-accent hover:to-course-orange text-white rounded-full font-semibold py-2 px-4 transition-all duration-500 hover:shadow-xl hover:shadow-course-orange/25">Enroll Now</button>
-                            <button class="px-4 rounded-full border-2 border-course-orange text-course-orange hover:bg-course-orange hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-course-orange/25"><i class="fas fa-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-course-orange/10 transition-all duration-300 hover:-translate-y-3 group border border-transparent hover:border-course-orange/20" data-category="marketing" data-aos="fade-up" data-aos-delay="400">
-                    <div class="relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Digital Marketing Masterclass" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
-                        <div class="absolute top-4 right-4 bg-gradient-to-r from-course-orange to-course-accent text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">$249</div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <div class="w-10 h-10 bg-gradient-to-br from-course-orange/20 to-course-accent/20 rounded-full flex items-center justify-center group-hover:from-course-orange group-hover:to-course-accent transition-all duration-300">
-                                <span class="text-course-primary group-hover:text-white font-semibold text-sm transition-colors duration-300">AM</span>
-                            </div>
-                            <div>
-                                <div class="font-semibold text-gray-800 text-sm">Anna Markova</div>
-                                <div class="text-gray-600 text-xs">Digital Marketing Strategist</div>
-                            </div>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-800 mb-4 group-hover:text-course-primary transition-colors duration-300">Digital Marketing Masterclass</h3>
-                        <div class="space-y-2 mb-6">
-                            <div style="box-shadow: 2px 2px 8px #fef3e9; padding: 6px; border-radius: 6px;" class="flex items-center justify-between text-sm text-gray-600">
-                                <div class="flex items-center space-x-1"><i class="fas fa-clock drop-shadow-lg"></i><span>35 classes</span></div>
-                                <div class="flex items-center space-x-1"><i class="fas fa-star text-yellow-400 drop-shadow-lg"></i><span>4.7</span></div>
-                            </div>
-                            <div style="box-shadow: 2px 2px 8px #fef3e9; padding: 6px; border-radius: 6px;" class="flex items-center justify-between text-sm text-gray-600">
-                                <div class="flex items-center space-x-1"><i class="fas fa-calendar drop-shadow-lg"></i><span>March 1, 2024</span></div>
-                                <div class="flex items-center space-x-1"><i class="fas fa-users drop-shadow-lg"></i><span>800 students</span></div>
-                            </div>
-                        </div>
-                        <div class="flex space-x-3">
-                            <button class="flex-1 bg-gradient-to-r from-course-orange to-course-accent hover:from-course-accent hover:to-course-orange text-white rounded-full font-semibold py-2 px-4 transition-all duration-500 hover:shadow-xl hover:shadow-course-orange/25">Enroll Now</button>
-                            <button class="px-4 rounded-full border-2 border-course-orange text-course-orange hover:bg-course-orange hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-course-orange/25"><i class="fas fa-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-course-orange/10 transition-all duration-300 hover:-translate-y-3 group border border-transparent hover:border-course-orange/20" data-category="web-dev" data-aos="fade-up" data-aos-delay="500">
-                    <div class="relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Full-Stack JavaScript Course" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
-                        <div class="absolute top-4 right-4 bg-gradient-to-r from-course-orange to-course-accent text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">$399</div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <div class="w-10 h-10 bg-gradient-to-br from-course-orange/20 to-course-accent/20 rounded-full flex items-center justify-center group-hover:from-course-orange group-hover:to-course-accent transition-all duration-300">
-                                <span class="text-course-primary group-hover:text-white font-semibold text-sm transition-colors duration-300">JD</span>
-                            </div>
-                            <div>
-                                <div class="font-semibold text-gray-800 text-sm">John Doe</div>
-                                <div class="text-gray-600 text-xs">Senior Web Developer</div>
-                            </div>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-800 mb-4 group-hover:text-course-primary transition-colors duration-300">Full-Stack JavaScript Course</h3>
-                        <div class="space-y-2 mb-6">
-                            <div style="box-shadow: 2px 2px 8px #fef3e9; padding: 6px; border-radius: 6px;" class="flex items-center justify-between text-sm text-gray-600">
-                                <div class="flex items-center space-x-1"><i class="fas fa-clock drop-shadow-lg"></i><span>60 classes</span></div>
-                                <div class="flex items-center space-x-1"><i class="fas fa-star text-yellow-400 drop-shadow-lg"></i><span>5.0</span></div>
-                            </div>
-                            <div style="box-shadow: 2px 2px 8px #fef3e9; padding: 6px; border-radius: 6px;" class="flex items-center justify-between text-sm text-gray-600">
-                                <div class="flex items-center space-x-1"><i class="fas fa-calendar drop-shadow-lg"></i><span>April 10, 2024</span></div>
-                                <div class="flex items-center space-x-1"><i class="fas fa-users drop-shadow-lg"></i><span>1,800 students</span></div>
-                            </div>
-                        </div>
-                        <div class="flex space-x-3">
-                            <button class="flex-1 bg-gradient-to-r from-course-orange to-course-accent hover:from-course-accent hover:to-course-orange text-white rounded-full font-semibold py-2 px-4 transition-all duration-500 hover:shadow-xl hover:shadow-course-orange/25">Enroll Now</button>
-                            <button class="px-4 rounded-full border-2 border-course-orange text-course-orange hover:bg-course-orange hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-course-orange/25"><i class="fas fa-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-course-orange/10 transition-all duration-300 hover:-translate-y-3 group border border-transparent hover:border-course-orange/20" data-category="design" data-aos="fade-up" data-aos-delay="600">
-                    <div class="relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1596495578036-281b3749437b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Graphic Design Fundamentals" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
-                        <div class="absolute top-4 right-4 bg-gradient-to-r from-course-orange to-course-accent text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">$149</div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <div class="w-10 h-10 bg-gradient-to-br from-course-orange/20 to-course-accent/20 rounded-full flex items-center justify-center group-hover:from-course-orange group-hover:to-course-accent transition-all duration-300">
-                                <span class="text-course-primary group-hover:text-white font-semibold text-sm transition-colors duration-300">EL</span>
-                            </div>
-                            <div>
-                                <div class="font-semibold text-gray-800 text-sm">Emily Lee</div>
-                                <div class="text-gray-600 text-xs">Graphic Designer</div>
-                            </div>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-800 mb-4 group-hover:text-course-primary transition-colors duration-300">Graphic Design Fundamentals</h3>
-                        <div class="space-y-2 mb-6">
-                            <div style="box-shadow: 2px 2px 8px #fef3e9; padding: 6px; border-radius: 6px;" class="flex items-center justify-between text-sm text-gray-600">
-                                <div class="flex items-center space-x-1"><i class="fas fa-clock drop-shadow-lg"></i><span>30 classes</span></div>
-                                <div class="flex items-center space-x-1"><i class="fas fa-star text-yellow-400 drop-shadow-lg"></i><span>4.6</span></div>
-                            </div>
-                            <div style="box-shadow: 2px 2px 8px #fef3e9; padding: 6px; border-radius: 6px;" class="flex items-center space-x-1">
-                                <i class="fas fa-calendar drop-shadow-lg"></i><span>May 5, 2024</span>
-                            </div>
-                            <div class="flex items-center space-x-1"><i class="fas fa-users drop-shadow-lg"></i><span>750 students</span></div>
-                        </div>
-                        <div class="flex space-x-3">
-                            <button class="flex-1 bg-gradient-to-r from-course-orange to-course-accent hover:from-course-accent hover:to-course-orange text-white rounded-full font-semibold py-2 px-4 transition-all duration-500 hover:shadow-xl hover:shadow-course-orange/25">Enroll Now</button>
-                            <button class="px-4 rounded-full border-2 border-course-orange text-course-orange hover:bg-course-orange hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-course-orange/25"><i class="fas fa-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                 <div class="course-card bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-course-orange/10 transition-all duration-300 hover:-translate-y-3 group border border-transparent hover:border-course-orange/20" data-category="data-science" data-aos="fade-up" data-aos-delay="700">
-                    <div class="relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1542744173-8e7e60ff42c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Machine Learning with Python" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
-                        <div class="absolute top-4 right-4 bg-gradient-to-r from-course-orange to-course-accent text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">$499</div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <div class="w-10 h-10 bg-gradient-to-br from-course-orange/20 to-course-accent/20 rounded-full flex items-center justify-center group-hover:from-course-orange group-hover:to-course-accent transition-all duration-300">
-                                <span class="text-course-primary group-hover:text-white font-semibold text-sm transition-colors duration-300">RK</span>
-                            </div>
-                            <div>
-                                <div class="font-semibold text-gray-800 text-sm">Rahul Kumar</div>
-                                <div class="text-gray-600 text-xs">AI/ML Engineer</div>
-                            </div>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-800 mb-4 group-hover:text-course-primary transition-colors duration-300">Machine Learning with Python</h3>
-                        <div class="space-y-2 mb-6">
-                            <div style="box-shadow: 2px 2px 8px #fef3e9; padding: 6px; border-radius: 6px;" class="flex items-center justify-between text-sm text-gray-600">
-                                <div class="flex items-center space-x-1"><i class="fas fa-clock drop-shadow-lg"></i><span>70 classes</span></div>
-                                <div class="flex items-center space-x-1"><i class="fas fa-star text-yellow-400 drop-shadow-lg"></i><span>5.0</span></div>
-                            </div>
-                            <div style="box-shadow: 2px 2px 8px #fef3e9; padding: 6px; border-radius: 6px;" class="flex items-center justify-between text-sm text-gray-600">
-                                <div class="flex items-center space-x-1"><i class="fas fa-calendar drop-shadow-lg"></i><span>Jan 1, 2025</span></div>
-                                <div class="flex items-center space-x-1"><i class="fas fa-users drop-shadow-lg"></i><span>2,000 students</span></div>
-                            </div>
-                        </div>
-                        <div class="flex space-x-3">
-                            <button class="flex-1 bg-gradient-to-r from-course-orange to-course-accent hover:from-course-accent hover:to-course-orange text-white rounded-full font-semibold py-2 px-4 transition-all duration-500 hover:shadow-xl hover:shadow-course-orange/25">Enroll Now</button>
-                            <button class="px-4 rounded-full border-2 border-course-orange text-course-orange hover:bg-course-orange hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-course-orange/25"><i class="fas fa-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-course-orange/10 transition-all duration-300 hover:-translate-y-3 group border border-transparent hover:border-course-orange/20" data-category="marketing" data-aos="fade-up" data-aos-delay="800">
-                    <div class="relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Social Media Marketing" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
-                        <div class="absolute top-4 right-4 bg-gradient-to-r from-course-orange to-course-accent text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">$179</div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <div class="w-10 h-10 bg-gradient-to-br from-course-orange/20 to-course-accent/20 rounded-full flex items-center justify-center group-hover:from-course-orange group-hover:to-course-accent transition-all duration-300">
-                                <span class="text-course-primary group-hover:text-white font-semibold text-sm transition-colors duration-300">JZ</span>
-                            </div>
-                            <div>
-                                <div class="font-semibold text-gray-800 text-sm">Jessica Zang</div>
-                                <div class="text-gray-600 text-xs">Social Media Expert</div>
-                            </div>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-800 mb-4 group-hover:text-course-primary transition-colors duration-300">Social Media Marketing</h3>
-                        <div class="space-y-2 mb-6">
-                            <div style="box-shadow: 2px 2px 8px #fef3e9; padding: 6px; border-radius: 6px;" class="flex items-center justify-between text-sm text-gray-600">
-                                <div class="flex items-center space-x-1"><i class="fas fa-clock drop-shadow-lg"></i><span>25 classes</span></div>
-                                <div class="flex items-center space-x-1"><i class="fas fa-star text-yellow-400 drop-shadow-lg"></i><span>4.5</span></div>
-                            </div>
-                            <div style="box-shadow: 2px 2px 8px #fef3e9; padding: 6px; border-radius: 6px;" class="flex items-center justify-between text-sm text-gray-600">
-                                <div class="flex items-center space-x-1"><i class="fas fa-calendar drop-shadow-lg"></i><span>April 20, 2024</span></div>
-                                <div class="flex items-center space-x-1"><i class="fas fa-users drop-shadow-lg"></i><span>600 students</span></div>
-                            </div>
-                        </div>
-                        <div class="flex space-x-3">
-                            <button class="flex-1 bg-gradient-to-r from-course-orange to-course-accent hover:from-course-accent hover:to-course-orange text-white rounded-full font-semibold py-2 px-4 transition-all duration-500 hover:shadow-xl hover:shadow-course-orange/25">Enroll Now</button>
-                            <button class="px-4 rounded-full border-2 border-course-orange text-course-orange hover:bg-course-orange hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-course-orange/25"><i class="fas fa-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            
-            <div class="text-center mt-16" data-aos="fade-up" data-aos-delay="900">
-                <button class="bg-gradient-to-r from-course-primary to-course-accent hover:from-course-accent hover:to-course-primary text-white px-8 py-3 rounded-full font-semibold transition-all duration-500 hover:shadow-xl hover:shadow-course-orange/25 hover:scale-110">Load More Courses</button>
-            </div>
+       <!-- course -->
+    <section
+      id="courses"
+      class="py-20 bg-gradient-to-br from-course-secondary/30 via-course-orange/5 to-course-secondary/30 relative overflow-hidden"
+    >
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center mb-16" data-aos="fade-down">
+          <span
+            class="inline-block text-sm font-semibold text-course-blue bg-course-orange/20 px-4 py-1.5 rounded-full mb-4"
+          >
+            — OUR EXCELLENT COURSE —
+          </span>
+          <h2
+            class="text-3xl md:text-4xl lg:text-5xl sm:text-5xl font-black text-gray-800 mb-6 leading-tight"
+          >
+            Professional Course
+            <span class="block bg-gradient-text">For Your Space</span>
+          </h2>
         </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-course-orange/10 transition-all duration-300 hover:-translate-y-3 group border border-transparent hover:border-course-orange/20"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Complete Web Development Bootcamp"
+                class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div
+                class="absolute top-4 right-4 bg-gradient-to-r from-course-orange to-course-accent text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg"
+              >
+                $299
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center space-x-3 mb-4">
+                <div
+                  class="w-10 h-10 bg-gradient-to-br from-course-orange/20 to-course-accent/20 rounded-full flex items-center justify-center group-hover:from-course-orange group-hover:to-course-accent transition-all duration-300"
+                >
+                  <span
+                    class="text-course-primary group-hover:text-white font-semibold text-sm transition-colors duration-300"
+                    >SJ</span
+                  >
+                </div>
+                <div>
+                  <div class="font-semibold text-gray-800 text-sm">
+                    Sarah Johnson
+                  </div>
+                  <div class="text-gray-600 text-xs">
+                    Senior Full-Stack Developer
+                  </div>
+                </div>
+              </div>
+              <h3
+                class="text-lg font-bold text-gray-800 mb-4 group-hover:text-course-primary transition-colors duration-300"
+              >
+                Complete Web Development Bootcamp
+              </h3>
+              <div class="space-y-2 mb-6">
+                <div
+                  style="
+                    box-shadow: 2px 2px 8px #fef3e9;
+                    padding: 6px;
+                    border-radius: 6px;
+                  "
+                  class="flex items-center justify-between text-sm text-gray-600"
+                >
+                  <div class="flex items-center space-x-1">
+                    <i class="fas fa-clock drop-shadow-lg"></i>
+                    <span>45 classes</span>
+                  </div>
+                  <div class="flex items-center space-x-1">
+                    <i class="fas fa-star text-yellow-400 drop-shadow-lg"></i>
+                    <span>4.9</span>
+                  </div>
+                </div>
+                <div
+                  style="
+                    box-shadow: 2px 2px 8px #fef3e9;
+                    padding: 6px;
+                    border-radius: 6px;
+                  "
+                  class="flex items-center justify-between text-sm text-gray-600"
+                >
+                  <div class="flex items-center space-x-1">
+                    <i class="fas fa-calendar drop-shadow-lg"></i>
+                    <span>March 15, 2024</span>
+                  </div>
+                  <div class="flex items-center space-x-1">
+                    <i class="fas fa-users drop-shadow-lg"></i>
+                    <span>1,250 students</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex space-x-3">
+                <button
+                  class="flex-1 bg-gradient-to-r from-course-orange to-course-accent hover:from-course-accent hover:to-course-orange text-white rounded-full font-semibold py-2 px-4 transition-all duration-500 hover:shadow-xl hover:shadow-course-orange/25"
+                >
+                  Enroll Now
+                </button>
+                <button
+                  class="px-4 rounded-full border-2 border-course-orange text-course-orange hover:bg-course-orange hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-course-orange/25"
+                >
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-course-orange/10 transition-all duration-300 hover:-translate-y-3 group border border-transparent hover:border-course-orange/20"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Advanced UI/UX Design Masterclass"
+                class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div
+                class="absolute top-4 right-4 bg-gradient-to-r from-course-orange to-course-accent text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg"
+              >
+                $199
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center space-x-3 mb-4">
+                <div
+                  class="w-10 h-10 bg-gradient-to-br from-course-orange/20 to-course-accent/20 rounded-full flex items-center justify-center group-hover:from-course-orange group-hover:to-course-accent transition-all duration-300"
+                >
+                  <span
+                    class="text-course-primary group-hover:text-white font-semibold text-sm transition-colors duration-300"
+                    >MC</span
+                  >
+                </div>
+                <div>
+                  <div class="font-semibold text-gray-800 text-sm">
+                    Michael Chen
+                  </div>
+                  <div class="text-gray-600 text-xs">Lead UX Designer</div>
+                </div>
+              </div>
+              <h3
+                class="text-lg font-bold text-gray-800 mb-4 group-hover:text-course-primary transition-colors duration-300"
+              >
+                Advanced UI/UX Design Masterclass
+              </h3>
+              <div class="space-y-2 mb-6">
+                <div
+                  style="
+                    box-shadow: 2px 2px 8px #fef3e9;
+                    padding: 6px;
+                    border-radius: 6px;
+                  "
+                  class="flex items-center justify-between text-sm text-gray-600"
+                >
+                  <div class="flex items-center space-x-1">
+                    <i class="fas fa-clock drop-shadow-lg"></i>
+                    <span>45 classes</span>
+                  </div>
+                  <div class="flex items-center space-x-1">
+                    <i class="fas fa-star text-yellow-400 drop-shadow-lg"></i>
+                    <span>4.9</span>
+                  </div>
+                </div>
+                <div
+                  style="
+                    box-shadow: 2px 2px 8px #fef3e9;
+                    padding: 6px;
+                    border-radius: 6px;
+                  "
+                  class="flex items-center justify-between text-sm text-gray-600"
+                >
+                  <div class="flex items-center space-x-1">
+                    <i class="fas fa-calendar drop-shadow-lg"></i>
+                    <span>March 15, 2024</span>
+                  </div>
+                  <div class="flex items-center space-x-1">
+                    <i class="fas fa-users drop-shadow-lg"></i>
+                    <span>1,250 students</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex space-x-3">
+                <button
+                  class="flex-1 bg-gradient-to-r from-course-orange to-course-accent hover:from-course-accent hover:to-course-orange text-white rounded-full font-semibold py-2 px-4 transition-all duration-500 hover:shadow-xl hover:shadow-course-orange/25"
+                >
+                  Enroll Now
+                </button>
+                <button
+                  class="px-4 rounded-full border-2 border-course-orange text-course-orange hover:bg-course-orange hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-course-orange/25"
+                >
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-course-orange/10 transition-all duration-300 hover:-translate-y-3 group border border-transparent hover:border-course-orange/20"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Complete Web Development Bootcamp"
+                class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div
+                class="absolute top-4 right-4 bg-gradient-to-r from-course-orange to-course-accent text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg"
+              >
+                $299
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center space-x-3 mb-4">
+                <div
+                  class="w-10 h-10 bg-gradient-to-br from-course-orange/20 to-course-accent/20 rounded-full flex items-center justify-center group-hover:from-course-orange group-hover:to-course-accent transition-all duration-300"
+                >
+                  <span
+                    class="text-course-primary group-hover:text-white font-semibold text-sm transition-colors duration-300"
+                    >SJ</span
+                  >
+                </div>
+                <div>
+                  <div class="font-semibold text-gray-800 text-sm">
+                    Sarah Johnson
+                  </div>
+                  <div class="text-gray-600 text-xs">
+                    Senior Full-Stack Developer
+                  </div>
+                </div>
+              </div>
+              <h3
+                class="text-lg font-bold text-gray-800 mb-4 group-hover:text-course-primary transition-colors duration-300"
+              >
+                Complete Web Development Bootcamp
+              </h3>
+              <div class="space-y-2 mb-6">
+                <div
+                  style="
+                    box-shadow: 2px 2px 8px #fef3e9;
+                    padding: 6px;
+                    border-radius: 6px;
+                  "
+                  class="flex items-center justify-between text-sm text-gray-600"
+                >
+                  <div class="flex items-center space-x-1">
+                    <i class="fas fa-clock drop-shadow-lg"></i>
+                    <span>45 classes</span>
+                  </div>
+                  <div class="flex items-center space-x-1">
+                    <i class="fas fa-star text-yellow-400 drop-shadow-lg"></i>
+                    <span>4.9</span>
+                  </div>
+                </div>
+                <div
+                  style="
+                    box-shadow: 2px 2px 8px #fef3e9;
+                    padding: 6px;
+                    border-radius: 6px;
+                  "
+                  class="flex items-center justify-between text-sm text-gray-600"
+                >
+                  <div class="flex items-center space-x-1">
+                    <i class="fas fa-calendar drop-shadow-lg"></i>
+                    <span>March 15, 2024</span>
+                  </div>
+                  <div class="flex items-center space-x-1">
+                    <i class="fas fa-users drop-shadow-lg"></i>
+                    <span>1,250 students</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex space-x-3">
+                <button
+                  class="flex-1 bg-gradient-to-r from-course-orange to-course-accent hover:from-course-accent hover:to-course-orange text-white rounded-full font-semibold py-2 px-4 transition-all duration-500 hover:shadow-xl hover:shadow-course-orange/25"
+                >
+                  Enroll Now
+                </button>
+                <button
+                  class="px-4 rounded-full border-2 border-course-orange text-course-orange hover:bg-course-orange hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-course-orange/25"
+                >
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-course-orange/10 transition-all duration-300 hover:-translate-y-3 group border border-transparent hover:border-course-orange/20"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Advanced UI/UX Design Masterclass"
+                class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div
+                class="absolute top-4 right-4 bg-gradient-to-r from-course-orange to-course-accent text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg"
+              >
+                $199
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center space-x-3 mb-4">
+                <div
+                  class="w-10 h-10 bg-gradient-to-br from-course-orange/20 to-course-accent/20 rounded-full flex items-center justify-center group-hover:from-course-orange group-hover:to-course-accent transition-all duration-300"
+                >
+                  <span
+                    class="text-course-primary group-hover:text-white font-semibold text-sm transition-colors duration-300"
+                    >MC</span
+                  >
+                </div>
+                <div>
+                  <div class="font-semibold text-gray-800 text-sm">
+                    Michael Chen
+                  </div>
+                  <div class="text-gray-600 text-xs">Lead UX Designer</div>
+                </div>
+              </div>
+              <h3
+                class="text-lg font-bold text-gray-800 mb-4 group-hover:text-course-primary transition-colors duration-300"
+              >
+                Advanced UI/UX Design Masterclass
+              </h3>
+              <div class="space-y-2 mb-6">
+                <div
+                  style="
+                    box-shadow: 2px 2px 8px #fef3e9;
+                    padding: 6px;
+                    border-radius: 6px;
+                  "
+                  class="flex items-center justify-between text-sm text-gray-600"
+                >
+                  <div class="flex items-center space-x-1">
+                    <i class="fas fa-clock drop-shadow-lg"></i>
+                    <span>45 classes</span>
+                  </div>
+                  <div class="flex items-center space-x-1">
+                    <i class="fas fa-star text-yellow-400 drop-shadow-lg"></i>
+                    <span>4.9</span>
+                  </div>
+                </div>
+                <div
+                  style="
+                    box-shadow: 2px 2px 8px #fef3e9;
+                    padding: 6px;
+                    border-radius: 6px;
+                  "
+                  class="flex items-center justify-between text-sm text-gray-600"
+                >
+                  <div class="flex items-center space-x-1">
+                    <i class="fas fa-calendar drop-shadow-lg"></i>
+                    <span>March 15, 2024</span>
+                  </div>
+                  <div class="flex items-center space-x-1">
+                    <i class="fas fa-users drop-shadow-lg"></i>
+                    <span>1,250 students</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex space-x-3">
+                <button
+                  class="flex-1 bg-gradient-to-r from-course-orange to-course-accent hover:from-course-accent hover:to-course-orange text-white rounded-full font-semibold py-2 px-4 transition-all duration-500 hover:shadow-xl hover:shadow-course-orange/25"
+                >
+                  Enroll Now
+                </button>
+                <button
+                  class="px-4 rounded-full border-2 border-course-orange text-course-orange hover:bg-course-orange hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-course-orange/25"
+                >
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12" data-aos="fade-up">
+          <button
+            class="bg-gradient-to-r from-course-primary to-course-accent hover:from-course-accent hover:to-course-primary text-white px-8 py-3 rounded-full font-semibold transition-all duration-500 hover:shadow-xl hover:shadow-course-orange/25 hover:scale-110"
+          >
+            View All Courses
+          </button>
+        </div>
+      </div>
     </section>
 
     <section
@@ -582,7 +687,7 @@
       </div>
       <div class="container mx-auto px-4 relative z-10">
         <h2
-          class="text-4xl lg:text-5xl font-bold mb-6"
+          class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
           data-aos="fade-up"
           data-aos-duration="1000"
         >
