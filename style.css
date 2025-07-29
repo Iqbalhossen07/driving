@@ -1,0 +1,51 @@
+
+      .bg-gradient-text {
+        background: linear-gradient(to right, #f97316, #ef4444);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .slide {
+        display: none;
+      }
+
+      .slide.active {
+        display: block;
+      }
+
+      .testimonial {
+        display: none;
+      }
+
+      .testimonial.active {
+        display: block;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      /* Added Font Styles */
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Merriweather", serif;
+      }
+
+      body {
+        font-family: "Lora", serif;
+      }
