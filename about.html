@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - CoursePlatform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "course-primary": "#f97316",
+              "course-secondary": "#fff7ed",
+              "course-accent": "#ef4444",
+              "course-red": "#ef4444",
+              "course-orange": "#f97316",
+              "course-orange-light": "#fb923c",
+              "course-blue": "#0E2A47",
+              topbar: "#f97316",
+              "topbar-foreground": "#ffffff",
+            },
+            animation: {
+              "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      .bg-gradient-text {
+        background: linear-gradient(to right, #f97316, #ef4444);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      body {
+        font-family: "Lora", serif;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Merriweather", serif;
+      }
+      .tab-content {
+        display: none;
+      }
+      .tab-content.active {
+        display: block;
+      }
+      .tab-button.active {
+        background: linear-gradient(to right, #f97316, #ef4444);
+        color: white;
+        box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-white">
+    <div class="bg-course-primary text-white py-2 px-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center space-x-6">
+          <div class="flex items-center space-x-2">
+            <i class="fas fa-phone text-sm"></i>
+            <span class="text-sm">+1 (555) 123-4567</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <i class="fas fa-envelope text-sm"></i>
+            <span class="text-sm">info@courseplatform.com</span>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-4">
+          <a
+            href="#"
+            class="hover:text-course-accent transition-colors duration-200"
+            aria-label="Facebook"
+          >
+            <i class="fab fa-facebook text-lg"></i>
+          </a>
+          <a
+            href="#"
+            class="hover:text-course-accent transition-colors duration-200"
+            aria-label="Twitter"
+          >
+            <i class="fab fa-twitter text-lg"></i>
+          </a>
+          <a
+            href="#"
+            class="hover:text-course-accent transition-colors duration-200"
+            aria-label="Instagram"
+          >
+            <i class="fab fa-instagram text-lg"></i>
+          </a>
+          <a
+            href="#"
+            class="hover:text-course-accent transition-colors duration-200"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin text-lg"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <nav
+      class="bg-white/95 backdrop-blur-md border-b border-gray-200/50 shadow-lg shadow-course-orange/10 sticky top-0 z-50"
+    >
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+          <a href="index.html" class="flex items-center space-x-2 group">
+            <div
+              class="w-10 h-10 bg-gradient-to-br from-course-primary to-course-accent rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-course-orange/25"
+            >
+              <span class="text-white font-bold text-xl">C</span>
+            </div>
+            <span class="text-xl font-bold bg-gradient-text"
+              >CoursePlatform</span
+            >
+          </a>
+
+          <div class="hidden lg:flex items-center space-x-8">
+            <a
+              href="index.html#home"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium relative group"
+            >
+              Home
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-course-orange to-course-accent group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+            <a
+              href="index.html#courses"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium relative group"
+            >
+              Courses
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-course-orange to-course-accent group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+            <a
+              href="index.html#categories"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium relative group"
+            >
+              Categories
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-course-orange to-course-accent group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+            <a
+              href="#"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium relative group"
+            >
+              About Us
+              <span
+                class="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-course-orange to-course-accent transition-all duration-300"
+              ></span>
+            </a>
+            <a
+              href="index.html#team"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium relative group"
+            >
+              Team
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-course-orange to-course-accent group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+            <a
+              href="index.html#blog"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium relative group"
+            >
+              Blog
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-course-orange to-course-accent group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+            <a
+              href="index.html#contact"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium relative group"
+            >
+              Contact
+              <span
+                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-course-orange to-course-accent group-hover:w-full transition-all duration-300"
+              ></span>
+            </a>
+
+            <button
+              class="bg-gradient-to-r from-course-orange to-course-accent hover:from-course-accent hover:to-course-orange text-white px-6 py-2 rounded-full flex items-center space-x-2 transition-all duration-500 hover:shadow-xl hover:shadow-course-orange/25 hover:scale-105"
+            >
+              <i class="fas fa-phone text-sm"></i>
+              <span>Call Now</span>
+            </button>
+          </div>
+
+          <div class="lg:hidden">
+            <button
+              id="mobile-menu-btn"
+              class="text-gray-700 hover:text-course-primary transition-colors"
+            >
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="mobile-menu"
+          class="lg:hidden hidden py-4 border-t border-gray-200"
+        >
+          <div class="flex flex-col space-y-4">
+            <a
+              href="index.html#home"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium px-2 py-1 rounded-lg hover:bg-course-orange/10"
+              >Home</a
+            >
+            <a
+              href="index.html#courses"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium px-2 py-1 rounded-lg hover:bg-course-orange/10"
+              >Courses</a
+            >
+            <a
+              href="index.html#categories"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium px-2 py-1 rounded-lg hover:bg-course-orange/10"
+              >Categories</a
+            >
+            <a
+              href="#"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium px-2 py-1 rounded-lg hover:bg-course-orange/10"
+              >About Us</a
+            >
+            <a
+              href="index.html#team"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium px-2 py-1 rounded-lg hover:bg-course-orange/10"
+              >Team</a
+            >
+            <a
+              href="index.html#blog"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium px-2 py-1 rounded-lg hover:bg-course-orange/10"
+              >Blog</a
+            >
+            <a
+              href="index.html#contact"
+              class="text-gray-700 hover:text-course-primary transition-colors duration-300 font-medium px-2 py-1 rounded-lg hover:bg-course-orange/10"
+              >Contact</a
+            >
+            <button
+              class="bg-gradient-to-r from-course-orange to-course-accent hover:from-course-accent hover:to-course-orange text-white px-6 py-2 rounded-full flex items-center justify-center space-x-2 transition-all duration-500 hover:shadow-xl hover:shadow-course-orange/25 hover:scale-105 mt-4"
+            >
+              <i class="fas fa-phone text-sm"></i>
+              <span>Call Now</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="relative py-20 bg-gradient-to-br from-course-secondary/50 via-course-orange/10 to-course-secondary/50 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-course-orange/10 rounded-full blur-3xl animate-pulse-slow"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-course-primary/10 rounded-full blur-3xl animate-pulse"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <h1 class="text-5xl lg:text-6xl font-bold bg-gradient-text mb-6" data-aos="fade-down" data-aos-duration="1000">
+                About Us
+            </h1>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                Welcome to CoursePlatform! We are committed to empowering your skills and building your career through world-class education.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8" data-aos="fade-right" data-aos-duration="1000">
+                    <h2 class="text-4xl font-bold bg-gradient-text mb-6">Our Mission & Vision</h2>
+
+                    <div class="flex space-x-4 mb-8">
+                        <button class="tab-button active flex-1 py-3 px-6 rounded-full text-lg font-semibold bg-gray-200 text-gray-700 hover:bg-gray-300 transition-all duration-300" data-tab="mission">Our Mission</button>
+                        <button class="tab-button flex-1 py-3 px-6 rounded-full text-lg font-semibold bg-gray-200 text-gray-700 hover:bg-gray-300 transition-all duration-300" data-tab="vision">Our Vision</button>
+                    </div>
+
+                    <div id="mission" class="tab-content active space-y-6">
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            At CoursePlatform, our mission is to provide accessible, high-quality, and engaging educational content that empowers individuals worldwide to acquire new skills, advance their careers, and achieve their personal goals. We strive to break down barriers to education, making lifelong learning a reality for everyone, everywhere.
+                        </p>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-course-primary text-xl"></i>
+                                <span>Deliver accessible and engaging courses</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-course-primary text-xl"></i>
+                                <span>Foster a community of lifelong learners</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-course-primary text-xl"></i>
+                                <span>Provide practical, industry-relevant knowledge</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="vision" class="tab-content space-y-6">
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Our vision at CoursePlatform is to be the leading global platform for online education, recognized for its innovative learning experiences, a diverse range of expert-led courses, and its profound impact on student success. We envision a future where continuous learning is seamlessly integrated into daily life, enabling individuals to thrive in a rapidly evolving world.
+                        </p>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-course-primary text-xl"></i>
+                                <span>Be a global leader in online education</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-course-primary text-xl"></i>
+                                <span>Continuously innovate learning technologies</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-check-circle text-course-primary text-xl"></i>
+                                <span>Bridge the gap between education and industry needs</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="relative" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <img src="img/about.png" alt="Mission Vision" class="w-full h-[400px] object-cover rounded-2xl shadow-xl shadow-course-primary/15 transform rotate-3 hover:rotate-0 transition-transform duration-500"/>
+                    <div class="absolute bottom-4 left-4 bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-gray-200/50">
+                        <p class="text-gray-700 font-semibold">"Education is the key to progress."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gradient-to-br from-course-secondary/30 via-course-orange/5 to-course-secondary/30 relative overflow-hidden">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold bg-gradient-text mb-12" data-aos="fade-down" data-aos-duration="800">
+                Our Values
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-course-orange/10 transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-course-orange/10 to-course-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-lightbulb text-3xl text-course-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Innovation</h3>
+                    <p class="text-gray-600">We constantly explore new teaching methodologies and technologies to ensure our students receive the best learning experience.</p>
+                </div>
+                <div class="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-course-orange/10 transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-gradient-to-br from-course-orange/10 to-course-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-handshake text-3xl text-course-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Collaboration</h3>
+                    <p class="text-gray-600">We believe that the best results come from collaborative efforts. We encourage cooperation among students and instructors.</p>
+                </div>
+                <div class="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-course-orange/10 transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-course-orange/10 to-course-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-graduation-cap text-3xl text-course-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Excellence</h3>
+                    <p class="text-gray-600">We are committed to maintaining the highest standards in every course and service, ensuring our students' success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gradient-to-r from-course-primary to-course-accent text-white text-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-24 h-24 border border-white/30 rounded-full"></div>
+            <div class="absolute bottom-20 right-20 w-32 h-32 border border-white/30 rounded-full"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-4xl lg:text-5xl font-bold mb-6" data-aos="fade-up" data-aos-duration="1000">
+                Start Your Learning Journey Today!
+            </h2>
+            <p class="text-xl text-white/90 max-w-3xl mx-auto mb-10" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                Our courses will help you enhance your skills and create new opportunities. Join us and unlock your potential.
+            </p>
+            <a href="index.html#courses" class="inline-block bg-white text-course-primary hover:bg-course-orange-light hover:text-white px-10 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-white/25 flex items-center justify-center space-x-3 mx-auto max-w-fit" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+                <span>View All Courses</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white relative">
+      <div class="container mx-auto px-4 pt-16 pb-8">
+        <div class="grid lg:grid-cols-5 md:grid-cols-3 gap-8">
+          <div class="lg:col-span-2">
+            <div class="flex items-center space-x-3 mb-6">
+              <div
+                class="w-12 h-12 bg-white rounded-lg flex items-center justify-center"
+              >
+                <span class="text-gray-800 font-bold text-xl">C</span>
+              </div>
+              <span class="text-2xl font-bold">CoursePlatform</span>
+            </div>
+            <p class="text-white/80 leading-relaxed mb-6 max-w-md">
+              Empowering learners worldwide with high-quality, accessible
+              education. Join thousands of students who have transformed their
+              careers through our comprehensive courses and expert instruction.
+            </p>
+
+            <div class="space-y-3">
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-phone text-white/60"></i>
+                <span class="text-white/80">+1 (555) 123-4567</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-envelope text-white/60"></i>
+                <span class="text-white/80">info@courseplatform.com</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-map-marker-alt text-white/60"></i>
+                <span class="text-white/80"
+                  >123 Education St, Learning City, LC 12345</span
+                >
+              </div>
+            </div>
+
+            <div class="flex space-x-4 mt-6">
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
+                aria-label="Facebook"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
+                aria-label="Twitter"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
+                aria-label="Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
+                aria-label="LinkedIn"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
+                aria-label="YouTube"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Popular Courses</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Web Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Data Science</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >UI/UX Design</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Mobile Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Digital Marketing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Photography</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Company</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#about"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#team"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Our Team</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Press</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Partner with Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Affiliate Program</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Support</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Help Center</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#contact"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Contact Support</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Course Refunds</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Technical Support</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >Accessibility</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/70 hover:text-white transition-colors duration-200 text-sm"
+                  >System Status</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-white/20 mt-12 pt-8">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+          >
+            <div class="flex flex-wrap justify-center md:justify-start gap-6">
+              <a
+                href="#"
+                class="text-white/60 hover:text-white transition-colors duration-200 text-sm"
+                >Privacy Policy</a
+              >
+              <a
+                href="#"
+                class="text-white/60 hover:text-white transition-colors duration-200 text-sm"
+                >Terms of Service</a
+              >
+              <a
+                href="#"
+                class="text-white/60 hover:text-white transition-colors duration-200 text-sm"
+                >Cookie Policy</a
+              >
+              <a
+                href="#"
+                class="text-white/60 hover:text-white transition-colors duration-200 text-sm"
+                >GDPR</a
+              >
+              <a
+                href="#"
+                class="text-white/60 hover:text-white transition-colors duration-200 text-sm"
+                >Refund Policy</a
+              >
+              <a
+                href="#"
+                class="text-white/60 hover:text-white transition-colors duration-200 text-sm"
+                >Student Agreement</a
+              >
+            </div>
+
+            <button
+              id="back-to-top"
+              class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
+              aria-label="Back to top"
+            >
+              <i class="fas fa-arrow-up"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="border-t border-white/20 mt-8 pt-8 text-center">
+          <p class="text-white/60 text-sm">
+            © 2024 CoursePlatform. All rights reserved. | Designed with ❤️ for
+            learners worldwide
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 900,
+        once: false,
+      });
+
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      document.getElementById("back-to-top").addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      window.addEventListener("scroll", () => {
+        const backToTopBtn = document.getElementById("back-to-top");
+        if (window.scrollY > 300) {
+          backToTopBtn.style.opacity = "1";
+        } else {
+          backToTopBtn.style.opacity = "0.6";
+        }
+      });
+
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+
+      // New JavaScript for Mission/Vision tabs
+      document.addEventListener("DOMContentLoaded", function () {
+        const tabButtons = document.querySelectorAll(".tab-button");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        tabButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            // Remove active class from all buttons and contents
+            tabButtons.forEach((btn) => btn.classList.remove("active"));
+            tabContents.forEach((content) =>
+              content.classList.remove("active")
+            );
+
+            // Add active class to the clicked button
+            button.classList.add("active");
+
+            // Show the corresponding content
+            const targetTabId = button.dataset.tab;
+            document.getElementById(targetTabId).classList.add("active");
+          });
+        });
+
+        // Optionally, ensure the first tab is active on load
+        if (tabButtons.length > 0) {
+          tabButtons[0].click(); // Simulate a click on the first button
+        }
+      });
+    </script>
+  </body>
+</html>
