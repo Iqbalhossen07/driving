@@ -27,7 +27,8 @@
               "course-blue": "#0E2A47", // Dark blue from your original palette
               topbar: "#f97316",
               "topbar-foreground": "#ffffff",
-              "dashboard-bg": "#F3F4F6" /* Lighter gray for background */,
+              "dashboard-bg":
+                "#F9FAFB" /* Very light gray for background to make cards pop */,
               "sidebar-bg": "#1F2937" /* Darker Slate for sidebar (gray-800) */,
               "sidebar-item-hover":
                 "#374151" /* Darker Slate for hover (gray-700) */,
@@ -35,9 +36,19 @@
               "card-bg": "#ffffff",
               "text-light": "#6B7280" /* Gray 500 for subtle text */,
               "text-dark": "#1F2937" /* Gray 900 for main text */,
-              "metric-green": "#10B981" /* Emerald Green */,
-              "metric-red-dark": "#DC2626" /* Red 600 */,
+              "metric-green":
+                "#10B981" /* Emerald Green (for positive metrics) */,
+              "metric-red-dark":
+                "#DC2626" /* Red 600 (for negative metrics/accents) */,
               "metric-blue-light": "#60A5FA" /* Blue 400 */,
+              "metric-purple": "#a855f7" /* Purple 500 */,
+              "metric-gray": "#9CA3AF" /* Gray 400 */,
+              "icon-bg-orange":
+                "#FEE2E2" /* Light Red/Orange for icon background (so primary accent text shows) */,
+              "icon-bg-green": "#D1FAE5" /* Light Emerald */,
+              "icon-bg-gray": "#E5E7EB" /* Light Gray */,
+              "icon-bg-blue": "#DBEAFE" /* Light Blue */,
+              "icon-bg-red": "#FEE2E2" /* Light Red */,
               "chart-color-1": "#f97316" /* primary */,
               "chart-color-2": "#ef4444" /* accent */,
               "chart-color-3": "#3b82f6" /* blue */,
@@ -153,7 +164,7 @@
     </aside>
 
     <div
-      class="flex-1 flex flex-col md:ml-64 transition-all duration-300 overflow-hidden"
+      class="flex-1 flex flex-col transition-all duration-300 overflow-hidden"
       id="main-content"
     >
       <header
@@ -167,7 +178,7 @@
             <i class="fas fa-bars text-xl"></i>
           </button>
           <h1 class="text-2xl lg:text-3xl font-bold text-gray-800">
-            Dashboard Overview
+            Welcome, Admin!
           </h1>
         </div>
         <div class="flex items-center space-x-4">
@@ -200,85 +211,197 @@
       </header>
 
       <main class="flex-1 p-4 sm:p-6 overflow-y-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          <div
-            class="bg-card-bg rounded-xl shadow-lg p-6 flex flex-col justify-between transform transition-transform duration-300 hover:scale-[1.01]"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div class="flex justify-between items-center mb-4">
-              <div class="text-base font-semibold text-text-light uppercase">
-                Total Students
-              </div>
-              <i
-                class="fas fa-user-graduate text-2xl text-metric-blue-light"
-              ></i>
+        <div
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4 mb-8"
+>
+    <div
+        class="bg-card-bg rounded-xl shadow-lg p-5 flex items-center justify-between transform transition-all duration-300 hover:scale-[1.02] group hover:bg-icon-bg-orange"
+        data-aos="fade-up"
+        data-aos-delay="100"
+    >
+        <div class="flex flex-col">
+            <div class="text-4xl font-extrabold text-text-dark group-hover:text-course-primary transition-colors duration-300">4</div>
+            <div class="text-sm font-semibold text-text-light mt-1">
+                Pending Bookings
             </div>
-            <div class="text-5xl font-extrabold text-text-dark mb-3">1,250</div>
-            <div class="text-sm text-metric-green flex items-center">
-              <i class="fas fa-caret-up mr-1 text-base"></i> 12%
-              <span class="ml-1 text-text-light">from last month</span>
-            </div>
-          </div>
-          <div
-            class="bg-card-bg rounded-xl shadow-lg p-6 flex flex-col justify-between transform transition-transform duration-300 hover:scale-[1.01]"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="flex justify-between items-center mb-4">
-              <div class="text-base font-semibold text-text-light uppercase">
-                Courses Enrolled
-              </div>
-              <i class="fas fa-book-open text-2xl text-chart-color-1"></i>
-            </div>
-            <div class="text-5xl font-extrabold text-text-dark mb-3">45</div>
-            <div class="text-sm text-metric-green flex items-center">
-              <i class="fas fa-caret-up mr-1 text-base"></i> 8%
-              <span class="ml-1 text-text-light">from last month</span>
-            </div>
-          </div>
-          <div
-            class="bg-card-bg rounded-xl shadow-lg p-6 flex flex-col justify-between transform transition-transform duration-300 hover:scale-[1.01]"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div class="flex justify-between items-center mb-4">
-              <div class="text-base font-semibold text-text-light uppercase">
-                Total Instructors
-              </div>
-              <i
-                class="fas fa-chalkboard-teacher text-2xl text-metric-green"
-              ></i>
-            </div>
-            <div class="text-5xl font-extrabold text-text-dark mb-3">15</div>
-            <div class="text-sm text-text-light">Active & Certified</div>
-          </div>
-          <div
-            class="bg-card-bg rounded-xl shadow-lg p-6 flex flex-col justify-between transform transition-transform duration-300 hover:scale-[1.01]"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            <div class="flex justify-between items-center mb-4">
-              <div class="text-base font-semibold text-text-light uppercase">
-                Monthly Revenue
-              </div>
-              <i class="fas fa-dollar-sign text-2xl text-metric-red-dark"></i>
-            </div>
-            <div class="text-5xl font-extrabold text-text-dark mb-3">
-              $5,500
-            </div>
-            <div class="text-sm text-metric-green flex items-center">
-              <i class="fas fa-caret-up mr-1 text-base"></i> 15%
-              <span class="ml-1 text-text-light">from last month</span>
-            </div>
-          </div>
         </div>
+        <div
+            class="w-12 h-12 bg-icon-bg-orange text-course-primary rounded-full flex items-center justify-center text-xl shadow-md"
+        >
+            <i class="fas fa-hourglass-half"></i>
+        </div>
+    </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+    <div
+        class="bg-card-bg rounded-xl shadow-lg p-5 flex items-center justify-between transform transition-all duration-300 hover:scale-[1.02] group hover:bg-icon-bg-green"
+        data-aos="fade-up"
+        data-aos-delay="200"
+    >
+        <div class="flex flex-col">
+            <div class="text-4xl font-extrabold text-text-dark group-hover:text-metric-green transition-colors duration-300">0</div>
+            <div class="text-sm font-semibold text-text-light mt-1">
+                Accepted Bookings
+            </div>
+        </div>
+        <div
+            class="w-12 h-12 bg-icon-bg-green text-metric-green rounded-full flex items-center justify-center text-xl shadow-md"
+        >
+            <i class="fas fa-check-circle"></i>
+        </div>
+    </div>
+
+    <div
+        class="bg-card-bg rounded-xl shadow-lg p-5 flex items-center justify-between transform transition-transform duration-300 hover:scale-[1.02] group hover:bg-icon-bg-gray"
+        data-aos="fade-up"
+        data-aos-delay="300"
+    >
+        <div class="flex flex-col">
+            <div class="text-4xl font-extrabold text-text-dark group-hover:text-gray-700 transition-colors duration-300">4</div>
+            <div class="text-sm font-semibold text-text-light mt-1">
+                All Bookings
+            </div>
+        </div>
+        <div
+            class="w-12 h-12 bg-icon-bg-gray text-gray-700 rounded-full flex items-center justify-center text-xl shadow-md"
+        >
+            <i class="fas fa-box"></i>
+        </div>
+    </div>
+
+    <div
+        class="bg-card-bg rounded-xl shadow-lg p-5 flex items-center justify-between transform transition-transform duration-300 hover:scale-[1.02] group hover:bg-icon-bg-blue"
+        data-aos="fade-up"
+        data-aos-delay="400"
+    >
+        <div class="flex flex-col">
+            <div class="text-4xl font-extrabold text-text-dark group-hover:text-blue-700 transition-colors duration-300">4</div>
+            <div class="text-sm font-semibold text-text-light mt-1">
+                Total Members
+            </div>
+        </div>
+        <div
+            class="w-12 h-12 bg-icon-bg-blue text-blue-700 rounded-full flex items-center justify-center text-xl shadow-md"
+        >
+            <i class="fas fa-users"></i>
+        </div>
+    </div>
+
+    <div
+        class="bg-card-bg rounded-xl shadow-lg p-5 flex items-center justify-between transform transition-transform duration-300 hover:scale-[1.02] group hover:bg-icon-bg-red"
+        data-aos="fade-up"
+        data-aos-delay="500"
+    >
+        <div class="flex flex-col">
+            <div class="text-4xl font-extrabold text-text-dark group-hover:text-course-accent transition-colors duration-300">6</div>
+            <div class="text-sm font-semibold text-text-light mt-1">
+                Total Testimonials
+            </div>
+        </div>
+        <div
+            class="w-12 h-12 bg-icon-bg-red text-course-accent rounded-full flex items-center justify-center text-xl shadow-md"
+        >
+            <i class="fas fa-star"></i>
+        </div>
+    </div>
+
+    <div
+        class="bg-card-bg rounded-xl shadow-lg p-5 flex items-center justify-between transform transition-transform duration-300 hover:scale-[1.02] group hover:bg-icon-bg-green"
+        data-aos="fade-up"
+        data-aos-delay="600"
+    >
+        <div class="flex flex-col">
+            <div class="text-4xl font-extrabold text-text-dark group-hover:text-metric-green transition-colors duration-300">3</div>
+            <div class="text-sm font-semibold text-text-light mt-1">
+                Total Services
+            </div>
+        </div>
+        <div
+            class="w-12 h-12 bg-icon-bg-green text-metric-green rounded-full flex items-center justify-center text-xl shadow-md"
+        >
+            <i class="fas fa-hand-holding-usd"></i>
+        </div>
+    </div>
+
+    <div
+        class="bg-card-bg rounded-xl shadow-lg p-5 flex items-center justify-between transform transition-transform duration-300 hover:scale-[1.02] group hover:bg-gray-200"
+        data-aos="fade-up"
+        data-aos-delay="700"
+    >
+        <div class="flex flex-col">
+            <div class="text-4xl font-extrabold text-text-dark group-hover:text-gray-600 transition-colors duration-300">4</div>
+            <div class="text-sm font-semibold text-text-light mt-1">
+                Total Blogs
+            </div>
+        </div>
+        <div
+            class="w-12 h-12 bg-gray-200 text-gray-600 rounded-full flex items-center justify-center text-xl shadow-md"
+        >
+            <i class="fas fa-blog"></i>
+        </div>
+    </div>
+
+    <div
+        class="bg-card-bg rounded-xl shadow-lg p-5 flex items-center justify-between transform transition-transform duration-300 hover:scale-[1.02] group hover:bg-gray-200"
+        data-aos="fade-up"
+        data-aos-delay="800"
+    >
+        <div class="flex flex-col">
+            <div class="text-4xl font-extrabold text-text-dark group-hover:text-gray-600 transition-colors duration-300">6</div>
+            <div class="text-sm font-semibold text-text-light mt-1">
+                Total Gallery
+            </div>
+        </div>
+        <div
+            class="w-12 h-12 bg-gray-200 text-gray-600 rounded-full flex items-center justify-center text-xl shadow-md"
+        >
+            <i class="fas fa-image"></i>
+        </div>
+    </div>
+
+    <div
+        class="bg-card-bg rounded-xl shadow-lg p-5 flex items-center justify-between transform transition-transform duration-300 hover:scale-[1.02] group hover:bg-gray-200"
+        data-aos="fade-up"
+        data-aos-delay="900"
+    >
+        <div class="flex flex-col">
+            <div class="text-4xl font-extrabold text-text-dark group-hover:text-gray-600 transition-colors duration-300">-</div>
+            <div class="text-sm font-semibold text-text-light mt-1">
+                Coming Soon
+            </div>
+        </div>
+        <div
+            class="w-12 h-12 bg-gray-200 text-gray-600 rounded-full flex items-center justify-center text-xl shadow-md"
+        >
+            <i class="fas fa-spinner fa-spin"></i>
+        </div>
+    </div>
+
+    <div
+        class="bg-card-bg rounded-xl shadow-lg p-5 flex items-center justify-between transform transition-transform duration-300 hover:scale-[1.02] group hover:bg-gray-200"
+        data-aos="fade-up"
+        data-aos-delay="1000"
+    >
+        <div class="flex flex-col">
+            <div class="text-4xl font-extrabold text-text-dark group-hover:text-gray-600 transition-colors duration-300">-</div>
+            <div class="text-sm font-semibold text-text-light mt-1">
+                Coming Soon
+            </div>
+        </div>
+        <div
+            class="w-12 h-12 bg-gray-200 text-gray-600 rounded-full flex items-center justify-center text-xl shadow-md"
+        >
+            <i class="fas fa-clock"></i>
+        </div>
+    </div>
+</div>
+
+        <h2 class="text-xl font-bold text-gray-800 mb-6">Reports Overview</h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-8">
           <div
-            class="bg-card-bg rounded-xl shadow-lg p-6"
+            class="bg-card-bg rounded-xl shadow-lg p-6 lg:col-span-2"
             data-aos="fade-up"
-            data-aos-delay="500"
+            data-aos-delay="1100"
           >
             <h3 class="text-xl font-bold text-gray-800 mb-6">
               Monthly Revenue Trend
@@ -288,18 +411,59 @@
             </div>
           </div>
           <div
-            class="bg-card-bg rounded-xl shadow-lg p-6"
+            class="bg-card-bg rounded-xl shadow-lg p-6 lg:col-span-1 flex flex-col justify-between"
             data-aos="fade-up"
-            data-aos-delay="600"
+            data-aos-delay="1200"
           >
             <h3 class="text-xl font-bold text-gray-800 mb-6">
               Course Enrollment Breakdown
             </h3>
-            <div class="h-64 sm:h-80 lg:h-96 flex items-center justify-center">
+            <div
+              class="flex-1 flex items-center justify-center min-h-[250px] lg:min-h-[300px]"
+            >
               <canvas id="courseBreakdownChart"></canvas>
             </div>
           </div>
         </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          <div
+            class="bg-card-bg rounded-xl shadow-lg p-5 flex items-center justify-between transform transition-transform duration-300 hover:scale-[1.02]"
+            data-aos="fade-up"
+            data-aos-delay="1300"
+          >
+            <div class="flex flex-col">
+              <div class="text-4xl font-extrabold text-text-dark">£ 180</div>
+              <div class="text-sm font-semibold text-text-light mt-1">
+                Average Booking Value
+              </div>
+            </div>
+            <div
+              class="w-12 h-12 bg-icon-bg-green text-metric-green rounded-full flex items-center justify-center text-xl shadow-md"
+            >
+              <i class="fas fa-pound-sign"></i>
+            </div>
+          </div>
+          <div
+            class="bg-card-bg rounded-xl shadow-lg p-5 flex items-center justify-between transform transition-transform duration-300 hover:scale-[1.02]"
+            data-aos="fade-up"
+            data-aos-delay="1400"
+          >
+            <div class="flex flex-col">
+              <div class="text-4xl font-extrabold text-text-dark">92%</div>
+              <div class="text-sm font-semibold text-text-light mt-1">
+                Client Retention Rate
+              </div>
+            </div>
+            <div
+              class="w-12 h-12 bg-icon-bg-blue text-blue-700 rounded-full flex items-center justify-center text-xl shadow-md"
+            >
+              <i class="fas fa-sync-alt"></i>
+            </div>
+          </div>
+        </div>
+
+        
       </main>
     </div>
 

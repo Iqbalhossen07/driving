@@ -1,44 +1,69 @@
+/* Existing CSS (from previous dashboard style) */
+.bg-gradient-text {
+    background: linear-gradient(to right, #f97316, #ef4444);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
 
-      .bg-gradient-text {
-        background: linear-gradient(to right, #f97316, #ef4444);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
+body {
+    font-family: "Lora", serif;
+    color: #1F2937; /* Using specific hex code for text-dark */
+}
 
-      body {
-        font-family: "Lora", serif;
-        color: var(--text-dark); /* Apply default text color */
-      }
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Merriweather", serif;
+    color: #1F2937; /* Using specific hex code for text-dark */
+}
 
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Merriweather", serif;
-        color: var(--text-dark); /* Ensure headings use dark text color */
-      }
+/* Custom scrollbar for sidebar (optional, but good for aesthetics) */
+.sidebar-nav::-webkit-scrollbar {
+    width: 8px;
+}
+.sidebar-nav::-webkit-scrollbar-track {
+    background: #1F2937; /* sidebar-bg */
+}
+.sidebar-nav::-webkit-scrollbar-thumb {
+    background-color: #4B5563; /* gray-600 */
+    border-radius: 4px;
+    border: 2px solid #1F2937;
+}
+.sidebar-nav::-webkit-scrollbar-thumb:hover {
+    background-color: #6B7280; /* gray-500 */
+}
 
-      .sidebar-nav::-webkit-scrollbar {
-        width: 8px;
-      }
-      .sidebar-nav::-webkit-scrollbar-track {
-        background: #1f2937; /* sidebar-bg */
-      }
-      .sidebar-nav::-webkit-scrollbar-thumb {
-        background-color: #4b5563; /* gray-600 */
-        border-radius: 4px;
-        border: 2px solid #1f2937;
-      }
-      .sidebar-nav::-webkit-scrollbar-thumb:hover {
-        background-color: #6b7280; /* gray-500 */
-      }
+/* Responsive adjustments for Chart.js (if used elsewhere) */
+canvas {
+    max-width: 100%;
+    height: auto;
+}
 
-      /* Responsive adjustments for Chart.js */
-      canvas {
-        max-width: 100%;
-        height: auto;
-      }
- 
+/* Custom styles for action buttons - ADJUSTED FOR CARD LAYOUT */
+.action-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px; /* Fixed width for small, cute buttons */
+    height: 36px; /* Fixed height */
+    border-radius: 9999px; /* Fully rounded (circle) */
+    transition: all 0.2s ease-in-out; /* Smooth transition for hover effects */
+    color: white; /* Default icon color */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06); /* Subtle shadow */
+    font-size: 1rem; /* Adjust icon size if needed */
+}
+.action-button:hover {
+    opacity: 0.9;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.08); /* More prominent shadow */
+    transform: translateY(-1px); /* Slight lift */
+}
+
+/* NEW: Course Card specific hover styling */
+.course-card-hover {
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid transparent; /* Add a subtle transparent border by default */
+}
+.course-card-hover:hover {
+    background-color: #F3F4F6; /* A slightly darker shade of dashboard-bg for hover */
+    border-color: #E5E7EB; /* A light border on hover to define boundaries */
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); /* Slightly more prominent shadow */
+}

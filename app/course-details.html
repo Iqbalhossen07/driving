@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beginner Driving Course Details - Narsingdi Driving School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "course-primary": "#f97316",
+              "course-secondary": "#fff7ed",
+              "course-accent": "#ef4444",
+              "course-red": "#ef4444",
+              "course-orange": "#f97316",
+              "course-orange-light": "#fb923c",
+              "course-blue": "#0E2A47", // Dark blue from your original palette
+              topbar: "#f97316",
+              "topbar-foreground": "#ffffff",
+              "dashboard-bg":
+                "#F9FAFB" /* Very light gray for background to make cards pop */,
+              "sidebar-bg": "#1F2937" /* Darker Slate for sidebar (gray-800) */,
+              "sidebar-item-hover":
+                "#374151" /* Darker Slate for hover (gray-700) */,
+              "sidebar-item-active": "#f97316" /* course-primary */,
+              "card-bg": "#ffffff",
+              "text-light": "#6B7280" /* Gray 500 for subtle text */,
+              "text-dark": "#1F2937" /* Gray 900 for main text */,
+              "metric-green":
+                "#10B981" /* Emerald Green (for positive metrics) */,
+              "metric-red-dark":
+                "#DC2626" /* Red 600 (for negative metrics/accents) */,
+              "metric-blue-light": "#60A5FA" /* Blue 400 */,
+              "metric-purple": "#a855f7" /* Purple 500 */,
+              "metric-gray": "#9CA3AF" /* Gray 400 */,
+              "icon-bg-orange":
+                "#FEE2E2" /* Light Red/Orange for icon background (so primary accent text shows) */,
+              "icon-bg-green": "#D1FAE5" /* Light Emerald */,
+              "icon-bg-blue": "#DBEAFE" /* Light Blue */,
+              "icon-bg-red": "#FEE2E2" /* Light Red */,
+              "chart-color-1": "#f97316", /* primary */
+              "chart-color-2": "#ef4444", /* accent */
+              "chart-color-3": "#3b82f6", /* blue */
+              "chart-color-4": "#10B981", /* green */
+              "chart-color-5": "#a855f7", /* purple */
+            },
+            animation: {
+              "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              float: "floatAnim 3s ease-in-out infinite",
+            },
+            keyframes: {
+              floatAnim: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-10px)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-dashboard-bg flex min-h-screen">
+    <aside
+      class="w-64 bg-sidebar-bg text-white flex-shrink-0 min-h-screen flex flex-col fixed md:relative z-40 transition-all duration-300 -translate-x-full md:translate-x-0 shadow-lg"
+      id="sidebar"
+    >
+      <div class="p-6 border-b border-gray-700">
+        <a
+          href="index.html"
+          class="flex items-center space-x-3 group text-white"
+        >
+          <div
+            class="w-10 h-10 bg-gradient-to-br from-course-primary to-course-accent rounded-lg flex items-center justify-center shadow-md"
+          >
+            <span class="text-white font-bold text-xl">D</span>
+          </div>
+          <span class="text-2xl font-bold tracking-wide">Narsingdi DS</span>
+        </a>
+      </div>
+      <nav class="flex-1 overflow-y-auto sidebar-nav py-6">
+        <ul class="space-y-2 px-3">
+          <li>
+            <a
+              href="index.html"
+              class="flex items-center px-4 py-3 rounded-lg font-semibold text-gray-300 hover:bg-sidebar-item-hover hover:text-white transition-colors duration-200"
+            >
+              <i class="fas fa-tachometer-alt text-lg mr-4"></i> Dashboard
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex items-center px-4 py-3 rounded-lg font-medium text-gray-300 hover:bg-sidebar-item-hover hover:text-white transition-colors duration-200"
+            >
+              <i class="fas fa-users text-lg mr-4"></i> Students
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex items-center px-4 py-3 rounded-lg font-medium text-gray-300 hover:bg-sidebar-item-hover hover:text-white transition-colors duration-200"
+            >
+              <i class="fas fa-chalkboard-teacher text-lg mr-4"></i> Instructors
+            </a>
+          </li>
+          <li>
+            <a
+              href="courses.html"
+              class="flex items-center px-4 py-3 rounded-lg font-semibold bg-sidebar-item-active text-white shadow-md transition-all duration-200 transform hover:scale-[1.02]"
+            >
+              <i class="fas fa-car-alt text-lg mr-4"></i> Driving Courses
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex items-center px-4 py-3 rounded-lg font-medium text-gray-300 hover:bg-sidebar-item-hover hover:text-white transition-colors duration-200"
+            >
+              <i class="fas fa-money-bill-wave text-lg mr-4"></i> Payments
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex items-center px-4 py-3 rounded-lg font-medium text-gray-300 hover:bg-sidebar-item-hover hover:text-white transition-colors duration-200"
+            >
+              <i class="fas fa-file-alt text-lg mr-4"></i> Reports
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex items-center px-4 py-3 rounded-lg font-medium text-gray-300 hover:bg-sidebar-item-hover hover:text-white transition-colors duration-200"
+            >
+              <i class="fas fa-cogs text-lg mr-4"></i> Settings
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="p-6 border-t border-gray-700 mt-auto">
+        <a
+          href="#"
+          class="flex items-center px-4 py-2 rounded-lg font-medium text-gray-300 hover:text-white hover:bg-sidebar-item-hover transition-colors duration-200"
+        >
+          <i class="fas fa-sign-out-alt mr-3"></i> Logout
+        </a>
+      </div>
+    </aside>
+
+    <div
+      class="flex-1 flex flex-col transition-all duration-300 overflow-hidden"
+      id="main-content"
+    >
+      <header
+        class="bg-white shadow-md p-4 flex justify-between items-center z-30"
+      >
+        <div class="flex items-center">
+          <button
+            id="sidebar-toggle"
+            class="md:hidden text-gray-600 hover:text-course-primary focus:outline-none mr-4 p-2 rounded-md hover:bg-gray-100 transition-colors"
+          >
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+          <h1 class="text-2xl lg:text-3xl font-bold text-gray-800">
+            Beginner Driving Course
+          </h1>
+        </div>
+        <div class="flex items-center space-x-4">
+          <div class="relative hidden sm:block">
+            <input
+              type="text"
+              placeholder="Search..."
+              class="pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-course-primary transition-all duration-200"
+            />
+            <i
+              class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+            ></i>
+          </div>
+          <button
+            class="text-gray-600 hover:text-course-primary focus:outline-none p-2 rounded-full hover:bg-gray-100 transition-colors"
+          >
+            <i class="fas fa-bell text-xl"></i>
+          </button>
+          <div class="flex items-center space-x-2">
+            <img
+              src="https://randomuser.me/api/portraits/men/32.jpg"
+              alt="User Avatar"
+              class="w-10 h-10 rounded-full object-cover border-2 border-course-primary shadow-sm"
+            />
+            <span class="font-medium text-gray-700 hidden sm:block"
+              >Admin User</span
+            >
+          </div>
+        </div>
+      </header>
+
+      <main class="flex-1 p-4 sm:p-6 overflow-y-auto">
+        <div class="mb-6 flex justify-between items-center">
+            <a href="courses.html" class="inline-flex items-center text-course-primary hover:text-course-orange-light transition-colors duration-200">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Courses
+            </a>
+            <div class="flex space-x-2">
+                <button
+                    class="bg-course-primary text-white px-4 py-2 rounded-lg shadow-md hover:bg-course-orange-light transition-colors duration-200 flex items-center space-x-2"
+                >
+                    <i class="fas fa-edit"></i>
+                    <span>Edit Course</span>
+                </button>
+                <button
+                    class="bg-metric-red-dark text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-700 transition-colors duration-200 flex items-center space-x-2"
+                >
+                    <i class="fas fa-trash-alt"></i>
+                    <span>Delete Course</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="bg-card-bg rounded-xl shadow-lg p-6" data-aos="fade-up">
+            <div class="flex flex-col md:flex-row gap-6 mb-8">
+                <div class="w-full md:w-2/3 flex-shrink-0">
+                    <div class="w-full h-72 sm:h-80 rounded-lg overflow-hidden shadow-md">
+                        <img
+                            src="https://via.placeholder.com/1000x700/f97316/ffffff?text=Beginner+Course+Banner"
+                            alt="Beginner Driving Course Banner"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/3 flex-shrink-0 flex flex-col gap-6">
+                    <div class="bg-gray-50 rounded-lg p-6 shadow-sm">
+                        <h3 class="text-2xl font-bold text-text-dark mb-4">Course Key Information</h3>
+                        <ul class="space-y-3 text-text-dark">
+                            <li class="flex items-center">
+                                <i class="fas fa-money-bill-wave mr-2 text-course-primary text-xl"></i>
+                                <span class="font-semibold mr-2">Price:</span> <span class="text-lg font-bold text-metric-green">£350</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-clock mr-2 text-course-primary text-xl"></i>
+                                <span class="font-semibold mr-2">Duration:</span> <span>20 Hours</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-users mr-2 text-course-primary text-xl"></i>
+                                <span class="font-semibold mr-2">Max Students:</span> <span>10</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-calendar-alt mr-2 text-course-primary text-xl"></i>
+                                <span class="font-semibold mr-2">Next Session:</span> <span>August 15, 2025</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-lg p-6 shadow-sm flex-1 flex flex-col justify-between">
+                        <h3 class="text-2xl font-bold text-text-dark mb-4">Enrollment Statistics</h3>
+                        <div class="flex-1 flex items-end justify-around gap-2 px-2 py-4 border-b border-gray-200">
+                            <div class="w-8 h-2/3 bg-chart-color-1 rounded-t-lg shadow-md hover:scale-y-105 transition-transform duration-200 cursor-pointer" title="Jan: 65"></div>
+                            <div class="w-8 h-1/2 bg-chart-color-2 rounded-t-lg shadow-md hover:scale-y-105 transition-transform duration-200 cursor-pointer" title="Feb: 59"></div>
+                            <div class="w-8 h-3/4 bg-chart-color-3 rounded-t-lg shadow-md hover:scale-y-105 transition-transform duration-200 cursor-pointer" title="Mar: 80"></div>
+                            <div class="w-8 h-2/3 bg-chart-color-4 rounded-t-lg shadow-md hover:scale-y-105 transition-transform duration-200 cursor-pointer" title="Apr: 81"></div>
+                            <div class="w-8 h-1/3 bg-chart-color-5 rounded-t-lg shadow-md hover:scale-y-105 transition-transform duration-200 cursor-pointer" title="May: 56"></div>
+                            <div class="w-8 h-2/5 bg-chart-color-1 rounded-t-lg shadow-md hover:scale-y-105 transition-transform duration-200 cursor-pointer" title="Jun: 55"></div>
+                            <div class="w-8 h-4/5 bg-chart-color-2 rounded-t-lg shadow-md hover:scale-y-105 transition-transform duration-200 cursor-pointer" title="Jul: 40"></div>
+                        </div>
+                        <div class="flex justify-around text-xs text-text-light mt-2">
+                            <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-6 border-t border-gray-200 mt-6">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-text-dark leading-tight mb-4">Course Overview</h2>
+                <p class="text-text-dark leading-relaxed mb-6">
+                    This comprehensive Beginner Driving Course is designed for new drivers with little to no prior experience. It covers all fundamental aspects of driving, ensuring students develop a strong foundation in vehicle control, traffic laws, and safe driving practices. Our certified instructors provide personalized guidance, helping students build confidence behind the wheel.
+                </p>
+
+                <h3 class="text-2xl font-bold text-text-dark mb-3">What You'll Learn:</h3>
+                <ul class="list-none text-text-dark space-y-2 mb-6 border-b border-gray-200 pb-6">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-metric-green mr-3 mt-1 text-lg flex-shrink-0"></i> <span>Vehicle controls and basic maneuvers (steering, braking, accelerating)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-metric-green mr-3 mt-1 text-lg flex-shrink-0"></i> <span>Understanding traffic signs, signals, and road markings</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-metric-green mr-3 mt-1 text-lg flex-shrink-0"></i> <span>Rules of the road, including right-of-way and lane discipline</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-metric-green mr-3 mt-1 text-lg flex-shrink-0"></i> <span>Parking techniques (parallel, perpendicular, angle parking)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-metric-green mr-3 mt-1 text-lg flex-shrink-0"></i> <span>Defensive driving fundamentals and hazard perception</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-metric-green mr-3 mt-1 text-lg flex-shrink-0"></i> <span>Pre-trip inspections and basic vehicle maintenance</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-metric-green mr-3 mt-1 text-lg flex-shrink-0"></i> <span>City driving and introduction to highway driving</span>
+                    </li>
+                </ul>
+
+                <h3 class="text-2xl font-bold text-text-dark mb-3">Prerequisites:</h3>
+                <p class="text-text-dark leading-relaxed mb-8 border-b border-gray-200 pb-6">
+                    Must be at least 16 years old with a valid learner's permit. No prior driving experience required.
+                </p>
+
+                <h3 class="text-2xl font-bold text-text-dark mb-4">Instructor:</h3>
+                <div class="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg shadow-sm">
+                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Instructor Avatar" class="w-20 h-20 rounded-full object-cover border-2 border-course-primary shadow-md" />
+                    <div>
+                        <p class="font-semibold text-text-dark text-xl">John Doe</p>
+                        <p class="text-sm text-text-light mt-1">Certified Driving Instructor with 10+ years experience, specializing in beginner driver education. Known for his patient and encouraging teaching style.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-6 border-t border-gray-200 mt-6" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-text-dark mb-6">Course Curriculum</h2>
+
+                <div class="bg-card-bg rounded-xl shadow-md p-5 mb-4 border border-gray-200 module-item" data-aos="fade-up" data-aos-delay="150">
+                    <div class="flex justify-between items-center cursor-pointer module-header">
+                        <h3 class="text-xl font-bold text-text-dark">Module 1: Vehicle Controls and Basics</h3>
+                        <i class="fas fa-chevron-down text-course-primary transform transition-transform duration-300"></i>
+                    </div>
+                    <div class="module-content hidden pt-4 mt-4 border-t border-gray-100 text-text-light">
+                        <p class="mb-3">This module introduces new drivers to the fundamental controls of a vehicle and basic operational procedures.</p>
+                        <ul class="list-disc list-inside space-y-1 text-sm">
+                            <li>Steering Wheel and its operation</li>
+                            <li>Accelerator, Brake, and Clutch usage</li>
+                            <li>Understanding Dashboard Warning Lights</li>
+                            <li>Mirror Adjustments and Seat Positioning</li>
+                            <li>Basic Starting and Stopping Procedures</li>
+                        </ul>
+                        <p class="mt-3 text-sm text-course-primary"><i class="fas fa-hourglass-half mr-1"></i> Duration: 2 Hours</p>
+                    </div>
+                </div>
+
+                <div class="bg-card-bg rounded-xl shadow-md p-5 mb-4 border border-gray-200 module-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex justify-between items-center cursor-pointer module-header">
+                        <h3 class="text-xl font-bold text-text-dark">Module 2: Traffic Rules and Road Signs</h3>
+                        <i class="fas fa-chevron-down text-course-primary transform transition-transform duration-300"></i>
+                    </div>
+                    <div class="module-content hidden pt-4 mt-4 border-t border-gray-100 text-text-light">
+                        <p class="mb-3">Learn about the essential traffic rules and road signs necessary for safe and legal driving on public roads.</p>
+                        <ul class="list-disc list-inside space-y-1 text-sm">
+                            <li>Understanding Regulatory Signs (Stop, Yield, Speed Limit)</li>
+                            <li>Navigating Warning Signs (Curves, Intersections, Pedestrian Crossings)</li>
+                            <li>Rules for Turning, Lane Changes, and Roundabouts</li>
+                            <li>Right-of-Way Principles</li>
+                            <li>Importance of Traffic Lights and Signals</li>
+                        </ul>
+                        <p class="mt-3 text-sm text-course-primary"><i class="fas fa-hourglass-half mr-1"></i> Duration: 2.5 Hours</p>
+                    </div>
+                </div>
+
+                <div class="bg-card-bg rounded-xl shadow-md p-5 mb-4 border border-gray-200 module-item" data-aos="fade-up" data-aos-delay="250">
+                    <div class="flex justify-between items-center cursor-pointer module-header">
+                        <h3 class="text-xl font-bold text-text-dark">Module 3: Parking Techniques</h3>
+                        <i class="fas fa-chevron-down text-course-primary transform transition-transform duration-300"></i>
+                    </div>
+                    <div class="module-content hidden pt-4 mt-4 border-t border-gray-100 text-text-light">
+                        <p class="mb-3">Master various parking methods crucial for urban and suburban driving environments.</p>
+                        <ul class="list-disc list-inside space-y-1 text-sm">
+                            <li>Parallel Parking (Step-by-step guide)</li>
+                            <li>Perpendicular Parking (Forward and Reverse)</li>
+                            <li>Angle Parking</li>
+                            <li>Parking on Hills (Uphill/Downhill with Curb)</li>
+                            <li>Parking Safety Tips</li>
+                        </ul>
+                        <p class="mt-3 text-sm text-course-primary"><i class="fas fa-hourglass-half mr-1"></i> Duration: 3 Hours</p>
+                    </div>
+                </div>
+
+                </div>
+        </div>
+      </main>
+    </div>
+
+    <div
+      id="sidebar-overlay"
+      class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden"
+    ></div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
