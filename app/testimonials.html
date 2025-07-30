@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Testimonials - Narsingdi Driving School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "course-primary": "#f97316",
+              "course-secondary": "#fff7ed",
+              "course-accent": "#ef4444",
+              "course-red": "#ef4444",
+              "course-orange": "#f97316",
+              "course-orange-light": "#fb923c",
+              "course-blue": "#0E2A47", // Dark blue from your original palette
+              topbar: "#f97316",
+              "topbar-foreground": "#ffffff",
+              "dashboard-bg":
+                "#F9FAFB" /* Very light gray for background to make cards pop */,
+              "sidebar-bg": "#1F2937" /* Darker Slate for sidebar (gray-800) */,
+              "sidebar-item-hover":
+                "#374151" /* Darker Slate for hover (gray-700) */,
+              "sidebar-item-active": "#f97316" /* course-primary */,
+              "card-bg": "#ffffff",
+              "text-light": "#6B7280" /* Gray 500 for subtle text */,
+              "text-dark": "#1F2937" /* Gray 900 for main text */,
+              "metric-green":
+                "#10B981" /* Emerald Green (for positive metrics) */,
+              "metric-red-dark":
+                "#DC2626" /* Red 600 (for negative metrics/accents) */,
+              "metric-blue-light": "#60A5FA" /* Blue 400 */,
+              "metric-purple": "#a855f7" /* Purple 500 */,
+              "metric-gray": "#9CA3AF" /* Gray 400 */,
+              "icon-bg-orange":
+                "#FEE2E2" /* Light Red/Orange for icon background (so primary accent text shows) */,
+              "icon-bg-green": "#D1FAE5" /* Light Emerald */,
+              "icon-bg-blue": "#DBEAFE" /* Light Blue */,
+              "icon-bg-red": "#FEE2E2" /* Light Red */,
+              "chart-color-1": "#f97316", /* primary */
+              "chart-color-2": "#ef4444", /* accent */
+              "chart-color-3": "#3b82f6", /* blue */
+              "chart-color-4": "#10B981", /* green */
+              "chart-color-5": "#a855f7", /* purple */
+            },
+            animation: {
+              "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              float: "floatAnim 3s ease-in-out infinite",
+            },
+            keyframes: {
+              floatAnim: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-10px)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-dashboard-bg flex min-h-screen">
+    <aside
+      class="w-64 bg-sidebar-bg text-white flex-shrink-0 min-h-screen flex flex-col fixed md:relative z-40 transition-all duration-300 -translate-x-full md:translate-x-0 shadow-lg"
+      id="sidebar"
+    >
+      <div class="p-6 border-b border-gray-700">
+        <a
+          href="index.html"
+          class="flex items-center space-x-3 group text-white"
+        >
+          <div
+            class="w-10 h-10 bg-gradient-to-br from-course-primary to-course-accent rounded-lg flex items-center justify-center shadow-md"
+          >
+            <span class="text-white font-bold text-xl">D</span>
+          </div>
+          <span class="text-2xl font-bold tracking-wide">Narsingdi DS</span>
+        </a>
+      </div>
+      <nav class="flex-1 overflow-y-auto sidebar-nav py-6">
+        <ul class="space-y-2 px-3">
+          <li>
+            <a
+              href="index.html"
+              class="flex items-center px-4 py-3 rounded-lg font-semibold text-gray-300 hover:bg-sidebar-item-hover hover:text-white transition-colors duration-200"
+            >
+              <i class="fas fa-tachometer-alt text-lg mr-4"></i> Dashboard
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex items-center px-4 py-3 rounded-lg font-medium text-gray-300 hover:bg-sidebar-item-hover hover:text-white transition-colors duration-200"
+            >
+              <i class="fas fa-users text-lg mr-4"></i> Students
+            </a>
+          </li>
+          <li>
+            <a
+              href="team.html"
+              class="flex items-center px-4 py-3 rounded-lg font-medium text-gray-300 hover:bg-sidebar-item-hover hover:text-white transition-colors duration-200"
+            >
+              <i class="fas fa-users-cog text-lg mr-4"></i> Our Team
+            </a>
+          </li>
+          <li>
+            <a
+              href="courses.html"
+              class="flex items-center px-4 py-3 rounded-lg font-medium text-gray-300 hover:bg-sidebar-item-hover hover:text-white transition-colors duration-200"
+            >
+              <i class="fas fa-car-alt text-lg mr-4"></i> Driving Courses
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex items-center px-4 py-3 rounded-lg font-medium text-gray-300 hover:bg-sidebar-item-hover hover:text-white transition-colors duration-200"
+            >
+              <i class="fas fa-money-bill-wave text-lg mr-4"></i> Payments
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex items-center px-4 py-3 rounded-lg font-medium text-gray-300 hover:bg-sidebar-item-hover hover:text-white transition-colors duration-200"
+            >
+              <i class="fas fa-file-alt text-lg mr-4"></i> Reports
+            </a>
+          </li>
+          <li>
+            <a
+              href="testimonials.html"
+              class="flex items-center px-4 py-3 rounded-lg font-semibold bg-sidebar-item-active text-white shadow-md transition-all duration-200 transform hover:scale-[1.02]"
+            >
+              <i class="fas fa-star text-lg mr-4"></i> Testimonials
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="flex items-center px-4 py-3 rounded-lg font-medium text-gray-300 hover:bg-sidebar-item-hover hover:text-white transition-colors duration-200"
+            >
+              <i class="fas fa-cogs text-lg mr-4"></i> Settings
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="p-6 border-t border-gray-700 mt-auto">
+        <a
+          href="#"
+          class="flex items-center px-4 py-2 rounded-lg font-medium text-gray-300 hover:text-white hover:bg-sidebar-item-hover transition-colors duration-200"
+        >
+          <i class="fas fa-sign-out-alt mr-3"></i> Logout
+        </a>
+      </div>
+    </aside>
+
+    <div
+      class="flex-1 flex flex-col transition-all duration-300 overflow-hidden"
+      id="main-content"
+    >
+      <header
+        class="bg-white shadow-md p-4 flex justify-between items-center z-30"
+      >
+        <div class="flex items-center">
+          <button
+            id="sidebar-toggle"
+            class="md:hidden text-gray-600 hover:text-course-primary focus:outline-none mr-4 p-2 rounded-md hover:bg-gray-100 transition-colors"
+          >
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+          <h1 class="text-2xl lg:text-3xl font-bold text-gray-800">
+            Student Testimonials
+          </h1>
+        </div>
+        <div class="flex items-center space-x-4">
+          <div class="relative hidden sm:block">
+            <input
+              type="text"
+              placeholder="Search testimonials..."
+              class="pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-course-primary text-sm transition-all duration-200"
+            />
+            <i
+              class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+            ></i>
+          </div>
+          <button
+            class="text-gray-600 hover:text-course-primary focus:outline-none p-2 rounded-full hover:bg-gray-100 transition-colors"
+          >
+            <i class="fas fa-bell text-xl"></i>
+          </button>
+          <div class="flex items-center space-x-2">
+            <img
+              src="https://randomuser.me/api/portraits/men/32.jpg"
+              alt="User Avatar"
+              class="w-10 h-10 rounded-full object-cover border-2 border-course-primary shadow-sm"
+            />
+            <span class="font-medium text-gray-700 hidden sm:block"
+              >Admin User</span
+            >
+          </div>
+        </div>
+      </header>
+
+      <main class="flex-1 p-4 sm:p-6 overflow-y-auto">
+        <div class="flex justify-end mb-6">
+          <button
+            class="bg-course-primary text-white px-5 py-2 rounded-lg shadow-md hover:bg-course-orange-light transition-colors duration-200 flex items-center space-x-2"
+          >
+            <i class="fas fa-comment-dots"></i>
+            <span>Add New Testimonial</span>
+          </button>
+        </div>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+        >
+          <div
+            class="bg-card-bg rounded-xl shadow-lg p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="flex items-center mb-4">
+              <img
+                src="https://randomuser.me/api/portraits/men/75.jpg"
+                alt="John Doe"
+                class="w-16 h-16 rounded-full object-cover mr-4 border-2 border-course-primary"
+              />
+              <div>
+                <h3 class="text-lg font-bold text-text-dark">John Doe</h3>
+                <p class="text-sm text-text-light">Learner Driver</p>
+              </div>
+            </div>
+            <div class="flex items-center mb-3">
+              <i class="fas fa-star text-yellow-400 mr-1"></i>
+              <i class="fas fa-star text-yellow-400 mr-1"></i>
+              <i class="fas fa-star text-yellow-400 mr-1"></i>
+              <i class="fas fa-star text-yellow-400 mr-1"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+            </div>
+            <p class="text-text-dark text-sm italic mb-4">
+              "Narsingdi Driving School exceeded my expectations! The instructors are incredibly patient and thorough. I passed my test on the first try thanks to their expert guidance. Highly recommend!"
+            </p>
+            <p class="text-xs text-text-light text-right mb-4">
+              - August 10, 2024
+            </p>
+
+            <div class="flex justify-end space-x-2 mt-auto pt-4 border-t border-gray-100">
+                <button
+                    class="action-button bg-metric-blue-light hover:bg-blue-600"
+                    title="View Testimonial"
+                >
+                    <i class="fas fa-eye"></i>
+                </button>
+                <button
+                    class="action-button bg-course-primary hover:bg-course-orange-light"
+                    title="Edit Testimonial"
+                >
+                    <i class="fas fa-edit"></i>
+                </button>
+                <button
+                    class="action-button bg-metric-red-dark hover:bg-red-700"
+                    title="Delete Testimonial"
+                >
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </div>
+          </div>
+
+          <div
+            class="bg-card-bg rounded-xl shadow-lg p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="flex items-center mb-4">
+              <img
+                src="https://randomuser.me/api/portraits/women/80.jpg"
+                alt="Maria Garcia"
+                class="w-16 h-16 rounded-full object-cover mr-4 border-2 border-course-primary"
+              />
+              <div>
+                <h3 class="text-lg font-bold text-text-dark">Maria Garcia</h3>
+                <p class="text-sm text-text-light">Defensive Driving Student</p>
+              </div>
+            </div>
+            <div class="flex items-center mb-3">
+              <i class="fas fa-star text-yellow-400 mr-1"></i>
+              <i class="fas fa-star text-yellow-400 mr-1"></i>
+              <i class="fas fa-star text-yellow-400 mr-1"></i>
+              <i class="fas fa-star text-yellow-400 mr-1"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+            </div>
+            <p class="text-text-dark text-sm italic mb-4">
+              "The defensive driving course completely changed my perspective on road safety. I feel much more confident and prepared for any situation. Fantastic instructors who genuinely care!"
+            </p>
+            <p class="text-xs text-text-light text-right mb-4">
+              - July 28, 2024
+            </p>
+
+            <div class="flex justify-end space-x-2 mt-auto pt-4 border-t border-gray-100">
+                <button
+                    class="action-button bg-metric-blue-light hover:bg-blue-600"
+                    title="View Testimonial"
+                >
+                    <i class="fas fa-eye"></i>
+                </button>
+                <button
+                    class="action-button bg-course-primary hover:bg-course-orange-light"
+                    title="Edit Testimonial"
+                >
+                    <i class="fas fa-edit"></i>
+                </button>
+                <button
+                    class="action-button bg-metric-red-dark hover:bg-red-700"
+                    title="Delete Testimonial"
+                >
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </div>
+          </div>
+
+          <div
+            class="bg-card-bg rounded-xl shadow-lg p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="flex items-center mb-4">
+              <img
+                src="https://randomuser.me/api/portraits/men/60.jpg"
+                alt="Ahmed Khan"
+                class="w-16 h-16 rounded-full object-cover mr-4 border-2 border-course-primary"
+              />
+              <div>
+                <h3 class="text-lg font-bold text-text-dark">Ahmed Khan</h3>
+                <p class="text-sm text-text-light">License Test Prep Student</p>
+              </div>
+            </div>
+            <div class="flex items-center mb-3">
+              <i class="fas fa-star text-yellow-400 mr-1"></i>
+              <i class="fas fa-star text-yellow-400 mr-1"></i>
+              <i class="fas fa-star text-yellow-400 mr-1"></i>
+              <i class="fas fa-star text-yellow-400 mr-1"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+            </div>
+            <p class="text-text-dark text-sm italic mb-4">
+              "I was so nervous about my driving test, but the prep course here was a lifesaver. The mock tests were incredibly realistic, and the feedback helped me fix all my weak points. Passed with flying colors!"
+            </p>
+            <p class="text-xs text-text-light text-right mb-4">
+              - July 20, 2024
+            </p>
+
+            <div class="flex justify-end space-x-2 mt-auto pt-4 border-t border-gray-100">
+                <button
+                    class="action-button bg-metric-blue-light hover:bg-blue-600"
+                    title="View Testimonial"
+                >
+                    <i class="fas fa-eye"></i>
+                </button>
+                <button
+                    class="action-button bg-course-primary hover:bg-course-orange-light"
+                    title="Edit Testimonial"
+                >
+                    <i class="fas fa-edit"></i>
+                </button>
+                <button
+                    class="action-button bg-metric-red-dark hover:bg-red-700"
+                    title="Delete Testimonial"
+                >
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </div>
+          </div>
+
+          <div
+            class="bg-card-bg rounded-xl shadow-lg p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="flex items-center mb-4">
+              <img
+                src="https://randomuser.me/api/portraits/women/85.jpg"
+                alt="Sarah Begum"
+                class="w-16 h-16 rounded-full object-cover mr-4 border-2 border-course-primary"
+              />
+              <div>
+                <h3 class="text-lg font-bold text-text-dark">Sarah Begum</h3>
+                <p class="text-sm text-text-light">Advanced Driving Student</p>
+              </div>
+            </div>
+            <div class="flex items-center mb-3">
+              <i class="fas fa-star text-yellow-400 mr-1"></i>
+              <i class="fas fa-star text-yellow-400 mr-1"></i>
+              <i class="fas fa-star text-yellow-400 mr-1"></i>
+              <i class="fas fa-star text-yellow-400 mr-1"></i>
+              <i class="fas fa-star text-gray-300"></i> </div>
+            <p class="text-text-dark text-sm italic mb-4">
+              "The advanced driving course helped me feel more in control on highways. While challenging, the skills I learned are invaluable. A great investment for anyone serious about driving safely."
+            </p>
+            <p class="text-xs text-text-light text-right mb-4">
+              - July 15, 2024
+            </p>
+
+            <div class="flex justify-end space-x-2 mt-auto pt-4 border-t border-gray-100">
+                <button
+                    class="action-button bg-metric-blue-light hover:bg-blue-600"
+                    title="View Testimonial"
+                >
+                    <i class="fas fa-eye"></i>
+                </button>
+                <button
+                    class="action-button bg-course-primary hover:bg-course-orange-light"
+                    title="Edit Testimonial"
+                >
+                    <i class="fas fa-edit"></i>
+                </button>
+                <button
+                    class="action-button bg-metric-red-dark hover:bg-red-700"
+                    title="Delete Testimonial"
+                >
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </div>
+          </div>
+          
+          </div>
+      </main>
+    </div>
+
+    <div
+      id="sidebar-overlay"
+      class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden"
+    ></div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
